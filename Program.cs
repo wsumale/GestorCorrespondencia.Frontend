@@ -1,6 +1,9 @@
 using Radzen;
-using Unisuper.GestorCorrespondencia.Frontend.Components;
-using Unisuper.GestorCorrespondencia.Frontend.Model;
+using GestorCorrespondencia.Frontend.Components;
+using GestorCorrespondencia.Frontend.Model;
+using GestorCorrespondencia.Frontend.Services;
+using GestorCorrespondencia.Frontend.Services.Http;
+using GestorCorrespondencia.Frontend.Services.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
 

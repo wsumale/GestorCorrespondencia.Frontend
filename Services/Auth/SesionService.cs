@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using System.Text.Json;
-using Unisuper.GestorCorrespondencia.Frontend.Model;
+using GestorCorrespondencia.Frontend.Model.Auth;
 
+namespace GestorCorrespondencia.Frontend.Services.Auth;
 public class SesionService
 {
     private readonly IJSRuntime _js;

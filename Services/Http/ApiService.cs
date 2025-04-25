@@ -1,11 +1,8 @@
-﻿using System.Net.Http;
-using System.Net.Http.Json;
-using System.Text.Json;
-using Microsoft.Extensions.Logging;
-using Unisuper.GestorCorrespondencia.Frontend.Interfaces;
-using Unisuper.GestorCorrespondencia.Frontend.Model;
-using Unisuper.GestorCorrespondencia.Frontend.Model.Responses;
+﻿using System.Text.Json;
+using GestorCorrespondencia.Frontend.Interfaces;
+using GestorCorrespondencia.Frontend.Model;
 
+namespace GestorCorrespondencia.Frontend.Services.Http;
 public class ApiService
 {
     private readonly HttpClient _http;

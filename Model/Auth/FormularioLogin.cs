@@ -1,13 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Unisuper.GestorCorrespondencia.Frontend.Model
+namespace GestorCorrespondencia.Frontend.Model.Auth;
+public class FormularioLogin
 {
-    public class FormularioLogin
-    {
-        [Required(ErrorMessage = "Email requerido")]
-        public string Email { get; set; }
+    [Required(ErrorMessage = "Email requerido")]
+    public string Email { get; set; }
 
-        [Required(ErrorMessage = "Contraseña requerida")]
-        public string Password { get; set; }
-    }
+    [Required(ErrorMessage = "Contraseña requerida")]
+    public string Password { get; set; }
 }

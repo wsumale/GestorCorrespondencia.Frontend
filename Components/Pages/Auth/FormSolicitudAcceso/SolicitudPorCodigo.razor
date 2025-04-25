@@ -1,8 +1,9 @@
 ﻿@layout Layout.LoginLayout
 
-@using Unisuper.GestorCorrespondencia.Frontend.Components.Pages.Auth.FormSolicitudAcceso.FormSolicitudPorCodigo
-@using Unisuper.GestorCorrespondencia.Frontend.Model.SolicitudAcceso
-@using Unisuper.GestorCorrespondencia.Frontend.Model.Responses
+@using GestorCorrespondencia.Frontend.Components.Pages.Auth.FormSolicitudAcceso.FormSolicitudPorCodigo
+@using GestorCorrespondencia.Frontend.Model.Auth.SolicitudAcceso
+@using GestorCorrespondencia.Frontend.Model.Responses
+@using GestorCorrespondencia.Frontend.Services.Http
 
 @inject HttpClient Http
 @inject ApiService Api
@@ -32,7 +33,7 @@
 
 @using System.Text.Json
 @using Microsoft.Extensions.Logging
-@inject ILogger<Home> _logger
+@inject ILogger<SolicitudPorCodigo> _logger
 
 @code {
     private int formulario = 0; //0=Validar Codigo, 1=Usar Credenciales Existentes, 2=Crear Usuario

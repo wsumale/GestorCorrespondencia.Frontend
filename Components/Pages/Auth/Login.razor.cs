@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Components;
 using Radzen;
-using Unisuper.GestorCorrespondencia.Frontend.Model;
-using Unisuper.GestorCorrespondencia.Frontend.Model.Responses;
-namespace Unisuper.GestorCorrespondencia.Frontend.Components.Pages.Auth
+using GestorCorrespondencia.Frontend.Model.Auth;
+
+namespace GestorCorrespondencia.Frontend.Components.Pages.Auth
 {
     public partial class Login
     {

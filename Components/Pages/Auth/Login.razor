@@ -2,14 +2,17 @@
 
 @layout Layout.LoginLayout
 
-@using Unisuper.GestorCorrespondencia.Frontend.Model
+@using GestorCorrespondencia.Frontend.Services.Auth
+@using GestorCorrespondencia.Frontend.Services.Http
+@using GestorCorrespondencia.Frontend.Model.Auth
+
 @inject NavigationManager NavigationManager
 @inject DialogService DialogService
 @inject ApiService Api
 @inject SesionService Sesion
 
 @using Microsoft.Extensions.Logging
-@inject ILogger<Home> _logger
+@inject ILogger<Login> _logger
 
 <PageTitle>Iniciar Sesíón - Gestor de Correspondencia</PageTitle>
 <div class="login-card">
@@ -41,5 +44,5 @@
 
     </RadzenTemplateForm>
 
-    <p class="signup-link">¿Aún no cuentas con acceso?<br /><RadzenLink Text="solicita tu acceso aquí." Path="/solicitar-acceso" class="request-access" /></p>
+    <p class="signup-link">¿Aún no cuentas con acceso?<br /><RadzenLink Text="Solicita tu acceso aquí." Path="/solicitar-acceso" class="request-access" /></p>
 </div>

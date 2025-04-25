@@ -1,4 +1,5 @@
-﻿public class LayoutService
+﻿namespace GestorCorrespondencia.Frontend.Services;
+public class LayoutService
 {
     // Eventos para el cambio de texto y el estado del sidebar
     public event Action<string> OnHeaderTextChanged = null!;

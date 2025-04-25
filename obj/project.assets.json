@@ -1650,9 +1650,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Unisuper.GestorCorrespondencia.Frontend.csproj",
-      "projectName": "Unisuper.GestorCorrespondencia.Frontend",
-      "projectPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Unisuper.GestorCorrespondencia.Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\GestorCorrespondencia.Frontend.csproj",
+      "projectName": "GestorCorrespondencia.Frontend",
+      "projectPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\GestorCorrespondencia.Frontend.csproj",
       "packagesPath": "C:\\Users\\wsumale\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\obj\\",
       "projectStyle": "PackageReference",

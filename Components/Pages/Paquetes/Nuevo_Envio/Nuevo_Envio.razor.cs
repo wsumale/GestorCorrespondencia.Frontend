@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Components;
-using Unisuper.GestorCorrespondencia.Frontend.Model;
+using GestorCorrespondencia.Frontend.Model.Paquetes.Nuevo_Envio;
 using Radzen;
 using Radzen.Blazor;
 
-namespace Unisuper.GestorCorrespondencia.Frontend.Components.Pages.Paquetes.Nuevo_Envio
+namespace GestorCorrespondencia.Frontend.Components.Pages.Paquetes.Nuevo_Envio
 {
     public partial class Nuevo_Envio
     {
@@ -93,7 +93,7 @@ namespace Unisuper.GestorCorrespondencia.Frontend.Components.Pages.Paquetes.Nuev
 
         private void OnChange()
         {
-
+            Console.WriteLine("Change");
         }
 
         private bool TieneDetallesValidos()
