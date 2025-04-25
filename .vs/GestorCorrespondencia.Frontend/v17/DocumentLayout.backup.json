@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\components\\pages\\auth\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:components\\pages\\auth\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\components\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:components\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\components\\pages\\paquetes\\nuevo_envio\\nuevo_envio.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:components\\pages\\paquetes\\nuevo_envio\\nuevo_envio.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,24 +26,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\Login.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Auth\\Login.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\Login.razor",
+              "RelativeToolTip": "Components\\Pages\\Auth\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T21:11:50.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Login.razor.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\Login.razor.cs",
+              "RelativeDocumentMoniker": "Components\\Pages\\Auth\\Login.razor.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\Login.razor.cs",
+              "RelativeToolTip": "Components\\Pages\\Auth\\Login.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T21:11:36.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Nuevo_Envio.razor.cs",
               "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Paquetes\\Nuevo_Envio\\Nuevo_Envio.razor.cs",
               "RelativeDocumentMoniker": "Components\\Pages\\Paquetes\\Nuevo_Envio\\Nuevo_Envio.razor.cs",
               "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Paquetes\\Nuevo_Envio\\Nuevo_Envio.razor.cs",
               "RelativeToolTip": "Components\\Pages\\Paquetes\\Nuevo_Envio\\Nuevo_Envio.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-25T20:46:45.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Nuevo_Envio.razor",
               "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Paquetes\\Nuevo_Envio\\Nuevo_Envio.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Paquetes\\Nuevo_Envio\\Nuevo_Envio.razor",
@@ -43,7 +77,8 @@
               "RelativeToolTip": "Components\\Pages\\Paquetes\\Nuevo_Envio\\Nuevo_Envio.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-25T20:46:39.774Z"
+              "WhenOpened": "2025-04-25T20:46:39.774Z",
+              "EditorCaption": ""
             }
           ]
         }

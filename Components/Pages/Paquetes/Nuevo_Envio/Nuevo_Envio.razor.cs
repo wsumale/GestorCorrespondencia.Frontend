@@ -7,7 +7,7 @@ namespace GestorCorrespondencia.Frontend.Components.Pages.Paquetes.Nuevo_Envio;
 public partial class Nuevo_Envio
 {
     private string title = "Formulario de Envío";
-    private FormularioEnvio modelo = new();
+    private readonly FormularioEnvio modelo = new();
 
     protected override void OnInitialized()
     {
