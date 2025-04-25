@@ -11,5 +11,6 @@ public partial class Login
 
     private async Task OnSubmit()
     {
+        Console.WriteLine("Submit");
     }
 }
