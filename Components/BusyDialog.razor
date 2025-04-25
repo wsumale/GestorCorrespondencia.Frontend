@@ -1,0 +1,14 @@
+﻿@using Radzen
+
+<div style="padding: 20px; text-align: center; font-weight: bold;">
+    <RadzenProgressBar Mode="ProgressBarMode.Indeterminate" />
+    <div style="margin-top: 15px;">
+        @Message
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Message { get; set; } = "Cargando...";
+}
+ 

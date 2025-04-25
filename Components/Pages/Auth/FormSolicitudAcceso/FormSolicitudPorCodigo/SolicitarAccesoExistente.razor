@@ -1,0 +1,32 @@
+﻿@layout Layout.LoginLayout
+
+@using Unisuper.GestorCorrespondencia.Frontend.Model.SolicitudAcceso
+
+<RadzenTemplateForm Data="solicitud" Submit="@OnSubmit" TItem="FormularioSolicitudCodigoExistente" class="form-solicitud">
+    <RadzenRow>
+        <RadzenFormField Text="Código" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+            <RadzenNumeric @bind-Value="solicitud.Codigo" Name="Codigo" class="form-input" autocomplete="off" />
+        </RadzenFormField>
+        <RadzenRequiredValidator Text="Campo requerido" Component="Codigo" Style="margin-bottom:10px" />
+    </RadzenRow>
+
+    <RadzenRow>
+        <RadzenFormField Text="Contraseña" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+            <RadzenPassword @bind-Value="solicitud.Password" Name="Password" class="form-input" automcomplete="off" />
+        </RadzenFormField>
+        <RadzenRequiredValidator Text="Campo requerido" Component="Password" />
+    </RadzenRow>
+
+    <RadzenRow class="rz-display-flex rz-justify-content-center">
+        <RadzenButton Text="Solicitar Acceso" ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" class="solicitud-submit" />
+    </RadzenRow>
+</RadzenTemplateForm>
+
+@code {
+    FormularioSolicitudCodigoExistente solicitud = new FormularioSolicitudCodigoExistente();
+
+    void OnSubmit()
+    {
+
+    }
+}

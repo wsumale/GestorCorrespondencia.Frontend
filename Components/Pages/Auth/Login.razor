@@ -1,0 +1,45 @@
+﻿@page "/"
+
+@layout Layout.LoginLayout
+
+@using Unisuper.GestorCorrespondencia.Frontend.Model
+@inject NavigationManager NavigationManager
+@inject DialogService DialogService
+@inject ApiService Api
+@inject SesionService Sesion
+
+@using Microsoft.Extensions.Logging
+@inject ILogger<Home> _logger
+
+<PageTitle>Iniciar Sesíón - Gestor de Correspondencia</PageTitle>
+<div class="login-card">
+    <h1 class="title">Gestor de Correspondencia</h1>
+    <div class="accent-bar"></div>
+    <p class="subtitle">Por favor ingresa tus credenciales para continuar.</p>
+
+    <RadzenTemplateForm Data="@usuario" Submit="@OnSubmit" TItem="FormularioLogin" class="form-login">
+
+        <RadzenRow>
+            <RadzenFormField Text="Usuario" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+                <RadzenTextBox @bind-Value="usuario.Email" Name="Email" class="form-input" autocomplete="off" />
+            </RadzenFormField>
+            <RadzenRequiredValidator Text="Campo requerido" Component="Email" Style="margin-bottom:10px" />
+        </RadzenRow>
+
+        <RadzenRow>
+            <RadzenFormField Text="Contraseña" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+                <RadzenPassword @bind-Value="usuario.Password" Name="Password" class="form-input" automcomplete="off" />
+            </RadzenFormField>
+            <RadzenRequiredValidator Text="Campo requerido" Component="Password" />
+        </RadzenRow>
+
+        <RadzenLink Text="¿Olvidaste tu contraseña?" Path="/recuperar" class="reset-password" />
+
+        <RadzenRow class="rz-display-flex rz-justify-content-center">
+            <RadzenButton ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" class="login-submit" BusyText="Iniciando sesión ..." IsBusy=@busy>Iniciar sesión</RadzenButton>
+        </RadzenRow>
+
+    </RadzenTemplateForm>
+
+    <p class="signup-link">¿Aún no cuentas con acceso?<br /><RadzenLink Text="solicita tu acceso aquí." Path="/solicitar-acceso" class="request-access" /></p>
+</div>

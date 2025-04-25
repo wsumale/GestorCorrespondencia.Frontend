@@ -1,0 +1,46 @@
+﻿@inject LayoutService LayoutService
+@inherits LayoutComponentBase
+
+<RadzenDialog />
+<RadzenNotification />
+<RadzenContextMenu />
+<RadzenTooltip />
+
+<RadzenLayout>
+    <NavMenu />
+    <RadzenBody>
+        <RadzenHeader class="main-header">
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+                <RadzenSidebarToggle Click="@ToggleSidebar" />
+                <RadzenLabel Text="@title" class="main-header-label" />
+            </RadzenStack>
+        </RadzenHeader>
+            @Body
+    </RadzenBody>
+</RadzenLayout>
+
+@code {
+    public string title { get; set; } = "Texto por defecto";
+
+    protected override void OnInitialized()
+    {
+        LayoutService.OnHeaderTextChanged += async (nuevoTexto) =>
+        {
+            title = nuevoTexto;
+            await InvokeAsync(StateHasChanged);
+        };
+    }
+
+    void ToggleSidebar()
+    {
+        var newState = !LayoutService.GetSidebarExpanded();
+        LayoutService.SetSidebarExpanded(newState);
+    }
+
+}
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>

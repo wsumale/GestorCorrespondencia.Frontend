@@ -1,0 +1,62 @@
+﻿@using Unisuper.GestorCorrespondencia.Frontend.Model
+
+<RadzenTable>
+    <RadzenTableHeader>
+        <RadzenTableHeaderRow>
+            <RadzenTableHeaderCell class="detalle-header-cell">Tipo</RadzenTableHeaderCell>
+            <RadzenTableHeaderCell class="detalle-header-cell">Comentarios</RadzenTableHeaderCell>
+            <RadzenTableHeaderCell class="detalle-header-cell">Cantidad</RadzenTableHeaderCell>
+            <RadzenTableHeaderCell class="detalle-header-cell">Acción</RadzenTableHeaderCell>
+        </RadzenTableHeaderRow>
+    </RadzenTableHeader>
+    <RadzenTableBody>
+        @foreach (var detalle in Modelo.Detalles) 
+        {
+            <RadzenTableRow>
+                <RadzenTableCell>
+                    <RadzenDropDown Data="@tipos" @bind-Value="detalle.Tipo" Placeholder="Seleccione un tipo" class="rz-w-100" />
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    <RadzenTextArea @bind-Value="detalle.Comentarios" Placeholder="Comentarios" class="rz-w-100" />
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    <RadzenNumeric @bind-Value="detalle.Cantidad" Min="1" Placeholder="Cantidad" class="rz-w-100" @onkeypress="@Enter" />
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    <RadzenButton Text="Eliminar" Icon="delete" ButtonStyle="ButtonStyle.Danger" Click="@(() => EliminarDetalle(detalle))" />
+                </RadzenTableCell>
+            </RadzenTableRow>
+        }
+    </RadzenTableBody>
+</RadzenTable>
+
+<RadzenButton Text="Agregar Detalle"
+ButtonStyle="ButtonStyle.Primary"
+Click="@AgregarDetalle"
+Icon="add_circle_outline"
+class="btn-agregar-detalle" />
+
+@code {
+    [Parameter] public FormularioEnvio Modelo { get; set; }
+    [Parameter] public EventCallback<FormularioEnvio> OnModelUpdated { get; set; }
+
+    private List<string> tipos = new() { "Documentos", "Paquete", "Carta", "Caja" };
+
+    private async Task AgregarDetalle()
+    {
+        Modelo.Detalles.Add(new DetalleEnvio());
+        await OnModelUpdated.InvokeAsync(Modelo);
+    }
+
+    private async Task EliminarDetalle(DetalleEnvio detalle)
+    {
+        Modelo.Detalles.Remove(detalle);
+        await OnModelUpdated.InvokeAsync(Modelo);
+    }
+
+    private async Task Enter(KeyboardEventArgs e){
+        if(e.Code == "Enter" || e.Code == "NumpadEnter"){
+            await AgregarDetalle();
+        }
+    }
+}

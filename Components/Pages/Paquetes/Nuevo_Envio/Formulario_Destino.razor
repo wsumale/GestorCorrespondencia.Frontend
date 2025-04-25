@@ -1,0 +1,57 @@
+﻿@using Unisuper.GestorCorrespondencia.Frontend.Model
+
+@code {
+    [Parameter] public FormularioEnvio Modelo { get; set; }
+    [Parameter] public EventCallback<FormularioEnvio> OnModelUpdated { get; set; }
+
+    private async Task UpdateModel()
+    {
+        await OnModelUpdated.InvokeAsync(Modelo);
+    }
+}
+
+<RadzenTemplateForm Data="@Modelo">
+    <RadzenGrid Columns="2" Style="width: 100%;" RowGap="1rem">
+        <RadzenRow>
+            <RadzenColumn>
+                <RadzenRow Class="gap-0">
+                    <RadzenLabel Text="Nombre destinatario" Component="Nombre" class="form-label" />
+                    <RadzenTextBox Name="Nombre" @bind-Value="Modelo.NombreDestinatario" Style="width: 100%;" @oninput="UpdateModel" />
+                    <RadzenRequiredValidator Component="Nombre" Text="Este campo es obligatorio." Popup="false" />
+                </RadzenRow>
+                <RadzenRow Class="gap-0">
+                    <RadzenLabel Text="Email de destinatario" Component="Email" class="form-label" />
+                    <RadzenTextBox Name="Email" @bind-Value="Modelo.EmailDestinatario" Style="width: 100%;" />
+                    <RadzenRequiredValidator Component="Email" Text="Este campo es obligatorio." Popup="false" />
+                    <RadzenEmailValidator Component="Email" Text="Proporcione una dirección de correo electrónico válida." Popup="false" />
+                </RadzenRow>
+            </RadzenColumn>
+
+            <RadzenColumn>
+                <RadzenRow Class="gap-0">
+                    <RadzenLabel Text="Categoría destino" class="form-label" />
+                    <RadzenDropDown Name="Ubicacion" Data="@categoriasDestino" @bind-Value="Modelo.CategoriaDestino" Style="width: 100%;" @onchange="UpdateModel" />
+                    <RadzenRequiredValidator Component="Ubicacion" Text="Este campo es obligatorio." Popup="false" />
+                </RadzenRow>
+                <RadzenRow Class="gap-0">
+                    <RadzenLabel Text="Destino" class="form-label" />
+                    <RadzenDropDown Name="Destino" Data="@destinos" @bind-Value="Modelo.Destino" Style="width: 100%;" @onchange="UpdateModel" />
+                    <RadzenRequiredValidator Component="Destino" Text="Este campo es obligatorio." Popup="false" />
+                </RadzenRow>
+            </RadzenColumn>
+        </RadzenRow>
+
+        <RadzenRow>
+            <RadzenColumn Size="12" class="rz-display-flex rz-flex-column rz-p-1">
+                <RadzenLabel Text="Observaciones" class="form-label" />
+                <RadzenTextArea @bind-Value="Modelo.Observaciones" Style="width: 100%; height: 100px;" @oninput="UpdateModel" />
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenGrid>
+</RadzenTemplateForm>
+
+
+@code {
+    private List<string> categoriasDestino = new() { "Gerencia", "Soporte", "Logística" };
+    private List<string> destinos = new() { "Almacén Central", "Bodega Sur", "Centro de Distribución" };
+}

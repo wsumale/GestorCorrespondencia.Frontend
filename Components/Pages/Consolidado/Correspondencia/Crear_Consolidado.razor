@@ -1,0 +1,140 @@
+﻿@page "/consolidado/correspondencia"
+
+@using Unisuper.GestorCorrespondencia.Frontend.Model
+@using System.Text.Json
+
+@inject LayoutService LayoutService
+
+@code {
+    Paquete paquete = new Paquete();
+    List<Paquete> paquetes = new List<Paquete>();
+
+    private List<string> ubicacionDestino = new() { "Oficinas Z 12", "Unicap", "Unipark" };
+    private List<string> destinos = new() { "Contabilidad", "RRHH", "Sistemas" };
+    private List<string> tipos = new() { "Documentos", "Paquete", "Carta", "Caja" };
+    private List<string> usuarioDestino = new() { "Cesar Mata", "Pablo Merida", "Luis Toledo" };
+
+    protected override void OnInitialized()
+    {
+        LayoutService.ActualizarHeader("Consolidar Paquetes - Correspondencia");
+        var random = new Random();
+
+        for (int i = 1; i <= 20; i++)
+        {
+            var paquete = new Paquete
+                {
+                    NumeroRastreo = $"PKT-{1000 + i}",
+                    UbicacionOrigen = ubicacionDestino[random.Next(ubicacionDestino.Count)],
+                    Origen = destinos[random.Next(destinos.Count)],
+                    UbicacionDestino = ubicacionDestino[random.Next(ubicacionDestino.Count)],
+                    Destino = destinos[random.Next(destinos.Count)],
+                    EmailRemitente = $"remitente{i}@correo.com",
+                    NombreRemitente = $"Remitente {i}",
+                    EmailDestinatario = $"destinatario{i}@correo.com",
+                    NombreDestinatario = $"Destinatario {i}",
+                    Observaciones = $"Observaciones del paquete {i}",
+                    Detalles = new List<DetallePaquete>
+                {
+                    new DetallePaquete
+                    {
+                        Tipo = tipos[random.Next(tipos.Count)],
+                        Comentarios = $"Comentario {i}",
+                        Cantidad = random.Next(1, 5)
+                    }
+                }
+                };
+
+            paquetes.Add(paquete);
+        }
+    }
+}
+
+<div class="main-container" style="max-width: 100%; width: 100%; margin-top: 0;">
+    <h3 class="form-title">Consolidar Paquetes</h3>
+
+    <RadzenRow style="margin-bottom: 1rem;">
+        <RadzenColumn Size="6" SizeXS="12" SizeSM="12" SizeMD="6" SizeLG="3" SizeXL="3" SizeXX="3">
+            <RadzenText TextStyle="TextStyle.H6" TagName="TagName.H3" Text="Ubicación Destino:" />
+            <RadzenDropDown Data="@ubicacionDestino" @bind-Value="selectedUbicacionDestino"
+                            Placeholder="Seleccione ubicación destino"
+                            Disabled="@(selectedPaquetes != null && selectedPaquetes.Any())" />
+        </RadzenColumn>
+        <RadzenColumn Size="6" SizeXS="12" SizeSM="12" SizeMD="6" SizeLG="3" SizeXL="3" SizeXX="3">
+            <RadzenText TextStyle="TextStyle.H6" TagName="TagName.H3" Text="Destino:" />
+            <RadzenDropDown Data="@destinos" @bind-Value="selectedDestino"
+                            Placeholder="Seleccione destino" />
+        </RadzenColumn>
+        <RadzenColumn Size="6" SizeXS="12" SizeSM="12" SizeMD="6" SizeLG="3" SizeXL="3" SizeXX="3">
+            <RadzenText TextStyle="TextStyle.H6" TagName="TagName.H3" Text="Usuario Recepción:" />
+            <RadzenDropDown Data="@usuarioDestino" @bind-Value="selectedUsuario"
+                            Placeholder="Seleccione destino" />
+        </RadzenColumn>
+        <RadzenColumn Size="6" SizeXS="12" SizeSM="12" SizeMD="6" SizeLG="3" SizeXL="3" SizeXX="3"
+                      class="rz-display-flex rz-flex-column rz-align-items-start rz-justify-content-end">
+            <RadzenButton Text="Enviar Consolidado" />
+        </RadzenColumn>
+    </RadzenRow>
+
+    <RadzenDataGrid @ref="grid" AllowRowSelectOnRowClick="@allowRowSelectOnRowClick" AllowFiltering="true" FilterPopupRenderMode="PopupRenderMode.OnDemand"
+                    FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="10"
+                    AllowSorting="true" Data="@paquetesFiltrados" ColumnWidth="200px"
+                    SelectionMode="DataGridSelectionMode.Multiple" @bind-Value=@selectedPaquetes>
+        <Columns>
+            <RadzenDataGridColumn>
+                <HeaderTemplate>
+                    <RadzenCheckBox TabIndex="-1" TriState="false" TValue="bool?" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select all items" }})"
+                                    Value="@(selectedPaquetes == null || selectedPaquetes?.Any() != true ? false : !paquetesFiltrados.All(i => selectedPaquetes.Contains(i)) ? null : paquetesFiltrados.Any(i => selectedPaquetes.Contains(i)))"
+                                    Change="@(args => selectedPaquetes = args == true ? paquetesFiltrados.ToList() : null)" 
+                                    Disabled="@(selectedPaquetes == null || !selectedPaquetes.Any())" />
+                </HeaderTemplate>
+                <Template Context="data">
+                    <RadzenCheckBox TabIndex="-1" TriState="false" Value="@(selectedPaquetes != null && selectedPaquetes.Contains(data))" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select item" }})"
+                                    TValue="bool" Change=@(args => { if(!allowRowSelectOnRowClick) { grid.SelectRow(data); }}) />
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="@nameof(paquete.NumeroRastreo)" Title="Rastreo" />
+            <RadzenDataGridColumn Property="@nameof(paquete.NombreRemitente)" Title="Remitente" />
+            <RadzenDataGridColumn Property="@nameof(paquete.UbicacionOrigen)" Title="Ubicación Origen" />
+            <RadzenDataGridColumn Property="@nameof(paquete.NombreDestinatario)" Title="Destinatario" />
+            <RadzenDataGridColumn Property="@nameof(paquete.UbicacionDestino)" Title="Ubicación Destino" />
+            <RadzenDataGridColumn Property="@nameof(paquete.Destino)" Title="Destino" />
+        </Columns>
+    </RadzenDataGrid>
+</div>
+
+
+
+@code {
+    bool allowRowSelectOnRowClick = true;
+    RadzenDataGrid<Paquete> grid;
+
+    private IList<Paquete> _selectedPaquetes;
+    private IList<Paquete> selectedPaquetes
+    {
+        get => _selectedPaquetes;
+        set
+        {
+            _selectedPaquetes = value;
+
+            // Solo si no hay una selección previa en el dropdown
+            if (!string.IsNullOrEmpty(selectedUbicacionDestino) || _selectedPaquetes == null || !_selectedPaquetes.Any())
+                return;
+
+            // Asignar la ubicación de la primera fila seleccionada al dropdown
+            selectedUbicacionDestino = _selectedPaquetes.First().UbicacionDestino;
+        }
+    }
+
+
+    private IEnumerable<Paquete> paquetesFiltrados =>
+    string.IsNullOrWhiteSpace(selectedUbicacionDestino)
+        ? paquetes
+        : paquetes.Where(p => p.UbicacionDestino == selectedUbicacionDestino);
+
+
+    private string? selectedUbicacionDestino;
+    private string? selectedDestino;
+    private string? selectedUsuario;
+}
+
+@* <pre>@JsonSerializer.Serialize(selectedPaquetes, new JsonSerializerOptions { WriteIndented = true })</pre> *@

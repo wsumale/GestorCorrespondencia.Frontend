@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\components\\pages\\auth\\formsolicitudacceso\\solicitudporcodigo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|solutionrelative:components\\pages\\auth\\formsolicitudacceso\\solicitudporcodigo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\components\\pages\\auth\\formsolicitudacceso\\formsolicitudporcodigo\\solicitaraccesoexistente.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|solutionrelative:components\\pages\\auth\\formsolicitudacceso\\formsolicitudporcodigo\\solicitaraccesoexistente.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\model\\auth\\formulariosolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|solutionrelative:model\\auth\\formulariosolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\model\\responses\\apiresponsenotacceptable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|solutionrelative:model\\responses\\apiresponsenotacceptable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\services\\http\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|Unisuper.GestorCorrespondencia.Frontend.csproj|solutionrelative:services\\http\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SolicitarAccesoExistente.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\FormSolicitudAcceso\\FormSolicitudPorCodigo\\SolicitarAccesoExistente.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Auth\\FormSolicitudAcceso\\FormSolicitudPorCodigo\\SolicitarAccesoExistente.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\FormSolicitudAcceso\\FormSolicitudPorCodigo\\SolicitarAccesoExistente.razor",
+              "RelativeToolTip": "Components\\Pages\\Auth\\FormSolicitudAcceso\\FormSolicitudPorCodigo\\SolicitarAccesoExistente.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T14:49:07.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SolicitudPorCodigo.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\FormSolicitudAcceso\\SolicitudPorCodigo.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Auth\\FormSolicitudAcceso\\SolicitudPorCodigo.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Auth\\FormSolicitudAcceso\\SolicitudPorCodigo.razor",
+              "RelativeToolTip": "Components\\Pages\\Auth\\FormSolicitudAcceso\\SolicitudPorCodigo.razor",
+              "ViewState": "AgIAACsAAAAAAAAAAADwvz8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T17:01:03.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Services\\Http\\ApiService.cs",
+              "RelativeDocumentMoniker": "Services\\Http\\ApiService.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Services\\Http\\ApiService.cs",
+              "RelativeToolTip": "Services\\Http\\ApiService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwDUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:48:20.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApiResponseNotAcceptable.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Model\\Responses\\ApiResponseNotAcceptable.cs",
+              "RelativeDocumentMoniker": "Model\\Responses\\ApiResponseNotAcceptable.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Model\\Responses\\ApiResponseNotAcceptable.cs",
+              "RelativeToolTip": "Model\\Responses\\ApiResponseNotAcceptable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T21:26:28.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormularioSolicitud.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Model\\Auth\\FormularioSolicitud.cs",
+              "RelativeDocumentMoniker": "Model\\Auth\\FormularioSolicitud.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Model\\Auth\\FormularioSolicitud.cs",
+              "RelativeToolTip": "Model\\Auth\\FormularioSolicitud.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T20:53:14.695Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
