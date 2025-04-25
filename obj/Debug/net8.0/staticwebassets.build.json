@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lUiNOV0VUaoGTQQGZtm7Ud6W1vWHcrYfphh+ut45BoY=",
+  "Hash": "x6XniNZYcTAGC/7C+UD00tfXT0JR9o2or214kRunkoQ=",
   "Source": "GestorCorrespondencia.Frontend",
   "BasePath": "_content/GestorCorrespondencia.Frontend",
   "Mode": "Default",
@@ -766,8 +766,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "tz0vlv7fii",
-      "Integrity": "N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8=",
+      "Fingerprint": "lun3xosizu",
+      "Integrity": "ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GestorCorrespondencia.Frontend.styles.css"
@@ -787,8 +787,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "tz0vlv7fii",
-      "Integrity": "N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8=",
+      "Fingerprint": "lun3xosizu",
+      "Integrity": "ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GestorCorrespondencia.Frontend.bundle.scp.css"
@@ -6770,7 +6770,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4119"
+          "Value": "4117"
         },
         {
           "Name": "Content-Type",
@@ -6778,11 +6778,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8=\""
+          "Value": "\"ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 25 Apr 2025 18:57:55 GMT"
+          "Value": "Fri, 25 Apr 2025 19:02:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6792,7 +6792,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8="
+          "Value": "sha256-ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc="
+        }
+      ]
+    },
+    {
+      "Route": "GestorCorrespondencia.Frontend.lun3xosizu.bundle.scp.css",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GestorCorrespondencia.Frontend.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 19:02:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lun3xosizu"
+        },
+        {
+          "Name": "label",
+          "Value": "GestorCorrespondencia.Frontend.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc="
+        }
+      ]
+    },
+    {
+      "Route": "GestorCorrespondencia.Frontend.lun3xosizu.styles.css",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GestorCorrespondencia.Frontend.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4117"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 19:02:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lun3xosizu"
+        },
+        {
+          "Name": "label",
+          "Value": "GestorCorrespondencia.Frontend.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc="
         }
       ]
     },
@@ -6807,7 +6897,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4119"
+          "Value": "4117"
         },
         {
           "Name": "Content-Type",
@@ -6815,11 +6905,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8=\""
+          "Value": "\"ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 25 Apr 2025 18:57:55 GMT"
+          "Value": "Fri, 25 Apr 2025 19:02:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6829,97 +6919,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8="
-        }
-      ]
-    },
-    {
-      "Route": "GestorCorrespondencia.Frontend.tz0vlv7fii.bundle.scp.css",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GestorCorrespondencia.Frontend.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4119"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 25 Apr 2025 18:57:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tz0vlv7fii"
-        },
-        {
-          "Name": "label",
-          "Value": "GestorCorrespondencia.Frontend.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8="
-        }
-      ]
-    },
-    {
-      "Route": "GestorCorrespondencia.Frontend.tz0vlv7fii.styles.css",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GestorCorrespondencia.Frontend.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4119"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 25 Apr 2025 18:57:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "tz0vlv7fii"
-        },
-        {
-          "Name": "label",
-          "Value": "GestorCorrespondencia.Frontend.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-N6jMAPh2pMOt0Y6+bGUXMNu3MYGS9r8WuhiKd2qcAq8="
+          "Value": "sha256-ffzAsvvA+x17q121MRmu4DhnpPbTjMRxgFvksFAYSJc="
         }
       ]
     },
