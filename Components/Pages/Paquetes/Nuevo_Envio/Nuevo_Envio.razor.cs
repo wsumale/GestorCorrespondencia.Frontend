@@ -81,13 +81,7 @@ namespace GestorCorrespondencia.Frontend.Components.Pages.Paquetes.Nuevo_Envio
 
         private void changeTitle(StepsCanChangeEventArgs args)
         {
-            if(args.NewIndex == 2)
-            {
-                title = "Resumen del Envío";
-            } else
-            {
-                title = "Formulario de Envío";
-            }
+            title = args.NewIndex == 2 ? "Resumen del Envío" : "Formulario de Envío";
         }
 
 
