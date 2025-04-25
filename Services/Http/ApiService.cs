@@ -41,13 +41,14 @@ public class ApiService
                 _logger.LogWarning("HTTP Status: {Code} - {Reason}", response.StatusCode, response.ReasonPhrase);
                 _logger.LogWarning("Response JSON (raw):");
                 _logger.LogWarning(string.IsNullOrWhiteSpace(rawContent) ? "[VACÍO]" : rawContent);
+                //_logger.LogWarning(JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true }));
                 _logger.LogWarning("---------------------------------------");
             }
 
             // 200 OK sin contenido (vacío)
             if (response.IsSuccessStatusCode && string.IsNullOrWhiteSpace(rawContent))
             {
-                return (new { StatusCode = (int)response.StatusCode }, null);
+                return (new { StatusCode = (int)response.StatusCode, IsSuccessStatusCode = (bool)response.IsSuccessStatusCode }, null);
             }
 
             // 200 OK con contenido (respuesta estándar ApiResponse<TData>)
