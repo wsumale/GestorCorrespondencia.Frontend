@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
-using GestorCorrespondencia.Frontend.Interfaces;
-using GestorCorrespondencia.Frontend.Model;
+using GestorCorrespondencia.Frontend.Shared.Interfaces;
+using GestorCorrespondencia.Frontend.Shared.Model;
 
 namespace GestorCorrespondencia.Frontend.Services.Http;
 public class ApiService
@@ -45,7 +45,7 @@ public class ApiService
                 _logger.LogWarning("---------------------------------------");
             }
 
-            // 200 OK sin contenido (vacío)
+            // 200 OK sin contenido
             if (response.IsSuccessStatusCode && string.IsNullOrWhiteSpace(rawContent))
             {
                 return (new { StatusCode = (int)response.StatusCode, IsSuccessStatusCode = (bool)response.IsSuccessStatusCode }, null);
@@ -77,7 +77,7 @@ public class ApiService
             }
 
             // Error HTTP
-            // 1. Si el body está vacío > devolver solo StatusCode
+            // 1. Si el body está vacío, devolver solo StatusCode
             if (string.IsNullOrWhiteSpace(rawContent))
             {
                 return (
@@ -86,7 +86,7 @@ public class ApiService
                 );
             }
 
-            // 2. Si el body tiene contenido > intentar deserializarlo como TDataError
+            // 2. Si el body tiene contenido, intentar deserializarlo como TDataError
             try
             {
                 var errorObject = JsonSerializer.Deserialize<TDataError>(rawContent, new JsonSerializerOptions
@@ -114,9 +114,4 @@ public class ApiService
             return (default, $"Error inesperado: {ex.Message}");
         }
     }
-
-
-
-
-
 }

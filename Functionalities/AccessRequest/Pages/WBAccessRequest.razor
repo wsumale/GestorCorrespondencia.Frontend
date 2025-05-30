@@ -1,0 +1,27 @@
+﻿@layout LoginLayout
+
+@using GestorCorrespondencia.Frontend.Functionalities.AccessRequest.Model
+@using GestorCorrespondencia.Frontend.Functionalities.AccessRequest.Components
+
+@switch(formulario) {
+    case 0:
+        <RadzenTemplateForm Data="Form" Submit="@OnSubmitValidarCodigo" TItem="WBValidateEmployeeCodeForm" class="form-solicitud">
+            <RadzenRow>
+                <RadzenFormField Text="Código" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+                    <RadzenNumeric @bind-Value="Form.EmployeeCode" Name="Codigo" ShowUpDown="false" class="form-input" autocomplete="off" />
+                </RadzenFormField>
+                <RadzenRequiredValidator Text="Campo requerido" Component="Codigo" Style="margin-bottom:10px" />
+            </RadzenRow>
+
+            <RadzenRow class="rz-display-flex rz-justify-content-center">
+                <RadzenButton Text="Continuar" IsBusy="@busy" ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" class="solicitud-submit" />
+            </RadzenRow>
+        </RadzenTemplateForm>
+        break;
+    case 1:
+        <WBAccessRequestExistingUser ValidateEmployeeCode="@Form" />
+        break;
+    case 2:
+        <WBAccessRequestNewUser ValidateEmployeeCode="@Form" />
+        break;
+}

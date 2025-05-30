@@ -1,0 +1,33 @@
+﻿<RadzenTable>
+    <RadzenTableHeader>
+        <RadzenTableHeaderRow>
+            <RadzenTableHeaderCell class="detalle-header-cell">Tipo</RadzenTableHeaderCell>
+            <RadzenTableHeaderCell class="detalle-header-cell">Comentarios</RadzenTableHeaderCell>
+            <RadzenTableHeaderCell class="detalle-header-cell">Cantidad</RadzenTableHeaderCell>
+            <RadzenTableHeaderCell class="detalle-header-cell">Acción</RadzenTableHeaderCell>
+        </RadzenTableHeaderRow>
+    </RadzenTableHeader>
+    <RadzenTableBody>
+        @foreach (var detail in shippingForm.Details) 
+        {
+            <RadzenTableRow>
+                <RadzenTableCell>
+                    <RadzenDropDown Data="@types" TextProperty="Value" ValueProperty="Key" @bind-Value="detail.TypeId"
+                                    Placeholder="Seleccione un tipo" class="rz-w-100" Change="@(args => OnTypeChanged(args, detail))" />
+
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    <RadzenTextArea @bind-Value="detail.Comment" Placeholder="Comentarios" class="rz-w-100" />
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    <RadzenNumeric @bind-Value="detail.Quantity" Min="1" Placeholder="Cantidad" class="rz-w-100" @onkeypress="@Enter" />
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    <RadzenButton Text="Eliminar" Icon="delete" ButtonStyle="ButtonStyle.Danger" Click="@(() => DeleteDetail(detail))" />
+                </RadzenTableCell>
+            </RadzenTableRow>
+        }
+    </RadzenTableBody>
+</RadzenTable>
+
+<RadzenButton Text="Agregar Detalle" ButtonStyle="ButtonStyle.Primary" Click="@AddDetail" Icon="add_circle_outline" class="btn-agregar-detalle" />

@@ -30,9 +30,14 @@ wwwroot\images\bouncing_squares.svg
 wwwroot\images\spinner.svg
 wwwroot\images\Unisuper.png
 wwwroot\images\vector-correspondencia.svg
+wwwroot\js\auth.js
+wwwroot\styles\EnvelopeLoader.css
 wwwroot\styles\fonts.css
-wwwroot\styles\gdc_login_styles.css
-wwwroot\styles\gdc_styles.css
-wwwroot\styles\gdc_styles_material3.css
+wwwroot\styles\gdc.css
+wwwroot\styles\gdc_auth.css
+wwwroot\styles\gdc_material3.css
+wwwroot\styles\main-gdc.css
 wwwroot\styles\Pages\MainLayout.css
 wwwroot\styles\Pages\Nuevo_Envio.css
+wwwroot\styles\Pages\ViewPackageComponent.css
+wwwroot\styles\TruckLoader.css

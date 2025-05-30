@@ -1,0 +1,27 @@
+﻿@page "/paquetes/mis_paquetes"
+
+<SessionValidator title="Mis paquetes" />
+<Loader Loading="loading" />
+
+<div class="main-container">
+    <RadzenText Text="Mis Paquetes" class="form-title" />
+
+    <RadzenDataGrid Data="@myPackages" AllowPaging="true" PageSize="10" ColumnWidth="200px"
+                    AllowRowSelectOnRowClick="true" SelectionMode="DataGridSelectionMode.Single"
+                    FilterMode="FilterMode.CheckBoxList" AllowSorting="true" AllowFiltering="true"
+                    ApplyFilterText="Aplicar" ClearFilterText="Limpiar">
+        <Columns>
+            <RadzenDataGridColumn Property="PackageId" Title="#" Width="100px" />
+            <RadzenDataGridColumn Property="Sender" Title="Remitente" />
+            <RadzenDataGridColumn Property="SenderLocation" Title="Ubicación remitente" />
+            <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
+            <RadzenDataGridColumn Property="RecipientLocation" Title="Ubicación destinatario" />
+            <RadzenDataGridColumn Property="Created" Title="Fecha" Width="100px">
+                <Template Context="data">
+                    @data.Created.ToLocalTime().ToString("dd/MM/yyyy")
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="State" Title="Estado" />
+        </Columns>
+    </RadzenDataGrid>
+</div>

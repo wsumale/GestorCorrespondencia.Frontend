@@ -1,11 +1,11 @@
-﻿@using GestorCorrespondencia.Frontend.Services
-@inject LayoutService LayoutService
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
 
 <RadzenDialog />
 <RadzenNotification />
 <RadzenContextMenu />
 <RadzenTooltip />
+
+<PageTitle>@title</PageTitle>
 
 <RadzenLayout>
     <NavMenu />
@@ -15,30 +15,19 @@
                 <RadzenSidebarToggle Click="@ToggleSidebar" />
                 <RadzenLabel Text="@title" class="main-header-label" />
             </RadzenStack>
+            <RadzenStack class="main-header-user">
+                <RadzenStack class="main-header-user-info">
+                    <RadzenLabel Text="@name" />
+                    <RadzenLabel Text="@employeeCode" />
+                </RadzenStack>
+                <RadzenStack class="main-header-user-logout">
+                    <RadzenButton Variant="Variant.Text" Icon="logout" Click="Logout" />
+                </RadzenStack>
+            </RadzenStack>
         </RadzenHeader>
-            @Body
+        @Body
     </RadzenBody>
 </RadzenLayout>
-
-@code {
-    public string title { get; set; } = "Texto por defecto";
-
-    protected override void OnInitialized()
-    {
-        LayoutService.OnHeaderTextChanged += async (nuevoTexto) =>
-        {
-            title = nuevoTexto;
-            await InvokeAsync(StateHasChanged);
-        };
-    }
-
-    void ToggleSidebar()
-    {
-        var newState = !LayoutService.GetSidebarExpanded();
-        LayoutService.SetSidebarExpanded(newState);
-    }
-
-}
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.

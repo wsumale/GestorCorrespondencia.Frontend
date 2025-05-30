@@ -1,0 +1,29 @@
+﻿@using GestorCorrespondencia.Frontend.Functionalities.Authentication.Model.Form
+
+<RadzenRow>
+	<RadzenColumn SizeLG="5" SizeXL="4" class="rz-display-flex rz-align-items-center rz-justify-content-center rz-p-5">
+		@((MarkupString)qr)
+	</RadzenColumn>
+	<RadzenColumn SizeLG="7" SizeXL="8" class="rz-p-5">
+		<RadzenRow>
+			<RadzenText Text="Configurar la aplicación de autenticación" TextStyle="TextStyle.H4" />
+			<RadzenText TextStyle="TextStyle.Body1">Para utilizar una aplicación de autenticación, siga los siguientes pasos:</RadzenText>
+			<RadzenText TextStyle="TextStyle.Body1"><strong>1.-</strong> Descargue una aplicación de autenticación de dos factores como Microsoft Authenticator para Android e iOS.</RadzenText>
+			<RadzenText TextStyle="TextStyle.Body1"><strong>2.-</strong> Escanee el código QR en la aplicación Authenticator de Microsoft.</RadzenText>
+			<RadzenText TextStyle="TextStyle.Body1"><strong>3.-</strong> Una vez que haya escaneado el código QR, su aplicación de autenticación de dos factores le proporcionará un código único. Ingrese el código en el cuadro de confirmación a continuación.</RadzenText>
+		</RadzenRow>
+		<RadzenRow>
+			<RadzenTemplateForm Data="@Form" Submit="@OnSubmit" TItem="TwoFactorAuthFormModel" class="rz-display-flex gap-3 flex-column rz-w-100">
+				<DataAnnotationsValidator />
+				<RadzenRow class="rz-display-flex rz-flex-column rz-w-100">
+					<RadzenNumeric ShowUpDown="false" TValue="int?" @bind-Value=@Form.AuthenticatorCode Placeholder="Código del autenticador" />
+					<ValidationMessage For="@(() => Form.AuthenticatorCode)" class="rz-message rz-messages-error" />
+				</RadzenRow>
+				<RadzenRow class="rz-display-flex rz-flex-column rz-w-100">
+					<RadzenButton Text="Verificar" ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" />
+				</RadzenRow>
+			</RadzenTemplateForm>
+		</RadzenRow>
+	</RadzenColumn>
+</RadzenRow>
+

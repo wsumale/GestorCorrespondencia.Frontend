@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "ContainingType": "GestorCorrespondencia.Frontend.Extensions.AuthExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthRoutes\u003Eb__0_1",
+    "RelativePath": "auth/logout",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestorCorrespondencia.Frontend.Extensions.AuthExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthRoutes\u003Eb__0_2",
+    "RelativePath": "auth/logout-background",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestorCorrespondencia.Frontend.Extensions.AuthExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthRoutes\u003Eb__0_3",
+    "RelativePath": "auth/refresh-session",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "payload",
+        "Type": "GestorCorrespondencia.Frontend.Functionalities.Authentication.Model.Session.RefreshSessionPayload",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestorCorrespondencia.Frontend.Extensions.AuthExtension\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthRoutes\u003Eb__0_0",
+    "RelativePath": "auth/start-session",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

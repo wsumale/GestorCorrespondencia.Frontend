@@ -133,6 +133,14 @@
       "PackagePath": "staticwebassets\\images\\vector-correspondencia.svg"
     },
     {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\auth.js",
+      "PackagePath": "staticwebassets\\js\\auth.js"
+    },
+    {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\EnvelopeLoader.css",
+      "PackagePath": "staticwebassets\\styles\\EnvelopeLoader.css"
+    },
+    {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\Pages\\MainLayout.css",
       "PackagePath": "staticwebassets\\styles\\Pages\\MainLayout.css"
     },
@@ -141,20 +149,32 @@
       "PackagePath": "staticwebassets\\styles\\Pages\\Nuevo_Envio.css"
     },
     {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\Pages\\ViewPackageComponent.css",
+      "PackagePath": "staticwebassets\\styles\\Pages\\ViewPackageComponent.css"
+    },
+    {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\TruckLoader.css",
+      "PackagePath": "staticwebassets\\styles\\TruckLoader.css"
+    },
+    {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\fonts.css",
       "PackagePath": "staticwebassets\\styles\\fonts.css"
     },
     {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc_login_styles.css",
-      "PackagePath": "staticwebassets\\styles\\gdc_login_styles.css"
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc.css",
+      "PackagePath": "staticwebassets\\styles\\gdc.css"
     },
     {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc_styles.css",
-      "PackagePath": "staticwebassets\\styles\\gdc_styles.css"
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc_auth.css",
+      "PackagePath": "staticwebassets\\styles\\gdc_auth.css"
     },
     {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc_styles_material3.css",
-      "PackagePath": "staticwebassets\\styles\\gdc_styles_material3.css"
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc_material3.css",
+      "PackagePath": "staticwebassets\\styles\\gdc_material3.css"
+    },
+    {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\main-gdc.css",
+      "PackagePath": "staticwebassets\\styles\\main-gdc.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GestorCorrespondencia.Frontend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

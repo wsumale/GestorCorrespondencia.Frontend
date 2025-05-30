@@ -32,50 +32,6 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/BusyDialog.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCdXN5RGlhbG9nLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/FormSolicitudAcceso/FormSolicitudPorCodigo/SolicitarAccesoExistente.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXEZvcm1Tb2xpY2l0dWRBY2Nlc29cRm9ybVNvbGljaXR1ZFBvckNvZGlnb1xTb2xpY2l0YXJBY2Nlc29FeGlzdGVudGUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/FormSolicitudAcceso/FormSolicitudPorCodigo/SolicitarAccesoNuevo.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXEZvcm1Tb2xpY2l0dWRBY2Nlc29cRm9ybVNvbGljaXR1ZFBvckNvZGlnb1xTb2xpY2l0YXJBY2Nlc29OdWV2by5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/FormSolicitudAcceso/SolicitudPorAD.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXEZvcm1Tb2xpY2l0dWRBY2Nlc29cU29saWNpdHVkUG9yQUQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/FormSolicitudAcceso/SolicitudPorCodigo.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXEZvcm1Tb2xpY2l0dWRBY2Nlc29cU29saWNpdHVkUG9yQ29kaWdvLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXExvZ2luLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/RecuperarPassword.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXFJlY3VwZXJhclBhc3N3b3JkLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/SolicitudAcceso.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXFNvbGljaXR1ZEFjY2Vzby5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Auth/SolicitudRecuperarPassword.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdXRoXFNvbGljaXR1ZFJlY3VwZXJhclBhc3N3b3JkLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Consolidado/Correspondencia/Crear_Consolidado.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25zb2xpZGFkb1xDb3JyZXNwb25kZW5jaWFcQ3JlYXJfQ29uc29saWRhZG8ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Consolidado/Usuario/Crear_Consolidado.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25zb2xpZGFkb1xVc3VhcmlvXENyZWFyX0NvbnNvbGlkYWRvLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,36 +40,108 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Paquetes/Mis_Paquetes/Mis_Paquetes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXF1ZXRlc1xNaXNfUGFxdWV0ZXNcTWlzX1BhcXVldGVzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Paquetes/Nuevo_Envio/Formulario_Destino.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXF1ZXRlc1xOdWV2b19FbnZpb1xGb3JtdWxhcmlvX0Rlc3Rpbm8ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Paquetes/Nuevo_Envio/Formulario_Detalle.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXF1ZXRlc1xOdWV2b19FbnZpb1xGb3JtdWxhcmlvX0RldGFsbGUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Paquetes/Nuevo_Envio/Nuevo_Envio.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXF1ZXRlc1xOdWV2b19FbnZpb1xOdWV2b19FbnZpby5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Paquetes/Nuevo_Envio/Preview_Nuevo_Envio.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXF1ZXRlc1xOdWV2b19FbnZpb1xQcmV2aWV3X051ZXZvX0VudmlvLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Pages/Paquetes/Rastreo_Paquete/Rastrear_Paquete.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXF1ZXRlc1xSYXN0cmVvX1BhcXVldGVcUmFzdHJlYXJfUGFxdWV0ZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/AccessRequest/Components/WBAccessRequestExistingUser.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEFjY2Vzc1JlcXVlc3RcQ29tcG9uZW50c1xXQkFjY2Vzc1JlcXVlc3RFeGlzdGluZ1VzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/AccessRequest/Components/WBAccessRequestNewUser.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEFjY2Vzc1JlcXVlc3RcQ29tcG9uZW50c1xXQkFjY2Vzc1JlcXVlc3ROZXdVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/AccessRequest/Pages/AccessRequest.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEFjY2Vzc1JlcXVlc3RcUGFnZXNcQWNjZXNzUmVxdWVzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/AccessRequest/Pages/ADAccessRequest.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEFjY2Vzc1JlcXVlc3RcUGFnZXNcQURBY2Nlc3NSZXF1ZXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/AccessRequest/Pages/WBAccessRequest.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEFjY2Vzc1JlcXVlc3RcUGFnZXNcV0JBY2Nlc3NSZXF1ZXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/Authentication/Components/Form2FA.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEF1dGhlbnRpY2F0aW9uXENvbXBvbmVudHNcRm9ybTJGQS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/Authentication/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEF1dGhlbnRpY2F0aW9uXFBhZ2VzXExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/CorrespondenceConsolidation/Pages/CorrespondenceConsolidation.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXENvcnJlc3BvbmRlbmNlQ29uc29saWRhdGlvblxQYWdlc1xDb3JyZXNwb25kZW5jZUNvbnNvbGlkYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/MyPackages/Pages/MyPackages.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXE15UGFja2FnZXNcUGFnZXNcTXlQYWNrYWdlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/PackageShipping/Components/PackageDestinationForm.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFBhY2thZ2VTaGlwcGluZ1xDb21wb25lbnRzXFBhY2thZ2VEZXN0aW5hdGlvbkZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/PackageShipping/Components/PackageDetailsForm.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFBhY2thZ2VTaGlwcGluZ1xDb21wb25lbnRzXFBhY2thZ2VEZXRhaWxzRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/PackageShipping/Components/PackageSummary.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFBhY2thZ2VTaGlwcGluZ1xDb21wb25lbnRzXFBhY2thZ2VTdW1tYXJ5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/PackageShipping/Pages/PackageShipping.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFBhY2thZ2VTaGlwcGluZ1xQYWdlc1xQYWNrYWdlU2hpcHBpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/RecoveryPassword/Pages/RecuperarPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFJlY292ZXJ5UGFzc3dvcmRcUGFnZXNcUmVjdXBlcmFyUGFzc3dvcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/RecoveryPassword/Pages/ResetPasswordRequest.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFJlY292ZXJ5UGFzc3dvcmRcUGFnZXNcUmVzZXRQYXNzd29yZFJlcXVlc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/SenderConsolidation/Pages/SenderConsolidation.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFNlbmRlckNvbnNvbGlkYXRpb25cUGFnZXNcU2VuZGVyQ29uc29saWRhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/Tracking/Pages/Tracking.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFRyYWNraW5nXFBhZ2VzXFRyYWNraW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXF9JbXBvcnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Shared/Components/ClaimsViewer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcQ2xhaW1zVmlld2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Shared/Components/Loader.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcTG9hZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Shared/Components/PreviewNewConsolidation/Components/PreviewNewConsolidation.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcUHJldmlld05ld0NvbnNvbGlkYXRpb25cQ29tcG9uZW50c1xQcmV2aWV3TmV3Q29uc29saWRhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Shared/Components/SessionValidator.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcU2Vzc2lvblZhbGlkYXRvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Shared/Components/ViewErrorsModal.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcVmlld0Vycm9yc01vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Shared/Components/ViewPackage.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENvbXBvbmVudHNcVmlld1BhY2thZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Components/Layout/LoginLayout.razor]

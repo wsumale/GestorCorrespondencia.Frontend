@@ -1,0 +1,34 @@
+﻿@layout LoginLayout
+
+@using GestorCorrespondencia.Frontend.Functionalities.AccessRequest.Model
+
+<RadzenTemplateForm Data="Form" Submit="@OnSubmit" TItem="WBAccessRequestNewUserForm" class="form-solicitud">
+
+    <DataAnnotationsValidator />
+
+    <RadzenRow>
+        <RadzenFormField Text="Código" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+            <RadzenNumeric @bind-Value="Form.EmployeeCode" Name="EmployeeCode" ShowUpDown="false" class="form-input" ReadOnly="@readOnlyCodigo" autocomplete="off" />
+        </RadzenFormField>
+        <ValidationMessage For="@(() => Form.EmployeeCode)" class="rz-message rz-messages-error" />
+    </RadzenRow>
+
+    <RadzenRow>
+        <RadzenFormField Text="Contraseña" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+            <RadzenPassword @bind-Value="Form.Password" Name="Password" class="form-input" automcomplete="off" />
+        </RadzenFormField>
+        <ValidationMessage For="@(() => Form.Password)" class="rz-message rz-messages-error" />
+    </RadzenRow>
+
+    <RadzenRow>
+        <RadzenFormField Text="Confirmar Contraseña" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+            <RadzenPassword @bind-Value="Form.RepeatPassword" Name="RepeatPassword" class="form-input" automcomplete="off" />
+        </RadzenFormField>
+        <ValidationMessage For="@(() => Form.RepeatPassword)" class="rz-message rz-messages-error" />
+    </RadzenRow>
+
+    <RadzenRow class="rz-display-flex rz-justify-content-center">
+        <RadzenButton Text="Solicitar Acceso" ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" IsBusy="@busy" class="solicitud-submit" />
+    </RadzenRow>
+</RadzenTemplateForm>
+

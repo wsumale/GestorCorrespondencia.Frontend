@@ -1,0 +1,59 @@
+﻿@page "/view-tracking"
+
+@using Radzen 
+@using Radzen.Blazor
+@using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model
+
+<Loader Loading="@loading" />
+@if(paqueteEncontrado){
+    <RadzenRow class="rz-display-flex rz-flex-wrap">
+        <RadzenColumn Size="7" SizeXS="12" SizeSM="12" SizeMD="12" SizeLG="7" SizeXL="7" SizeXX="7" class="order-mobile-last min-height-40vh">
+            <RadzenCard class="rz-background-color-base-light card-full-height">
+                <RadzenHeading Size="H3" Text="Detalle del Envío" />
+                <RadzenDataGrid Data="@model.Detalles" TItem="PackageDetail" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
+                    <Columns>
+                        <RadzenDataGridColumn TItem="PackageDetail" Property="Type" Title="Tipo" />
+                        <RadzenDataGridColumn TItem="PackageDetail" Property="Comment" Title="Comentarios" />
+                        <RadzenDataGridColumn TItem="PackageDetail" Property="Quantity" Title="Cantidad" />
+                    </Columns>
+                </RadzenDataGrid>
+            </RadzenCard>
+        </RadzenColumn>
+
+        <RadzenColumn Size="5" SizeXS="12" SizeSM="12" SizeMD="12" SizeLG="5" SizeXL="5" SizeXX="5" class="order-mobile-first min-height-40vh">
+            <RadzenCard class="rz-background-color-base-light card-full-height">
+                <RadzenHeading Size="H3" Text="Información del Envío" />
+
+                <p class="rz-mt-2 rz-mb-2"><strong>Fecha de envío:</strong> <span class="text-morado">04/mar/2025</span></p>
+                <p class="rz-mt-2 rz-mb-2"><strong>Estado:</strong> <span class="text-azul-claro">Nuevo Envío</span></p>
+                <p class="rz-mt-2 rz-mb-2"><strong>Rastreo:</strong> <span class="text-morado">@model.NumeroRastreo</span></p>
+
+                <p class="rz-mt-2 rz-mb-2"><strong>Remitente:</strong> <span class="text-naranja">@model.EmailDestinatario</span></p>
+                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de origen:</strong> <span class="text-azul-claro">@model.UbicacionOrigen</span></p>
+                <p class="rz-mt-2 rz-mb-2"><strong>Origen:</strong> <span class="text-azul-claro">@model.Origen</span></p>
+
+                <p class="rz-mt-2 rz-mb-2"><strong>Destinatario:</strong> <span class="text-naranja">@model.NombreDestinatario</span></p>
+                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de destino:</strong> <span class="text-azul-claro">@model.UbicacionDestino</span></p>
+                <p class="rz-mt-2 rz-mb-2"><strong>Destino:</strong> <span class="text-azul-claro">@model.Destino</span></p>
+
+                <pre class="rz-mt-2 rz-mb-2">
+                <strong>Observaciones:</strong><br />@model.Observaciones
+                </pre>
+            </RadzenCard>
+        </RadzenColumn>
+    </RadzenRow>
+
+    <RadzenRow>
+        <RadzenCard class="rz-mt-5 rz-background-color-base-light">
+            <RadzenHeading Size="H3" Text="Historial de Cambios" />
+            <RadzenDataGrid Data="@changelog" TItem="PackageChangelog" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
+                <Columns>
+                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Estado" Title="Estado" />
+                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Comentario" Title="Comentario" />
+                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Usuario" Title="Usuario" />
+                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Fecha" Title="Fecha" />
+                </Columns>
+            </RadzenDataGrid>
+        </RadzenCard>
+    </RadzenRow>
+}

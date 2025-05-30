@@ -1,0 +1,33 @@
+﻿@page "/paquetes/enviar"
+
+@using GestorCorrespondencia.Frontend.Functionalities.PackageShipping.Components
+@using GestorCorrespondencia.Frontend.Shared.Components
+
+<SessionValidator title="Enviar Paquete" />
+<Loader Loading="loading" />
+
+<div class="main-container">
+    <RadzenText Text="@title" class="form-title" />
+    <RadzenText Text="Complete el siguiente formulario para realizar el envío de su paquete. Asegúrese de proporcionar la información correctamente." class="description-text" />
+
+    <RadzenSteps Change="@OnChange" CanChange="@CanChange" PreviousText="Volver" NextText="Continuar" >
+        <Steps>
+            <RadzenStepsItem Text="Información del envío">
+                <PackageDestinationForm shippingForm="@shippingForm" Locations="@Locations" OnModelUpdated="@(m => shippingForm = m)" OnLoading="@(m => loading = m)" />
+            </RadzenStepsItem>
+
+            <RadzenStepsItem Text="Detalle del envío">
+                <PackageDetailsForm shippingForm="@shippingForm" OnModelUpdated="@(m => shippingForm = m)" />
+            </RadzenStepsItem>
+
+            <RadzenStepsItem Text="Confirmar Envío">
+                <PackageSummary shippingForm="@shippingForm" />
+                <div class="form-buttons">
+                    <RadzenButton Text="Cancelar" class="btn-cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
+                    <RadzenButton Text="Enviar" class="btn-enviar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="Submit" />
+                </div>
+            </RadzenStepsItem>
+        </Steps>
+    </RadzenSteps>
+</div>
+

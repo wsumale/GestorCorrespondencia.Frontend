@@ -1,0 +1,51 @@
+﻿@if (shippingForm != null)
+{
+    <div class="preview-container">
+
+        <div class="form-container">
+            <div class="form-left">
+                <p class="rz-mb-0"><strong>Nombre del destinatario:</strong> @shippingForm.AddresseeName</p>
+                <p class="rz-mb-3"><strong>Correo del destinatario:</strong> @shippingForm.AddresseeEmail</p>
+            </div>
+            <div class="form-right">
+                <p class="rz-mb-3"><strong>Destino:</strong>@shippingForm.LocationName</p>
+            </div>
+            <div class="form-field full-width">
+                <pre><strong>Observaciones:<br /></strong>@shippingForm.Observations</pre>
+            </div>
+        </div>
+
+        <hr />
+
+        @if (shippingForm.Details != null && shippingForm.Details.Any())
+        {
+            <RadzenTable>
+                <RadzenTableHeader>
+                    <RadzenTableHeaderRow>
+                        <RadzenTableHeaderCell class="detalle-header-cell">Tipo</RadzenTableHeaderCell>
+                        <RadzenTableHeaderCell class="detalle-header-cell">Comentarios</RadzenTableHeaderCell>
+                        <RadzenTableHeaderCell class="detalle-header-cell">Cantidad</RadzenTableHeaderCell>
+                    </RadzenTableHeaderRow>
+                </RadzenTableHeader>
+                <RadzenTableBody>
+                    @foreach (var detail in shippingForm.Details)
+                    {
+                        <RadzenTableRow>
+                            <RadzenTableCell>@detail.Type</RadzenTableCell>
+                            <RadzenTableCell>@detail.Comment</RadzenTableCell>
+                            <RadzenTableCell>@detail.Quantity</RadzenTableCell>
+                        </RadzenTableRow>
+                    }
+                </RadzenTableBody>
+            </RadzenTable>
+        }
+        else
+        {
+            <p>No se han agregado detalles al envío.</p>
+        }
+    </div>
+}
+else
+{
+    <p>No hay información para mostrar.</p>
+}

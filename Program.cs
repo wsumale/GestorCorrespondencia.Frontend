@@ -1,36 +1,24 @@
 using Radzen;
 using GestorCorrespondencia.Frontend.Components;
-using GestorCorrespondencia.Frontend.Model;
-using GestorCorrespondencia.Frontend.Services;
-using GestorCorrespondencia.Frontend.Services.Http;
-using GestorCorrespondencia.Frontend.Services.Auth;
+using GestorCorrespondencia.Frontend.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+var config = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).Build();
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddRadzenComponents();
-builder.Services.AddSingleton<LayoutService>();
-builder.Services.AddScoped<ApiService>();
-builder.Services.AddScoped<SesionService>();
 
-// Cargar configuración desde appsettings.json
-builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-
-var apiSettingsSection = builder.Configuration.GetSection("ApiSettings");
-builder.Services.Configure<ApiSettings>(apiSettingsSection);
-builder.Services.AddSingleton(apiSettingsSection.Get<ApiSettings>());
-
-builder.Services.AddScoped(sp =>
-{
-    var client = new HttpClient();
-    client.DefaultRequestHeaders.UserAgent.ParseAdd("GestorCorrespondencia/1.0");
-    return client;
-});
-
+builder.Services.AddConfigureClient(config);    // ConfigExtension
+builder.Services.AddServices();                 // ServiceExtension
 
 var app = builder.Build();
+
+// Autenticación en el pipeline
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapAuthRoutes();                            // AuthExtension
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -45,7 +33,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 
 app.Run();

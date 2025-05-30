@@ -1,45 +1,21 @@
-﻿@using GestorCorrespondencia.Frontend.Services
-@inject LayoutService LayoutService
-
-<RadzenSidebar Expanded="@(sidebarExpanded)" Responsive="false">
+﻿<RadzenSidebar Expanded="@(sidebarExpanded)" Responsive="false">
     <RadzenPanelMenu>
         <RadzenStack class="sidebar-container-logo">
             <RadzenImage Path="/images/Unisuper.png" class="sidebar-logo" />
-            <RadzenText TextStyle="TextStyle.H4" class="sidebar-logo-title">Gestor de<br />Correspondencia</RadzenText>
+            <RadzenStack class="sidebar-user-info">
+                <RadzenText TextStyle="TextStyle.Body1">@rol</RadzenText>
+                <RadzenText TextStyle="TextStyle.Body2">@name</RadzenText>
+            </RadzenStack>
             <hr class="rz-w-100" />
         </RadzenStack>
+        @foreach (var group in menus.GroupBy(m => m.Section))
+        {
+            <span class="rz-text-disabled-color">– @group.Key</span>
 
-        <RadzenPanelMenuItem Text="Inicio" Icon="home" Path="/home" />
-        <span class="rz-text-disabled-color">– Paquetes</span>
-        <RadzenPanelMenuItem Text="Enviar Paquete" Icon="box_add" Path="/enviar-paquete" />
-        <RadzenPanelMenuItem Text="Rastrear Paquete" Icon="location_searching" Path="/rastrear-paquete" />
-        <RadzenPanelMenuItem Text="Mis Paquetes" Icon="package" Path="/paquetes/mis-paquetes" />
-        <RadzenPanelMenuItem Text="Consolidado Usuario" Icon="package_2" Path="/consolidado/usuario" />
-        <span class="rz-text-disabled-color">- Correspondencia</span>
-        <RadzenPanelMenuItem Text="Consolidado Correspondencia" Icon="package_2" Path="/consolidado/correspondencia" />
+            @foreach (var item in group)
+            {
+                <RadzenPanelMenuItem Text="@item.Module" Icon="@item.Icon" Path="@item.Path" />
+            }
+        }
     </RadzenPanelMenu>
 </RadzenSidebar>
-
-@code {
-    private bool sidebarExpanded;
-    private string _searchModule = string.Empty;
-
-    protected override void OnInitialized()
-    {
-        // Obtener el estado inicial del sidebar desde el servicio
-        sidebarExpanded = LayoutService.GetSidebarExpanded();
-        // Suscribirse a cambios
-        LayoutService.OnSidebarExpandedChanged += OnSidebarStateChanged;
-    }
-
-    private void OnSidebarStateChanged(bool expanded)
-    {
-        sidebarExpanded = expanded;
-        InvokeAsync(StateHasChanged);
-    }
-
-    private void SearchModule(ChangeEventArgs args)
-    {
-        _searchModule = args.Value!.ToString()!;
-    }
-}

@@ -1,0 +1,58 @@
+﻿@page "/"
+
+@layout LoginLayout
+
+@using GestorCorrespondencia.Frontend.Functionalities.Authentication.Model.Form
+
+<PageTitle>Iniciar Sesíón - Gestor de Correspondencia</PageTitle>
+<div class="login-card">
+    <h1 class="title">Gestor de Correspondencia</h1>
+    <div class="accent-bar"></div>
+    <p class="subtitle">@subtitle</p>
+
+    <RadzenTemplateForm Data="@formLogin" Submit="@OnSubmit" TItem="LoginForm" class="form-login">
+
+        <DataAnnotationsValidator />
+
+        @if (!requiredAuthenticatorCode)
+        {
+            <RadzenRow>
+                <RadzenFormField Text="Username" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+                    <RadzenTextBox @bind-Value="formLogin.Username" Name="Userame" class="form-input" autocomplete="off" />
+                </RadzenFormField>
+                <ValidationMessage For="@(() => formLogin.Username)" class="rz-message rz-messages-error" />
+            </RadzenRow>
+
+            <RadzenRow>
+                <RadzenFormField Text="Contraseña" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+                    <RadzenPassword @bind-Value="formLogin.Password" Name="Password" class="form-input" automcomplete="off" />
+                </RadzenFormField>
+                <ValidationMessage For="@(() => formLogin.Password)" class="rz-message rz-messages-error" />
+            </RadzenRow>
+
+            <RadzenLink Text="¿Olvidaste tu contraseña?" Path="/recuperar" class="reset-password" />
+
+            <RadzenRow class="rz-display-flex rz-justify-content-center">
+                <RadzenButton Text="Iniciar sesión" IsBusy="@busy" BusyText="Iniciando sesión" ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" class="login-submit" />
+            </RadzenRow>
+        } else {
+            <RadzenRow>
+                <RadzenSecurityCode @bind-Value="formLogin.AuthenticatorCode" Type="SecurityCodeType.Numeric" Count="6" Gap="0.5rem" />
+                <ValidationMessage For="@(() => formLogin.AuthenticatorCode)" class="rz-message rz-messages-error" />
+            </RadzenRow>
+
+            <RadzenRow class="rz-display-flex rz-justify-content-center">
+                <RadzenButton Text="Autenticar" IsBusy="@busy" BusyText="Autenticando" ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" class="login-submit" />
+            </RadzenRow>
+        }
+
+    </RadzenTemplateForm>
+
+    @if (!requiredAuthenticatorCode)
+    {
+        <p class="signup-link">¿Aún no cuentas con acceso?<br /><RadzenLink Text="Solicita tu acceso aquí." Path="/solicitar-acceso" class="request-access" /></p>
+    } else {
+        <p class="signup-link">¿Ingresaste mal?<br /><span class="login" @onclick="returnToLogin">Volver al inicio de sesión</span></p>
+    }
+
+</div>

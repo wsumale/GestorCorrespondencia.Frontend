@@ -1,0 +1,80 @@
+﻿@page "/consolidados/consolidar"
+
+@using GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Model
+@using GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Http
+@using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model
+@using GestorCorrespondencia.Frontend.Services.Dialogs
+@using GestorCorrespondencia.Frontend.Shared.Components
+@using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model
+@using System.Text.Json
+
+@inject CustomDialogService CustomDialogService
+@inject SenderConsolidationHttp SenderConsolidationHttp
+
+@code {
+    private ConsolidatedDetail package = new();
+    private IList<ConsolidatedDetail> packages = new List<ConsolidatedDetail>();
+
+    protected override async void OnInitialized()
+    {
+        loading = true;
+        packages = await SenderConsolidationHttp.GetPackagesPendingConsolidationAsync();
+        loading = false;
+
+        StateHasChanged();
+    }
+}
+
+<SessionValidator title="Consolidado a correspondencia" />
+<Loader Loading="@loading" />
+
+<div class="main-container">
+
+    <RadzenText Text="Consolidar paquetes" TextStyle="TextStyle.H3" class="form-title" />
+
+    <RadzenDataGrid TItem="ConsolidatedDetail" @ref="grid" AllowRowSelectOnRowClick="@allowRowSelectOnRowClick"
+                    AllowFiltering="true" ApplyFilterText="Aplicar" ClearFilterText="Limpiar" EmptyText="No hay paquetes pendientes de consolidar"
+                    FilterMode="FilterMode.CheckBoxList" FilterPopupRenderMode="PopupRenderMode.OnDemand"
+                    FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="10"
+                    AllowSorting="true" Data="@packages" ColumnWidth="200px"
+                    SelectionMode="DataGridSelectionMode.Multiple" @bind-Value=@selectedPackages>
+        <Columns>
+            <RadzenDataGridColumn Filterable="false" Sortable="false" Width="42px">
+                <HeaderTemplate>
+                    <RadzenCheckBox TabIndex="-1" TriState="false" TValue="bool?"
+                                    InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select all items" }})"
+                                    Value="@(selectedPackages == null ||
+                                             selectedPackages?.Any() != true ? false : !packages.All(i => selectedPackages.Contains(i)) ?
+                                             null : packages.Any(i => selectedPackages.Contains(i)))"
+                                    Change="@(args => selectedPackages = args == true ? packages.ToList() : null)"
+                                    Disabled="false" />
+                </HeaderTemplate>
+                <Template Context="data">
+                    <RadzenCheckBox TabIndex="-1" TriState="false" Value="@(selectedPackages != null && selectedPackages.Contains(data))"
+                                    InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Select item" }})"
+                                    TValue="bool" Change=@(args => { if (!allowRowSelectOnRowClick) { grid.SelectRow(data); } }) />
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="PackageId" Title ="Rastreo" Width="100px">
+                <Template Context="Package">
+                    <span class="clickable-text" @onclick:stopPropagation="true" @onclick="() => CustomDialogService.OpenViewPackage()">
+                        @Package.PackageId
+                    </span>
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Title="Fecha" Width="100px">
+                <Template Context="package">
+                    @package.Created.ToLocalTime().ToString("dd/MM/yyyy") 
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="Sender" Title="Remitente" />
+            <RadzenDataGridColumn Property="SenderLocation" Title="Ubicación Origen" />
+            <RadzenDataGridColumn Property="Addressee" Title="Origen" />
+            <RadzenDataGridColumn Property="RecipientLocation" Title="Destinatario" />
+        </Columns>
+    </RadzenDataGrid>
+
+    <RadzenRow class="rz-mt-3 rz-display rz-justify-content-right rz-justify-content-end">
+        <RadzenButton Text="Enviar Consolidado" Click="OpenPreviewConsolidation" Disabled="@(selectedPackages == null || !selectedPackages.Any())" />
+    </RadzenRow>
+</div>

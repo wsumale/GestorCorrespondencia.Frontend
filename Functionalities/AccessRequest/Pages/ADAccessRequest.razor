@@ -1,0 +1,27 @@
+﻿@layout LoginLayout
+
+@using GestorCorrespondencia.Frontend.Functionalities.AccessRequest.Model
+
+<RadzenTemplateForm Data="Form" Submit="@OnSubmit" TItem="ADAccessRequestForm" class="form-solicitud">
+
+    <DataAnnotationsValidator />
+
+    <RadzenRow>
+        <RadzenFormField Text="Usuario" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+            <RadzenTextBox @bind-Value="Form.Username" Name="Usuario" class="form-input" autocomplete="off" />
+        </RadzenFormField>
+        <ValidationMessage For="@(() => Form.Username)" class="rz-message rz-messages-error" />
+    </RadzenRow>
+
+    <RadzenRow>
+        <RadzenFormField Text="Contraseña" Variant="Variant.Filled" class="w-100 rz-text-align-left">
+            <RadzenPassword @bind-Value="Form.Password" Name="Password" class="form-input" automcomplete="off" />
+        </RadzenFormField>
+        <ValidationMessage For="@(() => Form.Password)" class="rz-message rz-messages-error" />
+    </RadzenRow>
+
+    <RadzenRow class="rz-display-flex rz-justify-content-center">
+        <RadzenButton Text="Solicitar Acceso" IsBusy=@busy ButtonStyle="ButtonStyle.Primary" ButtonType="ButtonType.Submit" class="solicitud-submit" />
+    </RadzenRow>
+</RadzenTemplateForm>
+

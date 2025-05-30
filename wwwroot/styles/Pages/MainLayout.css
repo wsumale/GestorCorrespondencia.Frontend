@@ -2,12 +2,38 @@
     top: 0;
     border-radius: var(--rz-layout-body-border-radius);
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .main-header-label {
     font-family: "Poppins-Regular";
     font-size: 1.25rem;
     margin: 0;
+}
+
+.main-header-user {
+    font-family: "Poppins-Regular";
+    font-size: 0.8rem;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 0.5rem;
+}
+
+.main-header-user-info,
+.main-header-user-logout {
+    gap: 0;
+    justify-content: center !important;
+}
+
+.main-header-user-info > label {
+    text-align: right;
+}
+
+.main-header-user-logout > button i {
+    font-size: 2rem !important;
+    font-weight: 300;
 }
 
 .sidebar-container-logo {
@@ -23,4 +49,22 @@
 
 .sidebar-logo-title {
     text-align: center;
+}
+
+.sidebar-user-info {
+    gap: 0;
+}
+
+.sidebar-user-info p {
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Poppins-Regular';
+}
+
+.sidebar-user-info p:first-child{
+    font-weight: bolder;
+}
+
+.rz-navigation-item-text {
+    font-weight: normal;
 }
