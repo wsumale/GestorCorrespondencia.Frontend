@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z1d0RvJGaMtIR9mM/Xh6izabMKkRhK4EtKsPIwHKOig=",
+  "Hash": "P8lzx1aORqumEbwodyDaYuIE6GuebUmXoaLeUg5WI5c=",
   "Source": "GestorCorrespondencia.Frontend",
   "BasePath": "_content/GestorCorrespondencia.Frontend",
   "Mode": "Default",
@@ -1382,12 +1382,12 @@
       "OriginalItemSpec": "wwwroot\\fonts\\RobotoFlex.woff2"
     },
     {
-      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\bouncing_squares.svg",
+      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\invite-only.svg",
       "SourceId": "GestorCorrespondencia.Frontend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
       "BasePath": "_content/GestorCorrespondencia.Frontend",
-      "RelativePath": "images/bouncing_squares#[.{fingerprint}]?.svg",
+      "RelativePath": "images/invite-only#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1396,19 +1396,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2s9bxm7poc",
-      "Integrity": "vnBKUKQOnADWifI4Sh4nYCPgeqDd2gC3UYQMnCwOr/w=",
+      "Fingerprint": "o4zc7n2lib",
+      "Integrity": "2L+YrhWNbDVgdxpRmW6rNP0w5WpE7kPk/Gn5mMzYg7Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\bouncing_squares.svg"
+      "OriginalItemSpec": "wwwroot\\images\\invite-only.svg"
     },
     {
-      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\spinner.svg",
+      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\lock.svg",
       "SourceId": "GestorCorrespondencia.Frontend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
       "BasePath": "_content/GestorCorrespondencia.Frontend",
-      "RelativePath": "images/spinner#[.{fingerprint}]?.svg",
+      "RelativePath": "images/lock#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1417,11 +1417,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wv50ml6jkc",
-      "Integrity": "NHi/H/lb/8i+2v/Jq1Afl80LbXeNq6GDK+RRaIHDovk=",
+      "Fingerprint": "325ay7k4oo",
+      "Integrity": "5alY3XMtH/b/0erUzrQWGROwrFEgWbxmnZzr9udHTFA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\spinner.svg"
+      "OriginalItemSpec": "wwwroot\\images\\lock.svg"
+    },
+    {
+      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
+      "SourceId": "GestorCorrespondencia.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
+      "BasePath": "_content/GestorCorrespondencia.Frontend",
+      "RelativePath": "images/send#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m7oxvqadbh",
+      "Integrity": "0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\send.svg"
     },
     {
       "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Unisuper.png",
@@ -1487,6 +1508,48 @@
       "OriginalItemSpec": "wwwroot\\js\\auth.js"
     },
     {
+      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Download.js",
+      "SourceId": "GestorCorrespondencia.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
+      "BasePath": "_content/GestorCorrespondencia.Frontend",
+      "RelativePath": "js/Download#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kazuxkgxs8",
+      "Integrity": "1CBUWM+Ma5On32LhBxqoryukbfdxwCEWUSYGj8UA2Uo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Download.js"
+    },
+    {
+      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Scanner.js",
+      "SourceId": "GestorCorrespondencia.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
+      "BasePath": "_content/GestorCorrespondencia.Frontend",
+      "RelativePath": "js/Scanner#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q4rnimmhfz",
+      "Integrity": "GvNwt2272zBIpNCSi7R0K1ZleFDAde1RLPz5kib0h0c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Scanner.js"
+    },
+    {
       "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\EnvelopeLoader.css",
       "SourceId": "GestorCorrespondencia.Frontend",
       "SourceType": "Discovered",
@@ -1543,8 +1606,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lve6e6193u",
-      "Integrity": "0YY1zqMJL8QGIL3V1Wdh7v5xnel8+oDmuv8cw0Tgx5Q=",
+      "Fingerprint": "6cxvpg2iay",
+      "Integrity": "eqw9n5dqFViuCxN31ibk7lwb78UJL7IDXvt2vj5bI0U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\styles\\gdc.css"
@@ -7029,8 +7092,8 @@
       ]
     },
     {
-      "Route": "images/bouncing_squares.2s9bxm7poc.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\bouncing_squares.svg",
+      "Route": "images/invite-only.o4zc7n2lib.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\invite-only.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7039,7 +7102,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "826"
+          "Value": "6116"
         },
         {
           "Name": "Content-Type",
@@ -7047,11 +7110,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vnBKUKQOnADWifI4Sh4nYCPgeqDd2gC3UYQMnCwOr/w=\""
+          "Value": "\"2L+YrhWNbDVgdxpRmW6rNP0w5WpE7kPk/Gn5mMzYg7Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 16:15:32 GMT"
+          "Value": "Mon, 02 Jun 2025 16:47:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7061,21 +7124,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "2s9bxm7poc"
+          "Value": "o4zc7n2lib"
         },
         {
           "Name": "label",
-          "Value": "images/bouncing_squares.svg"
+          "Value": "images/invite-only.svg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vnBKUKQOnADWifI4Sh4nYCPgeqDd2gC3UYQMnCwOr/w="
+          "Value": "sha256-2L+YrhWNbDVgdxpRmW6rNP0w5WpE7kPk/Gn5mMzYg7Q="
         }
       ]
     },
     {
-      "Route": "images/bouncing_squares.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\bouncing_squares.svg",
+      "Route": "images/invite-only.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\invite-only.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7084,7 +7147,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "826"
+          "Value": "6116"
         },
         {
           "Name": "Content-Type",
@@ -7092,11 +7155,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vnBKUKQOnADWifI4Sh4nYCPgeqDd2gC3UYQMnCwOr/w=\""
+          "Value": "\"2L+YrhWNbDVgdxpRmW6rNP0w5WpE7kPk/Gn5mMzYg7Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 21 Apr 2025 16:15:32 GMT"
+          "Value": "Mon, 02 Jun 2025 16:47:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7106,13 +7169,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vnBKUKQOnADWifI4Sh4nYCPgeqDd2gC3UYQMnCwOr/w="
+          "Value": "sha256-2L+YrhWNbDVgdxpRmW6rNP0w5WpE7kPk/Gn5mMzYg7Q="
         }
       ]
     },
     {
-      "Route": "images/spinner.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\spinner.svg",
+      "Route": "images/lock.325ay7k4oo.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\lock.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7121,7 +7184,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2723"
+          "Value": "6645"
         },
         {
           "Name": "Content-Type",
@@ -7129,48 +7192,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NHi/H/lb/8i+2v/Jq1Afl80LbXeNq6GDK+RRaIHDovk=\""
+          "Value": "\"5alY3XMtH/b/0erUzrQWGROwrFEgWbxmnZzr9udHTFA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 17:22:53 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NHi/H/lb/8i+2v/Jq1Afl80LbXeNq6GDK+RRaIHDovk="
-        }
-      ]
-    },
-    {
-      "Route": "images/spinner.wv50ml6jkc.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\spinner.svg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2723"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/svg+xml"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NHi/H/lb/8i+2v/Jq1Afl80LbXeNq6GDK+RRaIHDovk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 17:22:53 GMT"
+          "Value": "Mon, 02 Jun 2025 16:39:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7180,15 +7206,134 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wv50ml6jkc"
+          "Value": "325ay7k4oo"
         },
         {
           "Name": "label",
-          "Value": "images/spinner.svg"
+          "Value": "images/lock.svg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NHi/H/lb/8i+2v/Jq1Afl80LbXeNq6GDK+RRaIHDovk="
+          "Value": "sha256-5alY3XMtH/b/0erUzrQWGROwrFEgWbxmnZzr9udHTFA="
+        }
+      ]
+    },
+    {
+      "Route": "images/lock.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\lock.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6645"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5alY3XMtH/b/0erUzrQWGROwrFEgWbxmnZzr9udHTFA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 16:39:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5alY3XMtH/b/0erUzrQWGROwrFEgWbxmnZzr9udHTFA="
+        }
+      ]
+    },
+    {
+      "Route": "images/send.m7oxvqadbh.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 16:41:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m7oxvqadbh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/send.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio="
+        }
+      ]
+    },
+    {
+      "Route": "images/send.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 16:41:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio="
         }
       ]
     },
@@ -7439,6 +7584,170 @@
       ]
     },
     {
+      "Route": "js/Download.js",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Download.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "242"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1CBUWM+Ma5On32LhBxqoryukbfdxwCEWUSYGj8UA2Uo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 16:46:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1CBUWM+Ma5On32LhBxqoryukbfdxwCEWUSYGj8UA2Uo="
+        }
+      ]
+    },
+    {
+      "Route": "js/Download.kazuxkgxs8.js",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Download.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "242"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1CBUWM+Ma5On32LhBxqoryukbfdxwCEWUSYGj8UA2Uo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Jun 2025 16:46:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kazuxkgxs8"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Download.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1CBUWM+Ma5On32LhBxqoryukbfdxwCEWUSYGj8UA2Uo="
+        }
+      ]
+    },
+    {
+      "Route": "js/Scanner.js",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Scanner.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "539"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GvNwt2272zBIpNCSi7R0K1ZleFDAde1RLPz5kib0h0c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 15:25:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GvNwt2272zBIpNCSi7R0K1ZleFDAde1RLPz5kib0h0c="
+        }
+      ]
+    },
+    {
+      "Route": "js/Scanner.q4rnimmhfz.js",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Scanner.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "539"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GvNwt2272zBIpNCSi7R0K1ZleFDAde1RLPz5kib0h0c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 10 Jun 2025 15:25:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q4rnimmhfz"
+        },
+        {
+          "Name": "label",
+          "Value": "js/Scanner.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GvNwt2272zBIpNCSi7R0K1ZleFDAde1RLPz5kib0h0c="
+        }
+      ]
+    },
+    {
       "Route": "styles/EnvelopeLoader.css",
       "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\EnvelopeLoader.css",
       "Selectors": [],
@@ -7603,6 +7912,51 @@
       ]
     },
     {
+      "Route": "styles/gdc.6cxvpg2iay.css",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2780"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eqw9n5dqFViuCxN31ibk7lwb78UJL7IDXvt2vj5bI0U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Jun 2025 22:43:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6cxvpg2iay"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/gdc.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eqw9n5dqFViuCxN31ibk7lwb78UJL7IDXvt2vj5bI0U="
+        }
+      ]
+    },
+    {
       "Route": "styles/gdc.css",
       "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc.css",
       "Selectors": [],
@@ -7613,7 +7967,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2782"
+          "Value": "2780"
         },
         {
           "Name": "Content-Type",
@@ -7621,11 +7975,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0YY1zqMJL8QGIL3V1Wdh7v5xnel8+oDmuv8cw0Tgx5Q=\""
+          "Value": "\"eqw9n5dqFViuCxN31ibk7lwb78UJL7IDXvt2vj5bI0U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 16 May 2025 21:23:45 GMT"
+          "Value": "Thu, 05 Jun 2025 22:43:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7635,52 +7989,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0YY1zqMJL8QGIL3V1Wdh7v5xnel8+oDmuv8cw0Tgx5Q="
-        }
-      ]
-    },
-    {
-      "Route": "styles/gdc.lve6e6193u.css",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\gdc.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2782"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0YY1zqMJL8QGIL3V1Wdh7v5xnel8+oDmuv8cw0Tgx5Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 16 May 2025 21:23:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lve6e6193u"
-        },
-        {
-          "Name": "label",
-          "Value": "styles/gdc.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0YY1zqMJL8QGIL3V1Wdh7v5xnel8+oDmuv8cw0Tgx5Q="
+          "Value": "sha256-eqw9n5dqFViuCxN31ibk7lwb78UJL7IDXvt2vj5bI0U="
         }
       ]
     },

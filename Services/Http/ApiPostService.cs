@@ -54,7 +54,7 @@ public class ApiPostService : IApiPostService
 
             request.Headers.UserAgent.ParseAdd("GestorCorrespondencia/1.0");
 
-            if (source == 1)
+            if (source != 2)
             {
                 await _accessControlService.RefreshTokenIfExpiringAsync();
                 var tokenInfo = await _getCurrentUser.GetTokenInfoAsync();

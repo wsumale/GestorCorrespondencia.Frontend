@@ -4,6 +4,9 @@ using GestorCorrespondencia.Frontend.Shared.Model;
 using System.Text.Json;
 using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
 using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Components;
+using GestorCorrespondencia.Frontend.Shared.Components.ViewPackageDetail.Components;
+using GestorCorrespondencia.Frontend.Shared.Components.CreatePackageIncident.Components;
+using GestorCorrespondencia.Frontend.Shared.Components.ConsolidationReceiveList.Components;
 
 namespace GestorCorrespondencia.Frontend.Services.Dialogs;
 public class CustomDialogService
@@ -17,7 +20,7 @@ public class CustomDialogService
 
     public async Task OpenViewPackage ()
     {
-        await DialogService.OpenAsync<ViewPackage>("Detalle del Paquete", null, new DialogOptions
+        await DialogService.OpenAsync<ViewPackageDetail>("Detalle del Paquete", null, new DialogOptions
         {
             Width = "75%",
             Height = "60%",
@@ -34,7 +37,32 @@ public class CustomDialogService
             {
                 { "consolidated", consolidated }
             },
-            new DialogOptions { CssClass = "consolidation-dialog", Width = "75%" });
+            new DialogOptions { CssClass = "consolidation-dialog", Width = "75%" }
+        );
+    }
+
+    public async Task OpenConsolidatedReceptionListAsync(int ConsolidatedId)
+    {
+        await DialogService.OpenAsync<ConsolidationReceiveList>(
+            $"Recibir consolidado: <strong>{ConsolidatedId}</strong>",
+            new Dictionary<string, object?>
+            {
+                { "ConsolidatedId", ConsolidatedId }
+            },
+            new DialogOptions { Width = "75%" }
+        );
+    }
+
+    public async Task OpenCreatePackageIncidentAsync(int PackageId)
+    {
+        await DialogService.OpenAsync<CreatePackageIncident>(
+            $"Crear incidencia, paquete: <strong>{PackageId}</strong>",
+            new Dictionary<string, object?>
+            {
+                { "PackageId", PackageId }
+            },
+            new DialogOptions { Width = "500px" }
+        );
     }
 
     public async Task OpenViewErrors (HttpResponseMessage response)

@@ -3,7 +3,7 @@
 namespace GestorCorrespondencia.Frontend.Functionalities.Authentication.DTO;
 public class TwoFactorSettingsResponseDto
 {
-    [JsonPropertyName("authenticatorCode")]
+    [JsonPropertyName("qrCodeUri")]
     public string? qrCodeUri { get; set; }
 
     [JsonPropertyName("secretKey")]

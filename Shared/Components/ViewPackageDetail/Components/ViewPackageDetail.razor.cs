@@ -2,8 +2,8 @@ using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using Microsoft.AspNetCore.Components;
 using Radzen;
 
-namespace GestorCorrespondencia.Frontend.Shared.Components;
-public partial class ViewPackage
+namespace GestorCorrespondencia.Frontend.Shared.Components.ViewPackageDetail.Components;
+public partial class ViewPackageDetail
 {
     [Inject] DialogService DialogService { get; set; } = default!;
 

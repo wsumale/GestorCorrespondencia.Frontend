@@ -1,4 +1,7 @@
 using System.Security.Claims;
+using System.Text.Json;
+using GestorCorrespondencia.Frontend.Services.Http;
+using GestorCorrespondencia.Frontend.Services.Security;
 using GestorCorrespondencia.Frontend.Services.UI;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -12,17 +15,27 @@ public partial class SessionValidator
     [Inject] NavigationManager Navigation { get; set; } = default!;
     [Inject] DialogService DialogService { get; set; } = default!;
     [Inject] MainLayoutService MainLayoutService { get; set; } = default!;
+    [Inject] AccessControlService AccessControlService { get; set; } = default!;
+    [Inject] ApiHeadAccessService ApiHeadAccessService { get; set; } = default!;
     [Inject] ILogger<SessionValidator> _logger { get; set; } = default!;
     [Inject] IJSRuntime JSRuntime { get; set; } = default!;
     [Parameter] public string? title { get; set; }
+    [Parameter] public string? path { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; } = null!;
+
     private ClaimsPrincipal? user;
     private bool _initialized;
     private string _exp = string.Empty;
     private string _expRefreshToken = string.Empty;
     private string _urlCloseSession = "/auth/logout";
+    private bool _hasAccess = false;
+    private bool _notHasAccess = false;
+    private bool _loading = false;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+            _loading = true; 
+
         if (firstRender && !_initialized)
         {
             _initialized = true;
@@ -46,7 +59,11 @@ public partial class SessionValidator
                 return;
             }
 
-            await Validator();
+            await ValidatorAsync();
+
+            _loading = false;
+
+            StateHasChanged();
         }
     }
 
@@ -73,7 +90,7 @@ public partial class SessionValidator
         base.OnInitialized();
     }
 
-    private async Task Validator()
+    private async Task ValidatorAsync()
     {
         var authState = await AuthStateProvider.GetAuthenticationStateAsync();
         var user = authState.User;
@@ -82,20 +99,29 @@ public partial class SessionValidator
         {
             if ((!user.Identity?.IsAuthenticated ?? true) || expDateTime <= DateTime.UtcNow)
             {
-                await CloseSession("Por favor, inicia sesión nuevamente.", "Sesión expirada");
+                await CloseSessionAsync("Por favor, inicia sesión nuevamente.", "Sesión expirada");
             }
             else
             {
-                // validar acceso a módulo
+                await ValidateAccessPathAsync(path!);
             }
         }
         else
         {
-            await CloseSession("No se pudo validar la sesión.", "Error");
+            await CloseSessionAsync("No se pudo validar la sesión.", "Error");
         }
     }
 
-    private async Task CloseSession(string msg, string title)
+    private async Task ValidateAccessPathAsync(string path)
+    {
+        var response = await ApiHeadAccessService.HeadAsync("auth/frontend-path", path, 2, true);
+
+        _hasAccess = response.IsSuccessStatusCode ? true : false;
+        _notHasAccess = !response.IsSuccessStatusCode ? true : false;
+        StateHasChanged();
+    }
+
+    private async Task CloseSessionAsync(string msg, string title)
     {
         await JSRuntime.InvokeVoidAsync("localStorage.setItem", "SessionReason", "expired");
         Navigation.NavigateTo(_urlCloseSession, forceLoad: true);

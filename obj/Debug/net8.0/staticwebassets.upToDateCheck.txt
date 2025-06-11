@@ -26,11 +26,14 @@ wwwroot\fonts\Poppins\Poppins-SemiBoldItalic.ttf
 wwwroot\fonts\Poppins\Poppins-Thin.ttf
 wwwroot\fonts\Poppins\Poppins-ThinItalic.ttf
 wwwroot\fonts\RobotoFlex.woff2
-wwwroot\images\bouncing_squares.svg
-wwwroot\images\spinner.svg
+wwwroot\images\invite-only.svg
+wwwroot\images\lock.svg
+wwwroot\images\send.svg
 wwwroot\images\Unisuper.png
 wwwroot\images\vector-correspondencia.svg
 wwwroot\js\auth.js
+wwwroot\js\Download.js
+wwwroot\js\Scanner.js
 wwwroot\styles\EnvelopeLoader.css
 wwwroot\styles\fonts.css
 wwwroot\styles\gdc.css

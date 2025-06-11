@@ -1,24 +1,51 @@
-﻿@using Radzen.Blazor
-@using Radzen
+﻿<Loader Loading="loading" />
 
-<Loader Loading="loading" />
+@if(consolidated!.Type == 1){
+    <RadzenDataGrid Data="@consolidated!.ConsolidatedDetail" ColumnWidth="200px" AllowPaging="true" PageNumbersCount="10">
+        <Columns>
+            <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="100px" />
+            <RadzenDataGridColumn Title="Fecha" Width="100px">
+                <Template Context="package">
+                    @package.Created.ToLocalTime().ToString("dd/MM/yyyy")
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="Sender" Title="Remitente" />
+            <RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
+            <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
+            <RadzenDataGridColumn Property="RecipientLocation" Title="Destino" />
+        </Columns>
+    </RadzenDataGrid>
 
-<RadzenDataGrid Data="@consolidated!.ConsolidatedDetail" ColumnWidth="200px" AllowPaging="true" PageNumbersCount="10">
-    <Columns>
-        <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="100px" />
-        <RadzenDataGridColumn Title="Fecha" Width="100px">
-            <Template Context="package">
-                @package.Created.ToLocalTime().ToString("dd/MM/yyyy")
-            </Template>
-        </RadzenDataGridColumn>
-        <RadzenDataGridColumn Property="Sender" Title="Remitente" />
-        <RadzenDataGridColumn Property="SenderLocation" Title="Ubicación Origen" />
-        <RadzenDataGridColumn Property="Addressee" Title="Origen" />
-        <RadzenDataGridColumn Property="RecipientLocation" Title="Destinatario" />
-    </Columns>
-</RadzenDataGrid>
+    <RadzenStack>
+        <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
+        <RadzenButton Text="Enviar a correspondencia" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="Submit" />
+    </RadzenStack>
+}
 
-<RadzenStack>
-    <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
-    <RadzenButton Text="Enviar a correspondencia" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="Submit" />
-</RadzenStack>
+@if (consolidated!.Type == 2)
+{
+    <RadzenDataGrid Data="@consolidated!.ConsolidatedDetail" ColumnWidth="200px" AllowPaging="true" PageNumbersCount="10">
+        <Columns>
+            <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="100px" />
+            <RadzenDataGridColumn Title="Fecha" Width="100px">
+                <Template Context="package">
+                    @package.Created.ToLocalTime().ToString("dd/MM/yyyy")
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="Sender" Title="Remitente" />
+            <RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
+            <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
+            <RadzenDataGridColumn title="Ubicación Destino">
+                <Template>
+                    @consolidated.RecipientLocation
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="RecipientLocation" Title="Destino" />
+        </Columns>
+    </RadzenDataGrid>
+
+    <RadzenStack>
+        <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
+        <RadzenButton Text="@($"Enviar a {consolidated.RecipientLocation}")" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="Submit" />
+    </RadzenStack>
+}

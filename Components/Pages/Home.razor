@@ -1,38 +1,40 @@
 ﻿@page "/principal/home"
 
-@using GestorCorrespondencia.Frontend.Shared.Components
-<SessionValidator title="Gestor de Correspondencia" />
+@inject IJSRuntime JS
+<h3>Escáner Global</h3>
 
-@inject ILogger<Home> _logger
-@using GestorCorrespondencia.Frontend.Services.Dialogs
-@inject CustomDialogService CustomDialogService
-@inject DialogService DialogService
+<p><strong>Último código escaneado:</strong> @LastScanned</p>
+<RadzenTextBox @bind-Value="@LastScanned" />
 
-@using GestorCorrespondencia.Frontend.Services.Security
-@inject AccessControlService ACService
+@code {
+    private string buffer = "";
+    private string LastScanned = "";
 
-@using GestorCorrespondencia.Frontend.Services.Http
-@inject ApiPostService ApiPostService
-
-<RadzenButton Click="@(()=>TestRefresh())">Click me</RadzenButton>
-
-@code{
-    async Task TestRefresh(){
-        try{
-            var response = await ApiPostService.PostAsync<object>("aut", null, 1, false);
-            if (response.IsSuccessStatusCode)
-            {
-                _logger.LogWarning("success");
-            }
-            else
-            {
-                // await CustomDialogService.OpenViewErrors(response);
-            }
-        } 
-        catch (Exception e){
-            await DialogService.Alert(e.Message, "Error interno", new AlertOptions() { OkButtonText = "Aceptar" });
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("startGlobalScanner", DotNetObjectReference.Create(this));
         }
+    }
+
+    [JSInvokable]
+    public async Task OnScannerInput(string code)
+    {
+        LastScanned = code;
+        buffer = "";
+        await ProcessScannedCode(code);
+        StateHasChanged();
+    }
+
+    private Task ProcessScannedCode(string code)
+    {
+        Console.WriteLine($"Código procesado: {code}");
+        return Task.CompletedTask;
     }
 }
 
-<ClaimsViewer />
+@using GestorCorrespondencia.Frontend.Shared.Components
+<SessionValidator title="Gestor de Correspondencia" path="/principal/home">
+	<ClaimsViewer />
+</SessionValidator>

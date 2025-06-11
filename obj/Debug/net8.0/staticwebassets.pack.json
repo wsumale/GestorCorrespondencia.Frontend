@@ -121,16 +121,28 @@
       "PackagePath": "staticwebassets\\images\\Unisuper.png"
     },
     {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\bouncing_squares.svg",
-      "PackagePath": "staticwebassets\\images\\bouncing_squares.svg"
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\invite-only.svg",
+      "PackagePath": "staticwebassets\\images\\invite-only.svg"
     },
     {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\spinner.svg",
-      "PackagePath": "staticwebassets\\images\\spinner.svg"
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\lock.svg",
+      "PackagePath": "staticwebassets\\images\\lock.svg"
+    },
+    {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
+      "PackagePath": "staticwebassets\\images\\send.svg"
     },
     {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\vector-correspondencia.svg",
       "PackagePath": "staticwebassets\\images\\vector-correspondencia.svg"
+    },
+    {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Download.js",
+      "PackagePath": "staticwebassets\\js\\Download.js"
+    },
+    {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Scanner.js",
+      "PackagePath": "staticwebassets\\js\\Scanner.js"
     },
     {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\auth.js",

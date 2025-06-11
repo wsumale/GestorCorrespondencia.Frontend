@@ -11,6 +11,8 @@ using GestorCorrespondencia.Frontend.Shared.Interfaces;
 using GestorCorrespondencia.Frontend.Extensions;
 using System.IdentityModel.Tokens.Jwt;
 using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
+using GestorCorrespondencia.Frontend.Services.Http;
 
 namespace GestorCorrespondencia.Frontend.Services.Security;
 public class AccessControlService
@@ -216,10 +218,5 @@ public class AccessControlService
     {
         await _sessionReasonService.SetSessionReasonAsync("expired");
         _authSessionService.CloseSession();
-    }
-
-    public async Task HasAccessToFrontendRouteAsync()
-    {
-
     }
 }

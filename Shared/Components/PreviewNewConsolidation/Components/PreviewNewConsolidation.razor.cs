@@ -4,6 +4,7 @@ using GestorCorrespondencia.Frontend.Services.Http;
 using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.DTO;
 using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using Radzen;
 
 namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Components
@@ -14,6 +15,7 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidati
         [Inject] ApiPostService ApiPostService { get; set; } = default!;
         [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
         [Inject] NavigationManager NavigationManager { get; set; } = default!;
+        [Inject] IJSRuntime JS { get; set; } = default!;
         [Inject] ILogger<PreviewNewConsolidation> _logger { get; set; } = default!;
 
         [Parameter] public Consolidated? consolidated { get; set; }
@@ -38,12 +40,18 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidati
                     dto = new ConsolidatedCorrespondenceRequestDTO { ConsolidatedType = consolidated.Type, RecipientLocationId = consolidated.RecipientLocationId, PackagesIds = packageIds };
                 }
 
-                _logger.LogWarning(JsonSerializer.Serialize(dto, new JsonSerializerOptions { WriteIndented = true }));
-
                 var response = await ApiPostService.PostAsync("consolidados", dto, 1, true);
 
                 if (response.IsSuccessStatusCode)
                 {
+                    var fileBytes = await response.Content.ReadAsByteArrayAsync();
+                    var contentType = response.Content.Headers.ContentType?.ToString() ?? "application/octet-stream";
+                    var fileName = response.Content.Headers.ContentDisposition?.FileName?.Trim('"') ?? "archivo.xlsx";
+
+                    var base64 = Convert.ToBase64String(fileBytes);
+
+                    await JS.InvokeVoidAsync("downloadFromByteArray", fileName, base64, contentType);
+
                     await Success();
                 }
                 else
@@ -62,7 +70,7 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidati
         private async Task Success()
         {
 
-            var redirect = await DialogService.Alert("Consolidado creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptas" });
+            var redirect = await DialogService.Alert("Consolidado creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar" });
             if (redirect == true)
             {
                 NavigationManager.NavigateTo("/principal/home");

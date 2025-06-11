@@ -21,6 +21,9 @@ public class SenderConsolidationView
     [JsonPropertyName("FechaCreacion")]
     public DateTime Created { get; set; }
 
+    [JsonPropertyName("IdEstado")]
+    public int StateId { get; set; }
+
     [JsonPropertyName("Estado")]
-    public int State { get; set; }
+    public string? State { get; set; }
 }

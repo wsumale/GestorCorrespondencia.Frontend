@@ -25,7 +25,7 @@ public partial class PackageShipping
 
     protected override async Task OnInitializedAsync()
     {
-        Locations = await SGUService.GetLocationsAsync();
+        Locations = await SGUService.GetLocationsSendPackagesAsync();
 
         loading = false;
     }

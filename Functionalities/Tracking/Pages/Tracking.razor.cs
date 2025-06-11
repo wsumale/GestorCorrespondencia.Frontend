@@ -1,5 +1,6 @@
 using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using Radzen;
 
 namespace GestorCorrespondencia.Frontend.Functionalities.Tracking.Pages;

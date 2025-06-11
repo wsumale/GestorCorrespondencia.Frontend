@@ -1,0 +1,29 @@
+﻿@page "/recepcion/recibir_consolidados"
+
+<SessionValidator title="Recepción de consolidados" path="/correspondencia/recibir_consolidados">
+
+	<Loader Loading="@loading" />
+
+	<div class="main-container">
+		<RadzenText Text="Consolidados pendientes de recibir" TextStyle="TextStyle.H3" class="form-title" />
+
+		<RadzenDataGrid Data="@consolidates"
+						AllowFiltering="true" ApplyFilterText="Aplicar" ClearFilterText="Limpiar" EmptyText="No hay consolidados pendientes de recibir"
+						FilterMode="FilterMode.CheckBoxList" FilterPopupRenderMode="PopupRenderMode.OnDemand"
+						FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="10"
+						AllowSorting="true" ColumnWidth="200px">
+			<Columns>
+				<RadzenDataGridColumn Property="ConsolidatedId" Title="No. Rastreo" />
+				<RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
+				<RadzenDataGridColumn Property="Sender" Title="Remitente" />
+				<RadzenDataGridColumn Property="Date" Title="Fecha de Envío" />
+				<RadzenDataGridColumn Filterable="false" Sortable="false" Width="120px" TextAlign="TextAlign.Right">
+					<Template Context="Consolidated">
+						<RadzenButton Click="@(args => ConsolidatedReceptionListAsync(Consolidated.ConsolidatedId))" Icon="list_alt_check" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
+					</Template>
+				</RadzenDataGridColumn>
+			</Columns>
+		</RadzenDataGrid>
+	</div>
+
+</SessionValidator>

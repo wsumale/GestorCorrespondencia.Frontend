@@ -79,7 +79,6 @@ public partial class Form2FA
                 });
 
                 Request.secretKey = EncryptionService.Decrypt(Settings!.secretKey!);
-
                 qr = GenerateQRCode(EncryptionService.Decrypt(Settings.qrCodeUri!));
             } else
             {
