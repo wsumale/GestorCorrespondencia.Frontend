@@ -14,10 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Functionalities\PendingPackages\Components\" />
     <Folder Include="Lib\" />
-    <Folder Include="Shared\Components\CreatePackageIncident\Http\" />
-    <Folder Include="Shared\Components\CreatePackageIncident\DTO\" />
-    <Folder Include="Shared\Components\ConsolidationReceiveList\DTO\" />
     <Folder Include="Shared\Components\ViewPackageDetail\DTO\" />
     <Folder Include="Shared\Components\ViewPackageDetail\Http\" />
     <Folder Include="Shared\Components\ViewPackageDetail\Model\" />

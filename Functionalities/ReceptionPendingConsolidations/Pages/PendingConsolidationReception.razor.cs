@@ -17,7 +17,7 @@ public partial class PendingConsolidationReception
     {
         loading = true;
 
-        await LoadData();
+        await LoadDataAsync();
         base.OnInitialized();
 
         loading = false;
@@ -27,10 +27,19 @@ public partial class PendingConsolidationReception
     private async Task ConsolidatedReceptionListAsync(int ConsolidatedId)
     {
         await CustomDialogService.OpenConsolidatedReceptionListAsync(ConsolidatedId);
+        await RefreshLoadDataAsync();
     }
 
-    private async Task LoadData()
+    private async Task LoadDataAsync()
     {
         consolidates = await ReceptionPendingConsolidationsHttp.GetPendingConsolidationsForReceptionAsync();
+    }
+
+    private async Task RefreshLoadDataAsync()
+    {
+        loading = true;
+        await LoadDataAsync();
+        loading = false;
+        StateHasChanged();
     }
 }

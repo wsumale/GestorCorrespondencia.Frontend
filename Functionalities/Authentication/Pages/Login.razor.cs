@@ -94,9 +94,7 @@ public partial class Login
     private async Task ProcesarLoginExitoso(HttpResponseMessage response, string content)
     {
         var token = response.Headers.GetValues("Authorization").FirstOrDefault()?.Replace("Bearer ", "");
-
         var user = JsonSerializer.Deserialize<SessionUser>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-        
         var cookieRefreshToken = await AuthCookieService.GetAuthCookie(response);
 
         if (string.IsNullOrEmpty(token) || user == null)

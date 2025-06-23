@@ -22,7 +22,7 @@ public class SGLService
     {
         try
         {
-            var response = await _apiGetService.GetAsync("ubicaciones?Correspondencia=true", 4, false);
+            var response = await _apiGetService.GetAsync("ubicaciones?Asignable=true", 4, false);
 
             if (response.IsSuccessStatusCode)
             {

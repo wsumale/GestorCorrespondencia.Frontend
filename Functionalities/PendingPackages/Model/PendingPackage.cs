@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
-public class ConsolidatedDetail
+namespace GestorCorrespondencia.Frontend.Functionalities.PendingPackages.Model;
+public class PendingPackage
 {
     [JsonPropertyName("IdPaquete")]
     public int PackageId { get; set; }
@@ -16,10 +16,10 @@ public class ConsolidatedDetail
     public string? Addressee { get; set; }
 
     [JsonPropertyName("UbicacionDestinatario")]
-    public string? RecipientLocation { get; set; }
+    public string? AddresseeLocation { get; set; }
 
     [JsonPropertyName("FechaCreacion")]
-    public DateTime Created { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     [JsonPropertyName("IdEstado")]
     public int StateId { get; set; }

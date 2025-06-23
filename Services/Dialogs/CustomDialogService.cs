@@ -2,11 +2,12 @@
 using Radzen;
 using GestorCorrespondencia.Frontend.Shared.Model;
 using System.Text.Json;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Components;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Components;
 using GestorCorrespondencia.Frontend.Shared.Components.ViewPackageDetail.Components;
 using GestorCorrespondencia.Frontend.Shared.Components.CreatePackageIncident.Components;
 using GestorCorrespondencia.Frontend.Shared.Components.ConsolidationReceiveList.Components;
+using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 
 namespace GestorCorrespondencia.Frontend.Services.Dialogs;
 public class CustomDialogService
@@ -44,7 +45,7 @@ public class CustomDialogService
     public async Task OpenConsolidatedReceptionListAsync(int ConsolidatedId)
     {
         await DialogService.OpenAsync<ConsolidationReceiveList>(
-            $"Recibir consolidado: <strong>{ConsolidatedId}</strong>",
+            $"Consolidado: <strong>{ConsolidatedId}</strong>",
             new Dictionary<string, object?>
             {
                 { "ConsolidatedId", ConsolidatedId }
@@ -53,16 +54,38 @@ public class CustomDialogService
         );
     }
 
-    public async Task OpenCreatePackageIncidentAsync(int PackageId)
+    public async Task OpenCreatePackageIncidentAsync(int PackageId, int ConsolidatedDetailId)
     {
         await DialogService.OpenAsync<CreatePackageIncident>(
             $"Crear incidencia, paquete: <strong>{PackageId}</strong>",
             new Dictionary<string, object?>
             {
-                { "PackageId", PackageId }
+                { "PackageId", PackageId },
+                { "ConsolidatedDetailId", ConsolidatedDetailId }
             },
             new DialogOptions { Width = "500px" }
         );
+    }
+
+    public async Task<bool> OpenConfirm (string Message, string Title, string ConfirmText, string CancelText, DialogOptions Options)
+    {
+        bool response = await DialogService.OpenAsync<Confirmation>(
+            Title,
+            new Dictionary<string, object?>
+            {
+                { "message", Message },
+                { "ConfirmText", ConfirmText },
+                { "CancelText", CancelText }
+            },
+            new DialogOptions
+            {
+                CloseDialogOnEsc = false,
+                ShowClose = false,
+                Width = Options.Width
+            }
+        );
+
+        return response;
     }
 
     public async Task OpenViewErrors (HttpResponseMessage response)
@@ -89,4 +112,10 @@ public class CustomDialogService
             );
         }
     }
+
+    public async Task OpenInternalError(Exception e)
+    {
+        await DialogService.Alert(e.Message, "Error interno", new AlertOptions { OkButtonText = "Aceptar" });
+    }
+
 }

@@ -1,0 +1,34 @@
+﻿@page "/paquetes/pendientes_de_recibir"
+
+@using GestorCorrespondencia.Frontend.Functionalities.PendingPackages.Model
+
+<SessionValidator title="Paquetes pendientes de recibir" path="/paquetes/pendientes_de_recibir">
+    <Loader Loading="loading" />
+    <div class="main-container">
+        <RadzenText Text="Recibir paquetes" class="form-title" />
+        <RadzenDataGrid TItem="@PendingPackage" Data="@packages" AllowPaging="true" PageSize="10" ColumnWidth="200px"
+                        AllowRowSelectOnRowClick="true" SelectionMode="DataGridSelectionMode.Single"
+                        FilterMode="FilterMode.CheckBoxList" AllowSorting="true" AllowFiltering="true"
+                        ApplyFilterText="Aplicar" ClearFilterText="Limpiar" EmptyText="No hay paquetes pendientes de recibir">
+            <Columns>
+                <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="120px" />
+                <RadzenDataGridColumn Property="Sender" Title="Remitente" />
+                <RadzenDataGridColumn Property="SenderLocation" Title="Ubicación remitente" />
+                <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
+                <RadzenDataGridColumn Property="AddresseeLocation" Title="Ubicación destinatario" />
+                <RadzenDataGridColumn Property="CreatedAt" Title="Fecha" Width="120px" FormatString="{0:dd/MM/yyyy HH:mm}">
+                    <Template Context="data">
+                        @data.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Property="State" Title="Estado" />
+                <RadzenDataGridColumn Filterable="false" Sortable="false" Width="120px" TextAlign="TextAlign.Right">
+                    <Template Context="Package">
+                        <RadzenButton Click="@(() => ReceivePackageAsync(Package.PackageId))" hidden="@(Package.StateId != 10)" Icon="download_done" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" class="rz-me-3" />
+                        <RadzenButton Click="@(() => CreateIncidentDialogAsync(Package.PackageId, Package.PackageId))" hidden="@(Package.StateId != 10)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </div>
+</SessionValidator>

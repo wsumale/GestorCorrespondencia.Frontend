@@ -26,10 +26,19 @@ public partial class PendingConsolidationReception
     private async Task ConsolidatedReceptionListAsync(int ConsolidatedId)
     {
         await CustomDialogService.OpenConsolidatedReceptionListAsync(ConsolidatedId);
+        await RefreshLoadDataAsync();
     }
 
     private async Task LoadDataAsync()
     {
         consolidates = await CorrespondencePendingConsolidationHttp.GetPendingConsolidationsForCorrespondenceAsync();
+    }
+
+    private async Task RefreshLoadDataAsync()
+    {
+        loading = true;
+        await LoadDataAsync();
+        loading = false;
+        StateHasChanged();
     }
 }

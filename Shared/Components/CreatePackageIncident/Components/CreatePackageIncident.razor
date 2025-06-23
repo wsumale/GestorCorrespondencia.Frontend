@@ -1,26 +1,36 @@
-﻿<RadzenTemplateForm Data="@form">
-	<RadzenRow>
-		<RadzenColumn class="rz-display-flex rz-flex-column rz-align-items-center gap-3">
+﻿@using GestorCorrespondencia.Frontend.Shared.Components.CreatePackageIncident.Model
 
-			<RadzenRow class="w-100">
-				<RadzenColumn class="rz-display-flex rz-flex-column">
-					<RadzenLabel Text="Tipo de incidencia" Component="IncidentType" />
-					<RadzenDropDown @bind-Value="form.IncidentType" Data="@incidentType" TextProperty="Value" ValueProperty="Key" />
-				</RadzenColumn>
-			</RadzenRow>
+<Loader Loading="@loading" />
 
-			<RadzenRow class="w-100">
-				<RadzenColumn class="rz-display-flex rz-flex-column">
-					<RadzenLabel Text="Comentarios" Component="Comment" />
-					<RadzenTextArea @bind-Value="form.Comment" Name="Comment" />
-				</RadzenColumn>
-			</RadzenRow>
+<RadzenTemplateForm Data="@form" Submit="@OnSubmit" TItem="IncidentFormModel" class="rz-display-flex rz-flex-column gap-3">
 
-			<RadzenRow class="w-100 rz-justify-content-end">
-				<RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
-				<RadzenButton Text="Crear incidencia" ButtonType="ButtonType.Submit" />
-			</RadzenRow>
+	<DataAnnotationsValidator />
 
-		</RadzenColumn>
+	<RadzenRow class="gap-0">
+		<RadzenLabel Text="Tipo de incidencia" />
+		<RadzenFormField class="w-100">
+			<RadzenDropDown TValue="int?"
+							Data="@incidentTypeValues"
+							TextProperty="Description"
+							ValueProperty="Value"
+							@bind-Value="form.IncidentType" 
+							Name="IncidentType" 
+							class="rz-m-0"/>
+		</RadzenFormField>
+		<ValidationMessage For="@(() => form.IncidentType)" class="rz-message rz-messages-error" />
 	</RadzenRow>
+
+	<RadzenRow class="gap-0">
+		<RadzenLabel Text="Comentarios" />
+		<RadzenFormField class="w-100">
+			<RadzenTextArea @bind-Value="form.Comment" Name="Comment" />
+		</RadzenFormField>
+		<ValidationMessage For="@(() => form.Comment)" class="rz-message rz-messages-error" />
+	</RadzenRow>
+
+	<RadzenRow class="w-100 rz-justify-content-end">
+		<RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
+		<RadzenButton Text="Crear incidencia" ButtonType="ButtonType.Submit" />
+	</RadzenRow>
+
 </RadzenTemplateForm>

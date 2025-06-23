@@ -28,7 +28,6 @@ public class MyPackagesHttp
     {
         try
         {
-            var user = _getCurrentUser.GetUserInfoAsync();
             var response = await _apiGetService.GetAsync($"paquetes", 1, false);
 
             if (response.IsSuccessStatusCode)

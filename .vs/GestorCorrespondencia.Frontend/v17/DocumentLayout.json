@@ -1,12 +1,173 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\services\\sgu\\sguservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:services\\sgu\\sguservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\services\\sgl\\sglservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:services\\sgl\\sglservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\packageshipping\\pages\\packageshipping.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\packageshipping\\pages\\packageshipping.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\packageshipping\\components\\packagedestinationform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\packageshipping\\components\\packagedestinationform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\packageshipping\\components\\packagedestinationform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\packageshipping\\components\\packagedestinationform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\correspondencependingconsolidations\\pages\\pendingconsolidationreception.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\correspondencependingconsolidations\\pages\\pendingconsolidationreception.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\correspondencependingconsolidations\\pages\\pendingconsolidationreception.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\correspondencependingconsolidations\\pages\\pendingconsolidationreception.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\shared\\components\\consolidationreceivelist\\components\\consolidationreceivelist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:shared\\components\\consolidationreceivelist\\components\\consolidationreceivelist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\shared\\components\\consolidationreceivelist\\components\\consolidationreceivelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:shared\\components\\consolidationreceivelist\\components\\consolidationreceivelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SGLService.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Services\\SGL\\SGLService.cs",
+              "RelativeDocumentMoniker": "Services\\SGL\\SGLService.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Services\\SGL\\SGLService.cs",
+              "RelativeToolTip": "Services\\SGL\\SGLService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBgAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:55:05.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PackageShipping.razor.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Pages\\PackageShipping.razor.cs",
+              "RelativeDocumentMoniker": "Functionalities\\PackageShipping\\Pages\\PackageShipping.razor.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Pages\\PackageShipping.razor.cs",
+              "RelativeToolTip": "Functionalities\\PackageShipping\\Pages\\PackageShipping.razor.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwBsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:54:50.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PackageDestinationForm.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor",
+              "RelativeDocumentMoniker": "Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor",
+              "RelativeToolTip": "Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T18:54:33.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PackageDestinationForm.razor.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
+              "RelativeDocumentMoniker": "Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
+              "RelativeToolTip": "Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:54:06.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SGUService.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Services\\SGU\\SGUService.cs",
+              "RelativeDocumentMoniker": "Services\\SGU\\SGUService.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Services\\SGU\\SGUService.cs",
+              "RelativeToolTip": "Services\\SGU\\SGUService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBgAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:53:24.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PendingConsolidationReception.razor.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
+              "RelativeDocumentMoniker": "Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
+              "RelativeToolTip": "Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwBkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:51:38.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PendingConsolidationReception.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor",
+              "RelativeDocumentMoniker": "Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor",
+              "RelativeToolTip": "Functionalities\\CorrespondencePendingConsolidations\\Pages\\PendingConsolidationReception.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T18:51:33.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConsolidationReceiveList.razor.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
+              "RelativeDocumentMoniker": "Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
+              "RelativeToolTip": "Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAwwA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T18:50:53.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ConsolidationReceiveList.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor",
+              "RelativeDocumentMoniker": "Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor",
+              "RelativeToolTip": "Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T18:50:50.058Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

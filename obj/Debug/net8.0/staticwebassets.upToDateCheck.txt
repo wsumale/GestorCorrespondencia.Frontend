@@ -41,6 +41,5 @@ wwwroot\styles\gdc_auth.css
 wwwroot\styles\gdc_material3.css
 wwwroot\styles\main-gdc.css
 wwwroot\styles\Pages\MainLayout.css
-wwwroot\styles\Pages\Nuevo_Envio.css
 wwwroot\styles\Pages\ViewPackageComponent.css
 wwwroot\styles\TruckLoader.css

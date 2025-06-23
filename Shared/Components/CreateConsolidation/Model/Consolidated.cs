@@ -1,4 +1,4 @@
-﻿namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
+﻿namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 public class Consolidated
 {
     public int Type { get; set; }

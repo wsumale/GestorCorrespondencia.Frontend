@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 using Radzen;
 
 namespace GestorCorrespondencia.Frontend.Functionalities.CorrespondenceConsolidation.Http;

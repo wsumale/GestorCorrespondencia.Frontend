@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.DTO;
+namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.DTO;
 
 public class ConsolidatedCorrespondenceRequestDTO
 {

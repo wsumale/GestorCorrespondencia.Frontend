@@ -1,9 +1,7 @@
 using GestorCorrespondencia.Frontend.Functionalities.CorrespondenceConsolidation.Http;
-using GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Http;
-using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.SGL;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 using GestorCorrespondencia.Frontend.Shared.Model;
 using Microsoft.AspNetCore.Components;
 using Radzen;

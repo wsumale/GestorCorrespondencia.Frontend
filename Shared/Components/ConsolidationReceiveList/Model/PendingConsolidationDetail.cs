@@ -3,7 +3,7 @@
 namespace GestorCorrespondencia.Frontend.Shared.Components.ConsolidationReceiveList.Model;
 public class PendingConsolidationDetail
 {
-    [JsonPropertyName("IdDetalleConsolidado ")]
+    [JsonPropertyName("IdDetalleConsolidado")]
     public int ConsolidatedDetailId{ get; set; }
 
     [JsonPropertyName("IdPaquete")]

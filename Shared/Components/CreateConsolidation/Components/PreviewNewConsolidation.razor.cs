@@ -1,13 +1,12 @@
-using System.Text.Json;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.DTO;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.DTO;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using Radzen;
 
-namespace GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Components
+namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Components
 {
     public partial class PreviewNewConsolidation
     {

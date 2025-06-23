@@ -750,8 +750,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>eli0ou73nq</Fingerprint>
-      <Integrity>3iEmLJTMfQb0F8mAqzm2yjQRhWLOIAdH4WPMQB2w5l8=</Integrity>
+      <Fingerprint>f4d17xu8k3</Fingerprint>
+      <Integrity>r2PZIY3RQlUHyzlPnRNr1heWkQvLtX7UaA31nmyKjac=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\gdc_material3.css'))</OriginalItemSpec>
@@ -768,8 +768,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>t785gfqxv9</Fingerprint>
-      <Integrity>J7sRjiQabgq2mBpv0Ibtul/tqZiLJiRsOFOpNQHHimY=</Integrity>
+      <Fingerprint>vv8lmypng3</Fingerprint>
+      <Integrity>xfGGg65c8nmBQqOBUKtVKO/FPLxaOOoxmDBtStltolE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\main-gdc.css'))</OriginalItemSpec>
@@ -791,24 +791,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\Pages\MainLayout.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\Pages\Nuevo_Envio.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>GestorCorrespondencia.Frontend</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/GestorCorrespondencia.Frontend</BasePath>
-      <RelativePath>styles/Pages/Nuevo_Envio.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bibqgi85bv</Fingerprint>
-      <Integrity>PeschNAB5laqzTI8CGSStEe9iE18GaJ4Yjb/qQ8sglk=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\Pages\Nuevo_Envio.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\Pages\ViewPackageComponent.css'))">
       <SourceType>Package</SourceType>

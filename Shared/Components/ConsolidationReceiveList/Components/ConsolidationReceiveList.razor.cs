@@ -15,6 +15,7 @@ public partial class ConsolidationReceiveList
     [Parameter] public int ConsolidatedId { get; set; }
 
     private bool loading = false;
+    private bool busy = false;
 
     private PendingConsolidation? consolidated = new();
 
@@ -35,15 +36,30 @@ public partial class ConsolidationReceiveList
         base.OnAfterRender(firstRender);
     }
 
-    private async Task CreateIncidentDialogAsync(int PackageId)
+    private async Task CreateIncidentDialogAsync(int PackageId, int ConsolidatedDetailId)
     {
-        await CustomDialogService.OpenCreatePackageIncidentAsync(PackageId);
+        await CustomDialogService.OpenCreatePackageIncidentAsync(PackageId, ConsolidatedDetailId);
+        await RefreshLoadDataAsync();
     }
 
     private async Task LoadDataAsync()
     {
         consolidated = await ConsolidationReceiveListHttp.GetPendingConsolidationDetailAsync(ConsolidatedId);
+    }
 
+    private async Task RefreshLoadDataAsync()
+    {
+        loading = true;
+        await LoadDataAsync();
+        loading = false;
+        StateHasChanged();
+    }
+
+    private async Task ReceiveConsolidationAsync()
+    {
+        busy = loading = true;
+        await ConsolidationReceiveListHttp.ReceiveConsolidatedPackagesAsync(ConsolidatedId);
+        busy = loading = false;
     }
 
     private void Cancel()

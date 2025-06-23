@@ -1,6 +1,6 @@
-﻿@page "/recepcion/recibir_consolidados"
+﻿@page "/recepcion/recepcion_de_consolidados"
 
-<SessionValidator title="Recepción de consolidados" path="/correspondencia/recibir_consolidados">
+<SessionValidator title="Recepción de consolidados" path="/recepcion/recepcion_de_consolidados">
 
 	<Loader Loading="@loading" />
 
@@ -13,7 +13,7 @@
 						FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="10"
 						AllowSorting="true" ColumnWidth="200px">
 			<Columns>
-				<RadzenDataGridColumn Property="ConsolidatedId" Title="No. Rastreo" />
+				<RadzenDataGridColumn Property="ConsolidatedId" Title="Rastreo" />
 				<RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
 				<RadzenDataGridColumn Property="Sender" Title="Remitente" />
 				<RadzenDataGridColumn Property="Date" Title="Fecha de Envío" />

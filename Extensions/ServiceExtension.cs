@@ -9,11 +9,11 @@ using GestorCorrespondencia.Frontend.Services.SGL;
 using GestorCorrespondencia.Frontend.Services.SGU;
 using GestorCorrespondencia.Frontend.Functionalities.MyPackages.Http;
 using GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Http;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Http;
 using GestorCorrespondencia.Frontend.Functionalities.CorrespondenceConsolidation.Http;
 using GestorCorrespondencia.Frontend.Functionalities.CorrespondencePendingConsolidations.Http;
 using GestorCorrespondencia.Frontend.Functionalities.ReceptionPendingConsolidations.Http;
 using GestorCorrespondencia.Frontend.Shared.Components.ConsolidationReceiveList.Http;
+using GestorCorrespondencia.Frontend.Functionalities.PendingPackages.Http;
 
 namespace GestorCorrespondencia.Frontend.Extensions;
 public static class ServiceExtension
@@ -25,15 +25,16 @@ public static class ServiceExtension
         services.AddScoped<ApiGetService>();
         services.AddScoped<ApiPostService>();
         services.AddScoped<ApiHeadAccessService>();
+        services.AddScoped<ApiPatchService>();
         services.AddScoped<SGLService>();
         services.AddScoped<SGUService>();
         services.AddScoped<MyPackagesHttp>();
         services.AddScoped<SenderConsolidationHttp>();
         services.AddScoped<CorrespondenceConsolidationHttp>();
-        services.AddScoped<ConsolidatedHttp>();
         services.AddScoped<CorrespondencePendingConsolidationHttp>();
         services.AddScoped<ReceptionPendingConsolidationsHttp>();
         services.AddScoped<ConsolidationReceiveListHttp>();
+        services.AddScoped<PendingPackagesHttp>();
 
         services.AddScoped<IAuthCookieService, AuthCookieService>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();

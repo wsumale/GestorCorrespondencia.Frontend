@@ -16,7 +16,7 @@ public class MyPackagesView
     public string? Addressee { get; set; }
 
     [JsonPropertyName("UbicacionDestinatario")]
-    public string? RecipientLocation { get; set; }
+    public string? DestinationLocation { get; set; }
 
     [JsonPropertyName("FechaCreacion")]
     public DateTime Created { get; set; }

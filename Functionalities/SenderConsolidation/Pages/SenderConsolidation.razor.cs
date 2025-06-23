@@ -1,4 +1,4 @@
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 using Microsoft.AspNetCore.Components;
 using Radzen;
 using Radzen.Blazor;
@@ -24,7 +24,8 @@ public partial class SenderConsolidation
             consolidated.Type = 1;
 
             await CustomDialogService.OpenPreviewNewConsolidation(consolidated);
-        } else
+        } 
+        else
         {
             await DialogService.Alert("Debe seleccionar al menos un paquete", "Error", new AlertOptions { OkButtonText="Aceptar"});
         }

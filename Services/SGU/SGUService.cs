@@ -22,7 +22,7 @@ public class SGUService
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"ubicaciones/{LocationId.ToString()}/usuarios", 3, false);
+            var response = await _apiGetService.GetAsync($"ubicaciones/{LocationId.ToString()}/usuarios", 3, true);
 
             if (response.IsSuccessStatusCode)
             {

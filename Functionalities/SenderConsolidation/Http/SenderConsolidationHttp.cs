@@ -1,10 +1,8 @@
-﻿using GestorCorrespondencia.Frontend.Functionalities.MyPackages.Model;
-using System.Text.Json;
+﻿using System.Text.Json;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
 using Radzen;
-using GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Model;
-using GestorCorrespondencia.Frontend.Shared.Components.PreviewNewConsolidation.Model;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 
 namespace GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Http;
 public class SenderConsolidationHttp

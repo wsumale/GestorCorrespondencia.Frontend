@@ -157,10 +157,6 @@
       "PackagePath": "staticwebassets\\styles\\Pages\\MainLayout.css"
     },
     {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\Pages\\Nuevo_Envio.css",
-      "PackagePath": "staticwebassets\\styles\\Pages\\Nuevo_Envio.css"
-    },
-    {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\Pages\\ViewPackageComponent.css",
       "PackagePath": "staticwebassets\\styles\\Pages\\ViewPackageComponent.css"
     },

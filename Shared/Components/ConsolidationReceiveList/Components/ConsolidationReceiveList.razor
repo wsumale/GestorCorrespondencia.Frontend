@@ -23,15 +23,16 @@
 					FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="10"
 					AllowSorting="true" ColumnWidth="200px">
 		<Columns>
-			<RadzenDataGridColumn Property="PackageId" Title="No. Rastreo" />
+			<RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="125px" />
 			<RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
 			<RadzenDataGridColumn Property="Sender" Title="Remitente" />
 			<RadzenDataGridColumn Property="DestinationLocation" Title="Destino" />
 			<RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
 			<RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
-			<RadzenDataGridColumn Width="120px" Filterable="false" Sortable="false" TextAlign="TextAlign.Right">
-				<Template Context="Package">
-					<RadzenButton Click="@(() => CreateIncidentDialogAsync(Convert.ToInt32(Package.PackageId)))" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
+			<RadzenDataGridColumn Filterable="false" Sortable="false" TextAlign="TextAlign.Right">
+				<Template Context="Detail">
+					<RadzenButton Click="@(() => CreateIncidentDialogAsync(Detail.PackageId, Detail.ConsolidatedDetailId))" hidden="@(Detail.StateId != 5)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
+					<RadzenBadge Shade="Shade.Lighter" BadgeStyle="BadgeStyle.Warning" Text="@(Detail.State)" hidden="@(Detail.StateId == 5)" />
 				</Template>
 			</RadzenDataGridColumn>
 		</Columns>
@@ -39,5 +40,5 @@
 
 	<RadzenRow class="rz-mt-3 gap-3 rz-justify-content-right">
 		<RadzenButton Text="Cancelar" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
-		<RadzenButton Text="Recibir consolidado" ButtonStyle="ButtonStyle.Primary" />
+		<RadzenButton Text="Recibir consolidado" BusyText="Recibiendo Consolidado" IsBusy="@busy" ButtonStyle="ButtonStyle.Primary" Click="ReceiveConsolidationAsync" />
 	</RadzenRow>
