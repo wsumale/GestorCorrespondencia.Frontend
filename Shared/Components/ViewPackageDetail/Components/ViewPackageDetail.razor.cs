@@ -1,3 +1,4 @@
+using GestorCorrespondencia.Frontend.Functionalities.Tracking.Http;
 using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using Microsoft.AspNetCore.Components;
 using Radzen;
@@ -6,47 +7,23 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.ViewPackageDetail.Com
 public partial class ViewPackageDetail
 {
     [Inject] DialogService DialogService { get; set; } = default!;
+    [Inject] TrackingHttp TrackingHttp { get; set; } = default!;
+
+    [Parameter] public int PackageId { get; set; }
 
     private bool paqueteEncontrado = true;
     private bool loading = true;
+    private Package package = new();
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            await Task.Delay(500);
+            package = await TrackingHttp.GetPackageAsync(PackageId);
             loading = false;
             StateHasChanged();
         }
     }
-
-    private Package model = new()
-    {
-        NumeroRastreo = "UKSIS-UKSIS-386759",
-        UbicacionOrigen = "Oficinas Z 12",
-        Origen = "Contabilidad",
-        UbicacionDestino = "Unipark",
-        Destino = "Sistemas",
-        EmailDestinatario = "test@gmail.com",
-        NombreDestinatario = "test",
-        Observaciones = "Observaciones de prueba \ntexto de prueba",
-        Detalles =
-            [
-                new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-                new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-                new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-                new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 },
-                new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-                new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-                new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 },
-                new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-                new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-                new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 },
-                new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-                new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-                new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 }
-            ]
-    };
 
     IList<PackageChangelog> changelog =
     [

@@ -14,6 +14,7 @@ using GestorCorrespondencia.Frontend.Functionalities.CorrespondencePendingConsol
 using GestorCorrespondencia.Frontend.Functionalities.ReceptionPendingConsolidations.Http;
 using GestorCorrespondencia.Frontend.Shared.Components.ConsolidationReceiveList.Http;
 using GestorCorrespondencia.Frontend.Functionalities.PendingPackages.Http;
+using GestorCorrespondencia.Frontend.Functionalities.Tracking.Http;
 
 namespace GestorCorrespondencia.Frontend.Extensions;
 public static class ServiceExtension
@@ -35,6 +36,7 @@ public static class ServiceExtension
         services.AddScoped<ReceptionPendingConsolidationsHttp>();
         services.AddScoped<ConsolidationReceiveListHttp>();
         services.AddScoped<PendingPackagesHttp>();
+        services.AddScoped<TrackingHttp>();
 
         services.AddScoped<IAuthCookieService, AuthCookieService>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();

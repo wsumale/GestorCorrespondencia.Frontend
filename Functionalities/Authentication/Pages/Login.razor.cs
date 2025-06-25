@@ -39,7 +39,7 @@ public partial class Login
 
         try
         {
-            var response = await ApiPostService.PostAsync("auth/login", login, 2, false);
+            var response = await ApiPostService.PostAsync("auth/login", login, 2, true);
             var content = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
@@ -107,7 +107,6 @@ public partial class Login
 
         await JS.InvokeVoidAsync("auth.setTempSession", token, userJson);
         await JS.InvokeVoidAsync("auth.setTempRefreshToken", cookieRefreshToken!.RefreshToken, cookieRefreshToken.Expires?.ToString("o"));
-
         NavigationManager.NavigateTo("/auth/start-session", forceLoad: true);
     }
 

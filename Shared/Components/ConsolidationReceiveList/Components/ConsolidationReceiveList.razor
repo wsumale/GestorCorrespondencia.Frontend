@@ -6,7 +6,7 @@
 	<RadzenRow>
 		<RadzenColumn>
 			<p>
-				<strong>Origen:</strong> @consolidated!.DestinationLocation <br />
+				<strong>Origen:</strong> @consolidated!.SenderLocation <br />
 				<strong>Remitente:</strong> @consolidated.CreatedBy
 			</p>
 		</RadzenColumn>
@@ -31,6 +31,7 @@
 			<RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
 			<RadzenDataGridColumn Filterable="false" Sortable="false" TextAlign="TextAlign.Right">
 				<Template Context="Detail">
+					<RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
 					<RadzenButton Click="@(() => CreateIncidentDialogAsync(Detail.PackageId, Detail.ConsolidatedDetailId))" hidden="@(Detail.StateId != 5)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
 					<RadzenBadge Shade="Shade.Lighter" BadgeStyle="BadgeStyle.Warning" Text="@(Detail.State)" hidden="@(Detail.StateId == 5)" />
 				</Template>

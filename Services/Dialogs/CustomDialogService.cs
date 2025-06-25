@@ -19,14 +19,19 @@ public class CustomDialogService
         DialogService = dialogService;
     }
 
-    public async Task OpenViewPackage ()
+    public async Task OpenViewPackage (int PackageId)
     {
-        await DialogService.OpenAsync<ViewPackageDetail>("Detalle del Paquete", null, new DialogOptions
-        {
-            Width = "75%",
-            Height = "60%",
-            Style = "min-height: auto; min-width: auto;"
-        });
+        await DialogService.OpenAsync<ViewPackageDetail>("Detalle del Paquete", 
+            new Dictionary<string, object>
+            {
+                { "PackageId", PackageId }
+            }, 
+            new DialogOptions
+            {
+                Width = "75%",
+                Height = "60%",
+                Style = "min-height: auto; min-width: auto;"
+            });
     }
 
     public async Task OpenPreviewNewConsolidation (Consolidated consolidated)

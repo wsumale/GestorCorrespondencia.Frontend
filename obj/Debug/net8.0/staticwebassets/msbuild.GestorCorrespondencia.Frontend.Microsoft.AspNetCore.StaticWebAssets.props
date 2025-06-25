@@ -624,8 +624,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>avantydtjm</Fingerprint>
-      <Integrity>OlSinxLmtxaJhclz6xQtAl2LZvZwX6fQfaU+9Btl1qk=</Integrity>
+      <Fingerprint>f2521d89mz</Fingerprint>
+      <Integrity>Jzuwity2RmdRlXkQXymzqIvq8azcSE5ZRHb6x9QhfWw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\auth.js'))</OriginalItemSpec>
@@ -714,8 +714,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6cxvpg2iay</Fingerprint>
-      <Integrity>eqw9n5dqFViuCxN31ibk7lwb78UJL7IDXvt2vj5bI0U=</Integrity>
+      <Fingerprint>07eyaq2xjc</Fingerprint>
+      <Integrity>pDFLAkLoY4W6UCzIbTnItGbM59QHo9Og1X+xpslYzY8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\gdc.css'))</OriginalItemSpec>

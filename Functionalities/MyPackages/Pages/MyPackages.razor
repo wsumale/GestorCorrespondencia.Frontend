@@ -11,17 +11,22 @@
                         FilterMode="FilterMode.CheckBoxList" AllowSorting="true" AllowFiltering="true"
                         ApplyFilterText="Aplicar" ClearFilterText="Limpiar" EmptyText="No hay paquetes para mostrar">
             <Columns>
-                <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="120px" />
+                <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="125px" />
                 <RadzenDataGridColumn Property="Sender" Title="Remitente" />
                 <RadzenDataGridColumn Property="SenderLocation" Title="Ubicación remitente" />
                 <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
-                <RadzenDataGridColumn Property="RecipientLocation" Title="Ubicación destinatario" />
+                <RadzenDataGridColumn Property="DestinationLocation" Title="Ubicación destinatario" />
                 <RadzenDataGridColumn Property="Created" Title="Fecha" Width="100px" FormatString="{0:dd/MM/yyyy HH:mm}">
                     <Template Context="data">
                         @data.Created.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
                     </Template>
                 </RadzenDataGridColumn>
                 <RadzenDataGridColumn Property="State" Title="Estado" />
+                <RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px" >
+                    <Template Context="Detail" >
+                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
+                    </Template>
+                </RadzenDataGridColumn>
             </Columns>
         </RadzenDataGrid>
     </div>

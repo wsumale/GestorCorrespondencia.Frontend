@@ -7,7 +7,7 @@
         <RadzenColumn Size="7" SizeXS="12" SizeSM="12" SizeMD="12" SizeLG="7" SizeXL="7" SizeXX="7" class="order-mobile-last min-height-40vh">
             <RadzenCard class="rz-background-color-base-light card-full-height">
                 <RadzenHeading Size="H3" Text="Detalle del Envío" />
-                <RadzenDataGrid Data="@model.Detalles" TItem="PackageDetail" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
+                <RadzenDataGrid Data="@package.Details" TItem="PackageDetail" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
                     <Columns>
                         <RadzenDataGridColumn TItem="PackageDetail" Property="Type" Title="Tipo" />
                         <RadzenDataGridColumn TItem="PackageDetail" Property="Comment" Title="Comentarios" />
@@ -21,21 +21,25 @@
             <RadzenCard class="rz-background-color-base-light card-full-height">
                 <RadzenHeading Size="H3" Text="Información del Envío" />
 
-                <p class="rz-mt-2 rz-mb-2"><strong>Fecha de envío:</strong> <span class="text-morado">04/mar/2025</span></p>
-                <p class="rz-mt-2 rz-mb-2"><strong>Estado:</strong> <span class="text-azul-claro">Nuevo Envío</span></p>
-                <p class="rz-mt-2 rz-mb-2"><strong>Rastreo:</strong> <span class="text-morado">@model.NumeroRastreo</span></p>
-
-                <p class="rz-mt-2 rz-mb-2"><strong>Remitente:</strong> <span class="text-naranja">@model.EmailDestinatario</span></p>
-                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de origen:</strong> <span class="text-azul-claro">@model.UbicacionOrigen</span></p>
-                <p class="rz-mt-2 rz-mb-2"><strong>Origen:</strong> <span class="text-azul-claro">@model.Origen</span></p>
-
-                <p class="rz-mt-2 rz-mb-2"><strong>Destinatario:</strong> <span class="text-naranja">@model.NombreDestinatario</span></p>
-                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de destino:</strong> <span class="text-azul-claro">@model.UbicacionDestino</span></p>
-                <p class="rz-mt-2 rz-mb-2"><strong>Destino:</strong> <span class="text-azul-claro">@model.Destino</span></p>
-
-                <pre class="rz-mt-2 rz-mb-2">
-                <strong>Observaciones:</strong><br />@model.Observaciones
-                </pre>
+                <table style="border-spacing: 0.25rem; border-collapse: separate;">
+                    <tbody>
+                        <tr><td class="fw-bold">Fecha Envío:</td> <td class="text-morado">@package.CreatedAt</td></tr>
+                        <tr><td class="fw-bold">Estado:</td>      <td class="text-azul-claro">@package.State</td></tr>
+                        <tr><td class="fw-bold">Rastreo:</td>     <td class="text-rojo-brillante">@package.PackageId</td></tr>
+                        <tr><td class="fw-bold">Origen:</td>      <td class="text-naranja">@package.SenderLocation</td></tr>
+                        <tr><td class="fw-bold">Remitente:</td>   <td>@package.Sender</td></tr>
+                        <tr><td class="fw-bold">Destino:</td>     <td class="text-morado">@package.DestinationLocation</td></tr>
+                        <tr><td class="fw-bold">Destinatario:</td><td>@package.Addressee</td></tr>
+                        <tr>
+                            <td colspan="2">
+                                <pre class="rz-mb-2">
+                                    <strong>Observaciones:</strong><br />@package.Observations
+                                </pre>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
             </RadzenCard>
         </RadzenColumn>
     </RadzenRow>

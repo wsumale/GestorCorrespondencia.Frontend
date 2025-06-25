@@ -38,6 +38,10 @@ body {
     color: #D9534F;
 }
 
+.text-verde {
+    color: #638b2c;
+}
+
 .min-h100 {
     min-height: 100%;
 }
@@ -145,4 +149,12 @@ pre {
     color: #562E8A;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.no-searchable-package {
+    height: 63vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #808080;
 }

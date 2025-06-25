@@ -30,7 +30,7 @@ public class ConsolidationReceiveListHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"consolidados/{consolidatedId}", 1, true);
+            var response = await _apiGetService.GetAsync($"consolidados/{consolidatedId}", 1, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -59,7 +59,7 @@ public class ConsolidationReceiveListHttp
     {
         try
         {
-            var response = await _apiPatchService.PatchWithoutBodyRequestAsync($"consolidados/{ConsolidatedId}", 1, true);
+            var response = await _apiPatchService.PatchWithoutBodyRequestAsync($"consolidados/{ConsolidatedId}", 1, false);
             if (response.IsSuccessStatusCode)
             {
                 _notificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Operación exitosa", Detail="Se recibió el consolidado", Duration = 4000 });

@@ -1,38 +1,39 @@
 ﻿using System.Text.Json;
-using GestorCorrespondencia.Frontend.Functionalities.CorrespondencePendingConsolidations.Model;
+using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 using Radzen;
 
-namespace GestorCorrespondencia.Frontend.Functionalities.CorrespondencePendingConsolidations.Http;
-public class CorrespondencePendingConsolidationHttp
+namespace GestorCorrespondencia.Frontend.Functionalities.Tracking.Http;
+public class TrackingHttp
 {
     private readonly ApiGetService _apiGetService;
     private readonly CustomDialogService _customDialogService;
     private readonly DialogService _dialogService;
 
-    public CorrespondencePendingConsolidationHttp(ApiGetService apiGetService, CustomDialogService customDialogService, DialogService dialogService)
+    public TrackingHttp(ApiGetService apiGetService, CustomDialogService customDialogService, DialogService dialogService)
     {
         _apiGetService = apiGetService;
         _customDialogService = customDialogService;
         _dialogService = dialogService;
     }
 
-    public async Task<IList<PendingConsolidationForCorrespondenceModel>> GetPendingConsolidationsForCorrespondenceAsync()
+    public async Task<Package> GetPackageAsync(int PackageId)
     {
         try
         {
-            var response = await _apiGetService.GetAsync("consolidados?TipoConsolidado=1&Recibido=false", 1, true);
+            var response = await _apiGetService.GetAsync($"paquetes/{PackageId}", 1, false);
 
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
-                var data = JsonSerializer.Deserialize<IList<PendingConsolidationForCorrespondenceModel>>(json, new JsonSerializerOptions
+                var data = JsonSerializer.Deserialize<Package>(json, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 });
 
-                return data ?? new List<PendingConsolidationForCorrespondenceModel>();
+                return data ?? new Package();
 
             }
             else
@@ -40,11 +41,11 @@ public class CorrespondencePendingConsolidationHttp
                 await _customDialogService.OpenViewErrors(response);
             }
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             await _dialogService.Alert(e.Message, "Error interno", new AlertOptions() { OkButtonText = "Aceptar" });
         }
 
-        return new List<PendingConsolidationForCorrespondenceModel>();
+        return new Package();
     }
 }

@@ -3,111 +3,117 @@
 @using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model
 
 <SessionValidator title="Rastrear Paquete" path="/paquetes/rastrear">
-    @if (paqueteEncontrado)
-    {
+    <Loader Loading="@loading" />
+    
         <div class="main-container">
 
             <RadzenText Text="Rastrear Paquete" class="form-title" />
-
-            <RadzenTextBox @bind-Value="@model.NumeroRastreo" Placeholder="Ingrese el número de rastreo" Style="width: 60%;" />
+            
+            <RadzenNumeric TValue="int?" @bind-Value="@PackageId" Placeholder="Ingrese el número de rastreo" Style="width: 60%;" ShowUpDown="false" />
             <RadzenButton Text="Rastrear" Icon="alt_route" Click="@BuscarPaquete" Style="margin-left: 10px;" />
-            <RadzenTimeline Orientation="@orientation" LinePosition="LinePosition.Start"
-                            style="--rz-timeline-line-width: 3px;
-           --rz-timeline-line-color: #562E8A;
-           --rz-timeline-axis-size: 72px;
-           margin: 0 auto;">
-                <Items>
-                    <RadzenTimelineItem PointVariant="Variant.Filled" PointStyle="PointStyle.Success" PointShadow="0">
-                        <PointContent>
-                            <RadzenIcon Icon="how_to_reg" Style="color: #ffffff;" />
-                        </PointContent>
-                        <ChildContent>
-                            <RadzenText TextStyle="TextStyle.Subtitle1" class="rz-m-0" Style="font-size: 0.8rem; color: #4CAF50;">
-                                Nuevo Envío
-                            </RadzenText>
-                        </ChildContent>
-                    </RadzenTimelineItem>
-
-                    @foreach (var item in timelineItems)
-                    {
-                        <RadzenTimelineItem PointVariant="Variant.Outlined" PointStyle="PointStyle.Info" PointShadow="0">
+            @if (foundPackage)
+            {
+                <RadzenTimeline Orientation="Orientation.Horizontal" LinePosition="LinePosition.Start"
+                                style="--rz-timeline-line-width: 3px;
+                                       --rz-timeline-line-color: #562E8A;
+                                       --rz-timeline-axis-size: 72px;
+                                       margin: 0 auto;">
+                    <Items>
+                        <RadzenTimelineItem PointVariant="Variant.Filled" PointStyle="PointStyle.Success" PointShadow="0">
                             <PointContent>
-                                <RadzenIcon Icon="@item.Icon" Style="color: #562E8A;" />
+                                <RadzenIcon Icon="how_to_reg" Style="color: #ffffff;" />
                             </PointContent>
                             <ChildContent>
-                                <RadzenText TextStyle="TextStyle.Subtitle1" class="rz-m-0" Style="font-size: 0.8rem; color: #562E8A;">
-                                    @item.Texto
+                                <RadzenText TextStyle="TextStyle.Subtitle1" class="rz-m-0" Style="font-size: 0.8rem; color: #4CAF50;">
+                                    Nuevo Envío
                                 </RadzenText>
                             </ChildContent>
                         </RadzenTimelineItem>
-                    }
-                </Items>
-            </RadzenTimeline>
 
-            <RadzenRow>
-                <RadzenColumn Size="7" style="min-height: 40vh;">
-                    <RadzenCard Style="height: 100%;">
-                        <RadzenRow>
-                            <RadzenColumn>
-                                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de origen:</strong> <span class="text-morado">@model.UbicacionOrigen</span></p>
-                                <p class="rz-mt-2 rz-mb-2"><strong>Origen:</strong> <span class="text-azul-claro">@model.Origen</span></p>
-                            </RadzenColumn>
-                            <RadzenColumn>
-                                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de destino:</strong> <span class="text-naranja">@model.UbicacionDestino</span></p>
-                                <p class="rz-mt-2 rz-mb-2"><strong>Destino:</strong> <span class="text-rojo">@model.Destino</span></p>
-                            </RadzenColumn>
-                        </RadzenRow>
+                        @foreach (var item in timelineItems)
+                        {
+                            <RadzenTimelineItem PointVariant="Variant.Outlined" PointStyle="PointStyle.Info" PointShadow="0">
+                                <PointContent>
+                                    <RadzenIcon Icon="@item.Icon" Style="color: #562E8A;" />
+                                </PointContent>
+                                <ChildContent>
+                                    <RadzenText TextStyle="TextStyle.Subtitle1" class="rz-m-0" Style="font-size: 0.8rem; color: #562E8A;">
+                                        @item.Texto
+                                    </RadzenText>
+                                </ChildContent>
+                            </RadzenTimelineItem>
+                        }
+                    </Items>
+                </RadzenTimeline>
 
-                        <RadzenHeading Size="H3" Text="Detalle del Envío" />
+                <RadzenRow>
+                    <RadzenColumn Size="7" style="min-height: 40vh;">
+                        <RadzenCard Style="height: 100%;">
+                            <RadzenRow>
+                                <RadzenColumn>
+                                    <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de origen:</strong> <span class="text-morado">@package.SenderLocation</span></p>
+                                </RadzenColumn>
+                                <RadzenColumn>
+                                    <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de destino:</strong> <span class="text-naranja">@package.DestinationLocation</span></p>
+                                </RadzenColumn>
+                            </RadzenRow>
 
-                        <RadzenDataGrid Data="@model.Detalles" TItem="PackageDetail" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
+                            <RadzenHeading Size="H3" Text="Detalle del Envío" />
+
+                            <RadzenDataGrid Data="@package.Details" TItem="PackageDetail" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
+                                <Columns>
+                                    <RadzenDataGridColumn TItem="PackageDetail" Property="Type" Title="Tipo" />
+                                    <RadzenDataGridColumn TItem="PackageDetail" Property="Comment" Title="Comentarios" />
+                                    <RadzenDataGridColumn TItem="PackageDetail" Property="Quantity" Title="Cantidad" />
+                                </Columns>
+                            </RadzenDataGrid>
+                        </RadzenCard>
+                    </RadzenColumn>
+
+                    <RadzenColumn Size="5" Style="min-height: 40vh;">
+                        <RadzenCard class="rz-display-flex rz-flex-column rz-justify-content-space-between" Style="height: 100%;">
+                            <div>
+                                <RadzenHeading Size="H3" Text="Información del Envío" />
+
+                                <p class="rz-mt-2 rz-mb-2"><strong>Fecha Envío:</strong> <span class="text-morado">@package.CreatedAt</span></p>
+                                <p class="rz-mt-2 rz-mb-2"><strong>Estado:</strong> <span class="text-azul-claro">@package.State</span></p>
+                                <p class="rz-mt-2 rz-mb-2"><strong>Rastreo:</strong> <span class="text-rojo-brillante">@package.PackageId</span></p>
+
+                                <p class="rz-mt-2 rz-mb-2"><strong>Remitente:</strong> <span class="text-naranja">@package.Sender</span></p>
+                                <p class="rz-mt-2 rz-mb-2"><strong>Destinatario:</strong> <span class="text-morado">@package.Addressee</span></p>
+
+                                <pre class="rz-mt-2 rz-mb-2 rz-pb-1">
+                                <strong>Observaciones:</strong><br />@package.Observations
+                                </pre>
+                            </div>
+                            <div class="rz-display-flex" style="gap: 10px;">
+                                <RadzenButton Text="Eliminar" ButtonStyle="ButtonStyle.Danger" Icon="Delete" />
+                                <RadzenButton Text="Recibir" ButtonStyle="ButtonStyle.Primary" Icon="unarchive" />
+                            </div>
+                        </RadzenCard>
+                    </RadzenColumn>
+                </RadzenRow>
+
+                <RadzenRow>
+                    <RadzenCard class="rz-mt-5">
+                        <RadzenHeading Size="H3" Text="Historial de Cambios" />
+
+                        <RadzenDataGrid Data="@changelog" TItem="PackageChangelog" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
                             <Columns>
-                                <RadzenDataGridColumn TItem="PackageDetail" Property="Type" Title="Tipo" />
-                                <RadzenDataGridColumn TItem="PackageDetail" Property="Comment" Title="Comentarios" />
-                                <RadzenDataGridColumn TItem="PackageDetail" Property="Quantity" Title="Cantidad" />
+                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Estado" Title="Estado" />
+                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Comentario" Title="Comentario" />
+                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Usuario" Title="Usuario" />
+                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Fecha" Title="Fecha" />
                             </Columns>
                         </RadzenDataGrid>
                     </RadzenCard>
-                </RadzenColumn>
-
-                <RadzenColumn Size="5" Style="min-height: 40vh;">
-                    <RadzenCard class="rz-display-flex rz-flex-column rz-justify-content-space-between" Style="height: 100%;">
-                        <div>
-                            <RadzenHeading Size="H3" Text="Información del Envío" />
-
-                            <p class="rz-mt-2 rz-mb-2"><strong>Fecha solicitud:</strong> <span class="text-morado">04/mar/2025</span></p>
-                            <p class="rz-mt-2 rz-mb-2"><strong>Estado:</strong> <span class="text-azul-claro">Nuevo Envío</span></p>
-                            <p class="rz-mt-2 rz-mb-2"><strong>Rastreo:</strong> <span class="text-rojo-brillante">@model.NumeroRastreo</span></p>
-
-                            <p class="rz-mt-2 rz-mb-2"><strong>Remitente:</strong> <span class="text-naranja">@model.EmailDestinatario</span></p>
-                            <p class="rz-mt-2 rz-mb-2"><strong>Destinatario:</strong> <span>@model.NombreDestinatario</span></p>
-
-                            <pre class="rz-mt-2 rz-mb-2">
-                            <strong>Observaciones:</strong><br />@model.Observaciones
-                            </pre>
-                        </div>
-                        <div class="rz-display-flex" style="gap: 10px;">
-                            <RadzenButton Text="Eliminar" ButtonStyle="ButtonStyle.Danger" Icon="Delete" />
-                            <RadzenButton Text="Recibir" ButtonStyle="ButtonStyle.Primary" Icon="unarchive" />
-                        </div>
-                    </RadzenCard>
-                </RadzenColumn>
-            </RadzenRow>
-
-            <RadzenRow>
-                <RadzenCard class="rz-mt-5">
-                    <RadzenHeading Size="H3" Text="Historial de Cambios" />
-
-                    <RadzenDataGrid Data="@changelog" TItem="PackageChangelog" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
-                        <Columns>
-                            <RadzenDataGridColumn TItem="PackageChangelog" Property="Estado" Title="Estado" />
-                            <RadzenDataGridColumn TItem="PackageChangelog" Property="Comentario" Title="Comentario" />
-                            <RadzenDataGridColumn TItem="PackageChangelog" Property="Usuario" Title="Usuario" />
-                            <RadzenDataGridColumn TItem="PackageChangelog" Property="Fecha" Title="Fecha" />
-                        </Columns>
-                    </RadzenDataGrid>
+                </RadzenRow>
+            }
+            else if (firstSearch)
+            {
+                <RadzenCard class="no-searchable-package rz-mt-3">
+                    <RadzenText Text="No se pudo encontrar el paquete" TextStyle="TextStyle.H4" />
                 </RadzenCard>
-            </RadzenRow>
+            }
         </div>
-    }
 </SessionValidator>

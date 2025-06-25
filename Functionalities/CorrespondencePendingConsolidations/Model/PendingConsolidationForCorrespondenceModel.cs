@@ -6,7 +6,7 @@ public class PendingConsolidationForCorrespondenceModel
     [JsonPropertyName("IdConsolidado")]
     public int ConsolidatedId { get; set; }
 
-    [JsonPropertyName("UbicacionDestino")]
+    [JsonPropertyName("UbicacionOrigen")]
     public string? SenderLocation { get; set; }
 
     [JsonPropertyName("CreadoPor")]

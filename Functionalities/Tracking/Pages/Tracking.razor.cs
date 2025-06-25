@@ -1,3 +1,4 @@
+using GestorCorrespondencia.Frontend.Functionalities.Tracking.Http;
 using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
@@ -6,41 +7,23 @@ using Radzen;
 namespace GestorCorrespondencia.Frontend.Functionalities.Tracking.Pages;
 public partial class Tracking
 {
-    [Inject] DialogService DialogService { get; set; } = default!;
+    [Inject] TrackingHttp TrackingHttp { get; set; } = default!;
 
-    private bool paqueteEncontrado = true;
+    private bool loading = false;
 
-    private Package model = new Package
+    private int? PackageId;
+    private Package package = new Package();
+    private bool foundPackage;
+    private bool firstSearch = false;
+
+    private async Task BuscarPaquete()
     {
-        NumeroRastreo = "UKSIS-UKSIS-386759",
-        UbicacionOrigen = "Oficinas Z 12",
-        Origen = "Contabilidad",
-        UbicacionDestino = "Unipark",
-        Destino = "Sistemas",
-        EmailDestinatario = "test@gmail.com",
-        NombreDestinatario = "test",
-        Observaciones = "test test test test test test test test \ntest test test test test test test test test test test test test test test test test test test test test test test test",
-        Detalles = new List<PackageDetail>
-        {
-            new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-            new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-            new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-            new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 },
-            new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-            new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-            new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 },
-            new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-            new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-            new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 },
-            new PackageDetail { Type = "Paquetes", Comment = "Camisas", Quantity = 4 },
-            new PackageDetail { Type = "Documentos", Comment = "Planillas ", Quantity = 2 },
-            new PackageDetail { Type = "Caja", Comment = "Etiquetas", Quantity = 2 }
-        }
-    };
-
-    private void BuscarPaquete()
-    {
-        paqueteEncontrado = true;
+        loading = true;
+        package  = await TrackingHttp.GetPackageAsync(PackageId ?? 0);
+        foundPackage = package.PackageId > 0 ? true : false;
+        firstSearch = true;
+        loading = false;
+        StateHasChanged();
     }
 
     IList<PackageChangelog> changelog = new List<PackageChangelog>
@@ -52,9 +35,6 @@ public partial class Tracking
         new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "Enviado a Correspondencia", Usuario = "scollections", Fecha = "01/04/2025" },
         new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "Nuevo Envío", Usuario = "scollections", Fecha = "31/03/2025" }
     };
-
-
-    private Orientation orientation = Orientation.Horizontal;
 
     private List<(string Texto, string Icon)> timelineItems = new()
     {

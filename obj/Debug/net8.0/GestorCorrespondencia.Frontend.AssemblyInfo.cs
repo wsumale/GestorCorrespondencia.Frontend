@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestorCorrespondencia.Frontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3afbea07d39755782a087c32225c5aa3cae3275")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbd14f619588632b5c8f5115454e5e8f946fd349")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestorCorrespondencia.Frontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestorCorrespondencia.Frontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

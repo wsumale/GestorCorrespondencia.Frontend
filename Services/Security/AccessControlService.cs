@@ -13,6 +13,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 using GestorCorrespondencia.Frontend.Services.Http;
+using Microsoft.JSInterop;
 
 namespace GestorCorrespondencia.Frontend.Services.Security;
 public class AccessControlService
@@ -29,6 +30,7 @@ public class AccessControlService
     private readonly AuthSessionService _authSessionService;
     private readonly ISessionReasonService _sessionReasonService;
     private readonly AuthenticationStateProvider _authProvider;
+    private readonly IJSRuntime _jsRuntime;
     private readonly ILogger _logger;
 
     public AccessControlService(HttpClient httpClient,
@@ -42,6 +44,7 @@ public class AccessControlService
                                 AuthSessionService authSessionService,
                                 ISessionReasonService sessionReasonService,
                                 AuthenticationStateProvider authProvider,
+                                IJSRuntime jsRuntime,
                                 ILogger<AccessControlService> logger)
     {
         _httpClient = httpClient;
@@ -56,6 +59,7 @@ public class AccessControlService
         _authSessionService = authSessionService;
         _sessionReasonService = sessionReasonService;
         _authProvider = authProvider;
+        _jsRuntime = jsRuntime;
         _logger = logger;
     }
 
@@ -101,6 +105,8 @@ public class AccessControlService
                     RefreshTokenExp = newExpRefreshToken,
                     User = user
                 };
+
+                await _jsRuntime.InvokeVoidAsync("auth.refreshSession", JsonSerializer.Serialize(payload));
 
                 var baseUri = new Uri(_navigationManager.BaseUri);
                 var endpoint = new Uri(baseUri, "auth/refresh-session");
