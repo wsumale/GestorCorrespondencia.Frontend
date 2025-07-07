@@ -63,14 +63,14 @@
                 <RadzenDataGridColumn Property="RecipientLocation" Title="Destino" />
                 <RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px">
                     <Template Context="Detail">
-                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" @onclick:stopPropagation="true" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
+                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" @onclick:stopPropagation="true" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
                     </Template>
                 </RadzenDataGridColumn>
             </Columns>
         </RadzenDataGrid>
 
         <RadzenRow class="rz-mt-3 rz-display rz-justify-content-right rz-justify-content-end">
-            <RadzenButton Text="Enviar Consolidado" Click="OpenPreviewConsolidation" Disabled="@(selectedPackages == null || !selectedPackages.Any())" />
+            <RadzenButton Text="Enviar Consolidado" Click="OpenPreviewConsolidationAsync" Disabled="@(selectedPackages == null || !selectedPackages.Any())" />
         </RadzenRow>
     </div>
 </SessionValidator>

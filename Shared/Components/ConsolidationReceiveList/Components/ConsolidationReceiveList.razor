@@ -31,7 +31,7 @@
 			<RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
 			<RadzenDataGridColumn Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Width="250px">
 				<Template Context="Detail">
-					<RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" class="rz-me-2" />
+					<RadzenButton Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" class="rz-me-2" />
 					@if(ConsolidatedType == 1){
 						<RadzenButton Click="@(() => CreateIncidentDialogAsync(Detail.PackageId, Detail.ConsolidatedDetailId))" hidden="@(Detail.StateId != 5)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
 						<RadzenBadge Shade="Shade.Lighter" BadgeStyle="BadgeStyle.Warning" Text="@(Detail.State)" hidden="@(Detail.StateId == 5)" />

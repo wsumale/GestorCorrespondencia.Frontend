@@ -30,7 +30,7 @@ public partial class Login
     private LoginRequestDto login = new();
     bool busy;
 
-    private async Task OnSubmit()
+    private async Task OnSubmitAsync()
     {
         busy = true;
 
@@ -43,7 +43,7 @@ public partial class Login
 
             if (response.IsSuccessStatusCode)
             {
-                await ProcesarLoginExitosoAsync(response, content);
+                await ProcessSuccessfulLoginAsync(response, content);
             }
             else
             {
@@ -68,7 +68,7 @@ public partial class Login
 
                     if (statusDialog != null && errorObject.Type == "TwoFactorAuthenticationConfigurationRequiredException")
                     {
-                        await Configure2FA();
+                        await Configure2FAAsync();
                     }
                 }
 
@@ -90,7 +90,7 @@ public partial class Login
         }
     }
 
-    private async Task ProcesarLoginExitosoAsync(HttpResponseMessage response, string content)
+    private async Task ProcessSuccessfulLoginAsync(HttpResponseMessage response, string content)
     {
         var token = response.Headers.GetValues("Authorization").FirstOrDefault()?.Replace("Bearer ", "");
         var user = JsonSerializer.Deserialize<SessionUser>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
@@ -128,7 +128,7 @@ public partial class Login
         }
     }
 
-    private async Task Configure2FA()
+    private async Task Configure2FAAsync()
     {
         await DialogService.OpenAsync<Form2FA>(
             "Configuración de 2FA",

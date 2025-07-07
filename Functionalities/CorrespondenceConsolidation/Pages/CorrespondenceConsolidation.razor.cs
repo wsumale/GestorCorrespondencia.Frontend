@@ -44,7 +44,7 @@ public partial class CorrespondenceConsolidation
 
     private string? selectedUbicacionDestino;
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 
@@ -87,14 +87,14 @@ public partial class CorrespondenceConsolidation
         StateHasChanged();
     }
 
-    private async Task OpenPreviewConsolidation()
+    private async Task OpenPreviewConsolidationAsync()
     {
-        Consolidated consolidated = new Consolidated();
+        Consolidated consolidated = new();
         consolidated.RecipientLocationId = selectedLocationId;
         consolidated.RecipientLocation = selectedLocation;
         consolidated.ConsolidatedDetail = selectedPackages;
         consolidated.Type = 2;
 
-        await CustomDialogService.OpenPreviewNewConsolidation(consolidated);
+        await CustomDialogService.OpenPreviewNewConsolidationAsync(consolidated);
     }
 }

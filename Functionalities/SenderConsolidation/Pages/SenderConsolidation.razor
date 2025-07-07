@@ -67,7 +67,7 @@
                 <RadzenDataGridColumn Property="RecipientLocation" Title="Destino" />
                 <RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px" >
                     <Template Context="Detail">
-                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" @onclick:stopPropagation="true" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
+                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" @onclick:stopPropagation="true" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
                     </Template>
                 </RadzenDataGridColumn>
             </Columns>

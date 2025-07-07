@@ -30,7 +30,7 @@
 		<RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
 		<RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px">
 			<Template Context="Detail">
-				<RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
+				<RadzenButton Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
 			</Template>
 		</RadzenDataGridColumn>
 	</Columns>

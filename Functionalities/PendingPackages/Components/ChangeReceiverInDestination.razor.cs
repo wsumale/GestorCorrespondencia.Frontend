@@ -30,7 +30,7 @@ public partial class ChangeReceiverInDestination
         loading = true;
 
         var user = await GetCurrentUser.GetUserInfoAsync();
-        Users = await SGUService.GetUsersPhysicalLocationFromUserLocation(user.LocationId ?? 0);
+        Users = await SGUService.GetUsersPhysicalLocationFromUserLocationAsync(user.LocationId ?? 0);
 
         Form.RelationshipType = 1;
         Form.IncidentTypeId = 4;

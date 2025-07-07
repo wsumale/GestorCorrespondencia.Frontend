@@ -47,7 +47,7 @@
                         <RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
                         <RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px">
                             <Template Context="Detail">
-                                <RadzenButton ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" Icon="list" Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" />
+                                <RadzenButton ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" Icon="list" Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" />
                             </Template>
                         </RadzenDataGridColumn>
                     </Columns>

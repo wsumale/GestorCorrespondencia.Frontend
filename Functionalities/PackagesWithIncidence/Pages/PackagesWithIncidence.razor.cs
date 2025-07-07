@@ -31,12 +31,12 @@ public partial class PackagesWithIncidence
 
     private async Task OpenIncidentDetailAsync(int IncidentId)
     {
-        await CustomDialogService.OpenIncidentDetail(IncidentId);
+        await CustomDialogService.OpenIncidentDetailAsync(IncidentId);
     }
 
     private async Task OpenPackageDetailAsync(int? PackageId)
     {
-        await CustomDialogService.OpenViewPackageNullable(PackageId);
+        await CustomDialogService.OpenViewPackageNullableAsync(PackageId);
     }
 
     private async Task OpenResolveIncidentAsync(int IncidentId, int? IncidentTypeId)

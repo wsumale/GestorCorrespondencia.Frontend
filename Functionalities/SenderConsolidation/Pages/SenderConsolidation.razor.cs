@@ -23,7 +23,7 @@ public partial class SenderConsolidation
             consolidated.ConsolidatedDetail = selectedPackages;
             consolidated.Type = 1;
 
-            await CustomDialogService.OpenPreviewNewConsolidation(consolidated);
+            await CustomDialogService.OpenPreviewNewConsolidationAsync(consolidated);
         } 
         else
         {

@@ -24,7 +24,7 @@
                 <RadzenDataGridColumn Property="State" Title="Estado" />
                 <RadzenDataGridColumn Filterable="false" Sortable="false" Width="180px" TextAlign="TextAlign.Right">
                     <Template Context="Package">
-                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Package.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" class="rz-me-3" />
+                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackageAsync(Package.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" class="rz-me-3" />
                         <RadzenButton Click="@(() => ReceivePackageAsync(Package.PackageId))" hidden="@(Package.StateId != 10)" Icon="download_done" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" class="rz-me-3" />
                         <RadzenButton Click="@(() => CreateIncidentDialogAsync(Package.PackageId, Package.PackageId))" hidden="@(Package.StateId != 10)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
                     </Template>

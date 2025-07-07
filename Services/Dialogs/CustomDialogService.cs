@@ -23,7 +23,7 @@ public class CustomDialogService
         DialogService = dialogService;
     }
 
-    public async Task OpenViewPackage (int PackageId)
+    public async Task OpenViewPackageAsync (int PackageId)
     {
         await DialogService.OpenAsync<ViewPackageDetail>("Detalle del Paquete", 
             new Dictionary<string, object>
@@ -38,7 +38,7 @@ public class CustomDialogService
             });
     }
 
-    public async Task OpenViewPackageNullable(int? PackageId)
+    public async Task OpenViewPackageNullableAsync(int? PackageId)
     {
         await DialogService.OpenAsync<ViewPackageDetail>("Detalle del Paquete",
             new Dictionary<string, object>
@@ -53,7 +53,7 @@ public class CustomDialogService
             });
     }
 
-    public async Task OpenPreviewNewConsolidation (Consolidated consolidated)
+    public async Task OpenPreviewNewConsolidationAsync (Consolidated consolidated)
     {
         
         await DialogService.OpenAsync<PreviewNewConsolidation>(
@@ -117,7 +117,7 @@ public class CustomDialogService
         );
     }
 
-    public async Task OpenIncidentDetail(int IncidentId)
+    public async Task OpenIncidentDetailAsync(int IncidentId)
     {
         await DialogService.OpenAsync<IncidentDetail>(
             "Detalle incidencia",

@@ -47,7 +47,7 @@ public class SGUService
         return new List<User>();
     }
 
-    public async Task<IList<User>> GetUsersPhysicalLocationFromUserLocation(int LocationId)
+    public async Task<IList<User>> GetUsersPhysicalLocationFromUserLocationAsync(int LocationId)
     {
         try
         {
