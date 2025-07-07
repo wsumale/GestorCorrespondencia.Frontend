@@ -26,7 +26,7 @@ public partial class PackagesWithIncidence
 
     private async Task LoadDataAsync()
     {
-        packages = await PackagesWithIncidentHttp.GetPackagesWithIncident();
+        packages = await PackagesWithIncidentHttp.GetPackagesWithIncidentAsync();
     }
 
     private async Task OpenIncidentDetailAsync(int IncidentId)

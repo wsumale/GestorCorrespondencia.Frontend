@@ -26,7 +26,7 @@ public partial class ChangeReceiver
     [Parameter] public int IncidentId { get; set; }
     private IncidentResolveDTO form = new();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         await LoadLocationsAsync();
     }
@@ -56,7 +56,7 @@ public partial class ChangeReceiver
         StateHasChanged();
     }
 
-    private async Task GetUsersByLocationId()
+    private async Task GetUsersByLocationIdAsync()
     {
         loading = true;
         Users = await SGUService.GetUsersByLocationAsync(selectedLocation);

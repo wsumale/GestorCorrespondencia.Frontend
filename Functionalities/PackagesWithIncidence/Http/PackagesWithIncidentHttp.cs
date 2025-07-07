@@ -28,7 +28,7 @@ public class PackagesWithIncidentHttp
         _dialogService = dialogService;
     }
 
-    public async Task<IList<PackageWithIncident>> GetPackagesWithIncident()
+    public async Task<IList<PackageWithIncident>> GetPackagesWithIncidentAsync()
     {
         try
         {
@@ -57,7 +57,7 @@ public class PackagesWithIncidentHttp
         return new List<PackageWithIncident>();
     }
 
-    public async Task<Incident> GetIncidentDetail(int IncidentId)
+    public async Task<Incident> GetIncidentDetailAsync(int IncidentId)
     {
         try
         {

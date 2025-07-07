@@ -14,7 +14,7 @@ public partial class SenderConsolidation
     RadzenDataGrid<ConsolidatedDetail>? grid;
     private IList<ConsolidatedDetail>? selectedPackages = new List<ConsolidatedDetail>();
 
-    private async Task OpenPreviewConsolidation()
+    private async Task OpenPreviewConsolidationAsync()
     {
         if (selectedPackages != null && selectedPackages!.Count() > 0)
         {

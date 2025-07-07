@@ -16,7 +16,6 @@ public partial class WBAccessRequestNewUser
     [Inject] private ApiPostService ApiPostService { get; set; } = default!;
     [Inject] private DialogService DialogService { get; set; } = default!;
     [Inject] private NavigationManager NavigationManager { get; set; } = default!;
-    [Inject] private ILogger<WBAccessRequestNewUser> _logger { get; set; } = default!;
     [Inject] private CustomDialogService CustomDialogService { get; set; } = default!;
 
     [Parameter] public WBValidateEmployeeCodeForm? ValidateEmployeeCode { get; set; }
@@ -33,7 +32,7 @@ public partial class WBAccessRequestNewUser
         readOnlyCodigo = ValidateEmployeeCode.EmployeeCode == null || ValidateEmployeeCode.EmployeeCode == 0 ? false : true;
     }
 
-    private async Task OnSubmit()
+    private async Task OnSubmitAsync()
     {
         busy = true;
 

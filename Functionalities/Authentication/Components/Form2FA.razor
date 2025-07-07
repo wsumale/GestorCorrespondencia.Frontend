@@ -13,7 +13,7 @@
 			<RadzenText TextStyle="TextStyle.Body1"><strong>3.-</strong> Una vez que haya escaneado el código QR, su aplicación de autenticación de dos factores le proporcionará un código único. Ingrese el código en el cuadro de confirmación a continuación.</RadzenText>
 		</RadzenRow>
 		<RadzenRow>
-			<RadzenTemplateForm Data="@Form" Submit="@OnSubmit" TItem="TwoFactorAuthFormModel" class="rz-display-flex gap-3 flex-column rz-w-100">
+			<RadzenTemplateForm Data="@Form" Submit="@OnSubmitAsync" TItem="TwoFactorAuthFormModel" class="rz-display-flex gap-3 flex-column rz-w-100">
 				<DataAnnotationsValidator />
 				<RadzenRow class="rz-display-flex rz-flex-column rz-w-100">
 					<RadzenNumeric ShowUpDown="false" TValue="int?" @bind-Value=@Form.AuthenticatorCode Placeholder="Código del autenticador" />

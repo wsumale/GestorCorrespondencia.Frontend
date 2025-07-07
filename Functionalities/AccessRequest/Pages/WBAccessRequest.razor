@@ -5,7 +5,7 @@
 
 @switch(formulario) {
     case 0:
-        <RadzenTemplateForm Data="Form" Submit="@OnSubmitValidarCodigo" TItem="WBValidateEmployeeCodeForm" class="form-solicitud">
+        <RadzenTemplateForm Data="Form" Submit="@OnSubmitValidateCodeAsync" TItem="WBValidateEmployeeCodeForm" class="form-solicitud">
             <RadzenRow>
                 <RadzenFormField Text="Código" Variant="Variant.Filled" class="w-100 rz-text-align-left">
                     <RadzenNumeric @bind-Value="Form.EmployeeCode" Name="Codigo" ShowUpDown="false" class="form-input" autocomplete="off" />

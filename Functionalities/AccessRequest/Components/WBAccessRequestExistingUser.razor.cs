@@ -1,12 +1,8 @@
-using System.Text.Json;
 using GestorCorrespondencia.Frontend.Functionalities.AccessRequest.DTO;
 using GestorCorrespondencia.Frontend.Functionalities.AccessRequest.Mapper;
 using GestorCorrespondencia.Frontend.Functionalities.AccessRequest.Model;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
-using GestorCorrespondencia.Frontend.Services.Security;
-using GestorCorrespondencia.Frontend.Shared.Components;
-using GestorCorrespondencia.Frontend.Shared.Model;
 using Microsoft.AspNetCore.Components;
 using Radzen;
 
@@ -16,7 +12,6 @@ public partial class WBAccessRequestExistingUser
     [Inject] private ApiPostService ApiPostService { get; set; } = default!;
     [Inject] private DialogService DialogService { get; set; } = default!;
     [Inject] private NavigationManager NavigationManager { get; set; } = default!;
-    [Inject] private ILogger<WBAccessRequestExistingUser> _logger { get; set; } = default!;
     [Inject] private CustomDialogService CustomDialogService { get; set; } = default!;
 
     [Parameter] public WBValidateEmployeeCodeForm? ValidateEmployeeCode { get; set; }
@@ -32,7 +27,7 @@ public partial class WBAccessRequestExistingUser
         readOnlyEmployeeCode = ValidateEmployeeCode.EmployeeCode == null || ValidateEmployeeCode.EmployeeCode == 0 ? false : true;
     }
 
-    private async Task OnSubmit()
+    private async Task OnSubmitAsync()
     {
         busy = true;
 

@@ -18,7 +18,7 @@
 
     <RadzenStack>
         <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
-        <RadzenButton Text="Enviar a correspondencia" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="Submit" />
+        <RadzenButton Text="Enviar a correspondencia" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="SubmitAsync" />
     </RadzenStack>
 }
 
@@ -46,6 +46,6 @@
 
     <RadzenStack>
         <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
-        <RadzenButton Text="@($"Enviar a {consolidated.RecipientLocation}")" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="Submit" />
+        <RadzenButton Text="@($"Enviar a {consolidated.RecipientLocation}")" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="SubmitAsync" />
     </RadzenStack>
 }

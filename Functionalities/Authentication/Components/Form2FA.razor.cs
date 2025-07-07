@@ -17,7 +17,6 @@ public partial class Form2FA
     [Inject] ApiPostService ApiPostService { get; set; } = default!;
     [Inject] DialogService DialogService { get; set; } = default!;
     [Inject] EncryptionService EncryptionService { get; set; } = default!;
-    [Inject] ILogger<Login> _logger { get; set; } = default!;
     [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
 
     [Parameter] public LoginRequestDto Login { get; set; } = default!;
@@ -25,7 +24,7 @@ public partial class Form2FA
     private readonly TwoFactorSettingsRequestDto Request = new();
     private string qr = "";
 
-    protected override async void OnInitialized()
+    protected override void OnInitialized()
     {
         Request.username = Login.Username;
     }
@@ -34,12 +33,12 @@ public partial class Form2FA
     {
         if (firstRender)
         {
-            await GetSettings();
+            await GetSettingsAsync();
             StateHasChanged();
         }
     }
 
-    private async Task OnSubmit()
+    private async Task OnSubmitAsync()
     {
         try
         {
@@ -63,7 +62,7 @@ public partial class Form2FA
         }
     }
 
-    private async Task GetSettings()
+    private async Task GetSettingsAsync()
     {
         try
         {

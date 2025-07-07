@@ -15,7 +15,7 @@
     private ConsolidatedDetail package = new();
     private IList<ConsolidatedDetail> packages = new List<ConsolidatedDetail>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
         packages = await SenderConsolidationHttp.GetPackagesPendingConsolidationAsync();
@@ -74,7 +74,7 @@
         </RadzenDataGrid>
 
         <RadzenRow class="rz-mt-3 rz-display rz-justify-content-right rz-justify-content-end">
-            <RadzenButton Text="Enviar Consolidado" Click="OpenPreviewConsolidation" Disabled="@(selectedPackages == null || !selectedPackages.Any())" />
+            <RadzenButton Text="Enviar Consolidado" Click="OpenPreviewConsolidationAsync" Disabled="@(selectedPackages == null || !selectedPackages.Any())" />
         </RadzenRow>
     </div>
 </SessionValidator>

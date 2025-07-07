@@ -13,14 +13,13 @@ public partial class WBAccessRequest
     [Inject] private HttpClient Http { get; set; } = default!;
     [Inject] private ApiGetService ApiGetService { get; set; } = default!;
     [Inject] private DialogService DialogService { get; set; } = default!;
-    [Inject] private ILogger<WBAccessRequest> _logger { get; set; } = default!;
     [Inject] private CustomDialogService CustomDialogService { get; set; } = default!;
 
     private int formulario = 0; //0=Validar Codigo, 1=Usar Credenciales Existentes, 2=Crear Usuario
     public readonly WBValidateEmployeeCodeForm Form = new WBValidateEmployeeCodeForm();
     bool busy;
 
-    private async Task OnSubmitValidarCodigo()
+    private async Task OnSubmitValidateCodeAsync()
     {
         busy = true;
 

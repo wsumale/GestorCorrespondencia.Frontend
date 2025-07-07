@@ -16,7 +16,7 @@ public partial class ResetPasswordRequest
     public ResetPasswordRequestForm Request = new();
     public bool busy;
 
-    public async Task OnSubmit()
+    public async Task OnSubmitAsync()
     {
         try
         {

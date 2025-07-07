@@ -15,7 +15,6 @@ public partial class CreatePackageIncident
     [Inject] private ApiPostService ApiPostService { get; set; } = default!;
     [Inject] private CustomDialogService CustomDialogService { get; set; } = default!;
     [Inject] private NotificationService NotificationService { get; set; } = default!;
-    [Inject] private ILogger<CreatePackageIncident> _logger { get; set; } = default!;
 
     [Parameter] public int PackageId { get; set; }
     [Parameter] public int ConsolidatedDetailId { get; set; }
@@ -28,12 +27,7 @@ public partial class CreatePackageIncident
     .Cast<IncidentType>()
     .Select(e => new { Value = (int)e, Description = e.Description() });
 
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-    }
-
-    private async Task OnSubmit()
+    private async Task OnSubmitAsync()
     {
         try
         {
@@ -44,10 +38,6 @@ public partial class CreatePackageIncident
             dto.IncidentTypeId = form.IncidentType;
             dto.Comment = form.Comment;
             dto.RelationshipType = 2;
-
-            _logger.LogWarning(ConsolidatedDetailId.ToString());
-            _logger.LogWarning(PackageId.ToString());
-            _logger.LogWarning(JsonSerializer.Serialize(dto, new JsonSerializerOptions { WriteIndented = true }));
 
             var response = await ApiPostService.PostAsync("incidencias", dto, 1, true);
 

@@ -15,13 +15,12 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
         [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
         [Inject] NavigationManager NavigationManager { get; set; } = default!;
         [Inject] IJSRuntime JS { get; set; } = default!;
-        [Inject] ILogger<PreviewNewConsolidation> _logger { get; set; } = default!;
 
         [Parameter] public Consolidated? consolidated { get; set; }
 
         bool loading = false;
 
-        public async Task Submit()
+        public async Task SubmitAsync()
         {
             try
             {
@@ -51,7 +50,7 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
 
                     await JS.InvokeVoidAsync("downloadFromByteArray", fileName, base64, contentType);
 
-                    await Success();
+                    await SuccessAsync();
                 }
                 else
                 {
@@ -66,7 +65,7 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
             }
         }
 
-        private async Task Success()
+        private async Task SuccessAsync()
         {
 
             var redirect = await DialogService.Alert("Consolidado creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar" });

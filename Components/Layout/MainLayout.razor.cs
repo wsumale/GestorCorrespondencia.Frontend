@@ -41,7 +41,7 @@ public partial class MainLayout
         };
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override void OnAfterRender(bool firstRender)
     {
         if (firstRender)
         {
@@ -55,7 +55,7 @@ public partial class MainLayout
         LayoutService.SetSidebarExpanded(newState);
     }
 
-    private async Task Logout()
+    private async Task LogoutAsync()
     {
         if (_jsAvailable)
         {

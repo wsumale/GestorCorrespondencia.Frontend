@@ -26,7 +26,7 @@ public partial class IncidentDetail
 
     private async Task LoadDataAsync()
     {
-        incident = await PackagesWithIncidentHttp.GetIncidentDetail(IncidentId);
+        incident = await PackagesWithIncidentHttp.GetIncidentDetailAsync(IncidentId);
         showContent = incident.IncidentId > 0 ? true : false;
     }
 }
