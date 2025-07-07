@@ -16,7 +16,7 @@ public partial class PackageDestinationForm
 
     private IList<User>? Users;
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         if(shippingForm!.LocationId > 0)
         {

@@ -25,7 +25,7 @@ public partial class ChangeReceiverInDestination
 
     private IList<User> Users = new List<User>();
     
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

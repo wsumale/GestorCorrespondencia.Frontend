@@ -16,7 +16,7 @@ public partial class ViewConsolidationDetail
 
     private bool loading = false;
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

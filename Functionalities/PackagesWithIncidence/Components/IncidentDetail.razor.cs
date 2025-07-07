@@ -13,7 +13,7 @@ public partial class IncidentDetail
 
     private Incident incident = new();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

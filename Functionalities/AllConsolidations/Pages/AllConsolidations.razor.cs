@@ -15,7 +15,7 @@ public partial class AllConsolidations
 
     private IList<AllConsolidationsView> consolidations = new List<AllConsolidationsView>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

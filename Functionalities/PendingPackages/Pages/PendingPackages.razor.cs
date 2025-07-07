@@ -14,7 +14,7 @@ public partial class PendingPackages
     private bool loading = false;
     private IList<PendingPackage> packages = new List<PendingPackage>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
         await LoadDataAsync();

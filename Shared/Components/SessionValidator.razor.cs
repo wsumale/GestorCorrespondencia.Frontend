@@ -67,7 +67,7 @@ public partial class SessionValidator
         }
     }
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         var authState = await AuthStateProvider.GetAuthenticationStateAsync();
         user = authState.User;

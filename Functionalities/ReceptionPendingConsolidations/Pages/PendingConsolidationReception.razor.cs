@@ -13,7 +13,7 @@ public partial class PendingConsolidationReception
     private bool loading = false;
     private IList<PendingConsolidationForReceptionModel> consolidates = new List<PendingConsolidationForReceptionModel>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

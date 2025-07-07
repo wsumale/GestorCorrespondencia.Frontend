@@ -15,7 +15,7 @@ public partial class ConsolidationsMailbox
 
     private IList<ConsolidationsMailboxView> consolidations = new List<ConsolidationsMailboxView>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

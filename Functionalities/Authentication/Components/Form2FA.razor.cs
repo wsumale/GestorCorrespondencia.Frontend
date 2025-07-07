@@ -29,7 +29,7 @@ public partial class Form2FA
         Request.username = Login.Username;
     }
 
-    protected override async void OnAfterRender(bool firstRender)
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {

@@ -20,7 +20,7 @@ public partial class ConsolidationReceiveList
 
     private PendingConsolidation? consolidated = new();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

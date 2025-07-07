@@ -13,7 +13,7 @@ public partial class MyConsolidations
 
     private IList<MyConsolidationsView> myConsolidations = new List<MyConsolidationsView>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

@@ -13,7 +13,7 @@ public partial class PackagesWithIncidence
 
     private IList<PackageWithIncident> packages = new List<PackageWithIncident>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
 

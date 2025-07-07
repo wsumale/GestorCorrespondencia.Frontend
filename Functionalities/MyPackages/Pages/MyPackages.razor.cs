@@ -14,7 +14,7 @@ public partial class MyPackages
     bool loading = false;
     private IList<MyPackagesView> myPackages = new List<MyPackagesView>();
 
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         loading = true;
         myPackages = await MyPackagesHttp.GetMyPackagesAsync();
