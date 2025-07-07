@@ -82,7 +82,7 @@
         <RadzenText Text="@title" class="form-title" />
         <RadzenText Text="Complete el siguiente formulario para realizar el envío de su paquete. Asegúrese de proporcionar la información correctamente." class="description-text" />
 
-        <RadzenSteps Change="@OnChange" CanChange="@CanChange" PreviousText="Volver" NextText="Continuar">
+        <RadzenSteps Change="@OnChange" CanChange="@CanChangeAsync" PreviousText="Volver" NextText="Continuar">
             <Steps>
                 <RadzenStepsItem Text="Información del envío">
                     <PackageDestinationForm shippingForm="@shippingForm" Locations="@Locations" OnModelUpdated="@(m => shippingForm = m)" OnLoading="@(m => loading = m)" />
@@ -95,8 +95,8 @@
                 <RadzenStepsItem Text="Confirmar Envío">
                     <PackageSummary shippingForm="@shippingForm" />
                     <div class="form-buttons">
-                        <RadzenButton Text="Cancelar" class="btn-cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="Cancel" />
-                        <RadzenButton Text="Enviar" class="btn-enviar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="Submit" />
+                        <RadzenButton Text="Cancelar" class="btn-cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="CancelAsync" />
+                        <RadzenButton Text="Enviar" IsBusy="@busy" BusyText="Enviando" class="btn-enviar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Click="SubmitAsync" />
                     </div>
                 </RadzenStepsItem>
             </Steps>

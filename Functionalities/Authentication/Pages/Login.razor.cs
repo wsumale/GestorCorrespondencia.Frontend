@@ -23,7 +23,6 @@ public partial class Login
     [Inject] private AuthenticationStateProvider AuthStateProvider { get; set; } = default!;
     [Inject] private IAuthCookieService AuthCookieService { get; set; } = default!;
     [Inject] private IJSRuntime JS { get; set; } = default!;
-    [Inject] ILogger<Login> _logger { get; set; } = default!;
 
     public string subtitle = "Por favor ingresa tus credenciales para continuar.";
     public bool requiredAuthenticatorCode = false;

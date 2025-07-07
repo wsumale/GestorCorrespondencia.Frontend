@@ -16,7 +16,6 @@ public partial class ChangeReceiverInDestination
     [Inject] DialogService DialogService { get; set; } = default!;
     [Inject] SGUService SGUService { get; set; } = default!;
     [Inject] GetCurrentUser GetCurrentUser { get; set; } = default!;
-    [Inject] ILogger<ChangeReceiverInDestination> _logger { get; set; } = default!;
 
     [Parameter] public int PackageId { get; set; }
 
@@ -43,14 +42,15 @@ public partial class ChangeReceiverInDestination
 
     private async Task OnSubmitChangeReceiverAsync()
     {
-        bool confirm = await CustomDialogService.OpenConfirmAsync($"Esta a punto de modificar el destinatario ¿Continuar?", "Confirmar", "Cambiar destinatario", "Cancelar", new DialogOptions { Width = "400px" });
+        bool confirm = await CustomDialogService.OpenConfirmAsync("Esta a punto de modificar el destinatario ¿Continuar?", "Confirmar", "Cambiar destinatario", "Cancelar", new DialogOptions { Width = "400px" });
         if (confirm)
         {
             StateHasChanged();
+
             loading = true;
-            _logger.LogWarning(JsonSerializer.Serialize(Form, new JsonSerializerOptions { WriteIndented = true }));
             await PendingPackagesHttp.ChangeReceiverAsync(Form);
             loading = false;
+
             DialogService.Close();
         }
     }

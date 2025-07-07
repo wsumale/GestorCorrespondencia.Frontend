@@ -16,11 +16,11 @@ public partial class PackageShipping
     [Inject] DialogService DialogService { get; set; } = default!;
     [Inject] NavigationManager NavigationManager { get; set; } = default!;
     [Inject] SGLService SGLService { get; set; } = default!;
-    [Inject] ILogger<PackageShipping> _logger { get; set; } = default!;
     [Inject] ApiPostService ApiPostService { get; set; } = default!;
     [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
 
     private bool loading = true;
+    private bool busy;
     private IList<Location>? Locations;
 
     protected override async Task OnInitializedAsync()
@@ -33,7 +33,7 @@ public partial class PackageShipping
     private string title = "Formulario de Envío";
     private ShippingForm shippingForm = new ShippingForm();
 
-    private async Task CanChange(StepsCanChangeEventArgs args)
+    private async Task CanChangeAsync(StepsCanChangeEventArgs args)
     {
         changeTitle(args);
 
@@ -106,18 +106,18 @@ public partial class PackageShipping
         Console.WriteLine("Change");
     }
 
-    private async Task Submit()
+    private async Task SubmitAsync()
     {
         try
         {
-            loading = true;
+            loading = busy = true;
 
             PackageRequestDTO dto = shippingForm.ToPackageRequestDTO();
             var response = await ApiPostService.PostAsync("paquetes", dto, 1, true);
 
             if (response.IsSuccessStatusCode)
             {
-                await Success();
+                await SuccessAsync();
             } else
             {
                 await CustomDialogService.OpenViewErrorsAsync(response);
@@ -127,11 +127,11 @@ public partial class PackageShipping
             await CustomDialogService.OpenInternalErrorAsync(e);
         } finally
         {
-            loading = false;
+            loading = busy = false;
         }
     }
 
-    private async Task Success()
+    private async Task SuccessAsync()
     {
 
         var redirect = await DialogService.Alert("Paquete creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar" });
@@ -141,9 +141,9 @@ public partial class PackageShipping
         }
     }
 
-    private async Task Cancel()
+    private async Task CancelAsync()
     {
-        var response = await DialogService.Confirm("¿Está seguro de que desea cancelar la envío del paquete?", "Cancelar", new ConfirmOptions() { OkButtonText = "Sí", CancelButtonText = "No" });
+        var response = await DialogService.Confirm("¿Está seguro de que desea cancelar el envío del paquete?", "Cancelar", new ConfirmOptions() { OkButtonText = "Sí", CancelButtonText = "No" });
 
         if (response == true)
         {

@@ -49,7 +49,7 @@ public partial class PackagesWithIncidence
     void OnSolvedFilterChanged(object value)
     {
         solvedFilter = value as bool?;
-        // Aquí, si usas LoadData, puedes disparar el filtrado en el backend
+        // Aquí, si usas LoadData, disparar el filtrado en el backend
         // Si el grid es local, Radzen lo hace automático con FilterProperty
     }
 

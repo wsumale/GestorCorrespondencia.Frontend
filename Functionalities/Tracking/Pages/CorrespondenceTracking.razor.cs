@@ -10,7 +10,7 @@ public partial class CorrespondenceTracking
     private bool loading = false;
 
     private int? PackageId;
-    private Package package = new Package();
+    private Package package = new();
     private bool foundPackage;
     private bool firstSearch = false;
 

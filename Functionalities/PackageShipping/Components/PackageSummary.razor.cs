@@ -4,5 +4,5 @@ using Microsoft.AspNetCore.Components;
 namespace GestorCorrespondencia.Frontend.Functionalities.PackageShipping.Components;
 public partial class PackageSummary
 {
-    [Parameter] public ShippingForm shippingForm { get; set; }
+    [Parameter] public ShippingForm? shippingForm { get; set; }
 }

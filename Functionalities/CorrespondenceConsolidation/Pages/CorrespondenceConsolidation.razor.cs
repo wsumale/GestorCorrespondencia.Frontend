@@ -12,7 +12,6 @@ namespace GestorCorrespondencia.Frontend.Functionalities.CorrespondenceConsolida
 public partial class CorrespondenceConsolidation
 {
     [Inject] DialogService DialogService { get; set; } = default!;
-    //[Inject] CustomDialogService CustomDialogService { get; set; } = default!;
     [Inject] CorrespondenceConsolidationHttp CorrespondenceConsolidationHttp { get; set; } = default!;
     [Inject] SGLService SGLService { get; set; } = default!;
 

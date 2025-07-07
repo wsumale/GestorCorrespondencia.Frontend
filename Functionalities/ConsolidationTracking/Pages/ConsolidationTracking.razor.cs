@@ -14,7 +14,7 @@ public partial class ConsolidationTracking
     private bool foundConsolidated;
     private bool firstSearch = false;
 
-    private ConsolidationTrackingView consolidated = new ConsolidationTrackingView();
+    private ConsolidationTrackingView? consolidated = new();
 
     private async Task SearchConsolidationAsync()
     {
