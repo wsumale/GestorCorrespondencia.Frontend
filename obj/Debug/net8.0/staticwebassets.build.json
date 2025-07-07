@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eBG5/Fmv0/5ODSvObrQCdvgl7SxT9ly7MP9izMsOFnk=",
+  "Hash": "3ODxPbQNPDV72VY8kkHhWfQX6zRkhxtXRqSZ9hrMC0U=",
   "Source": "GestorCorrespondencia.Frontend",
   "BasePath": "_content/GestorCorrespondencia.Frontend",
   "Mode": "Default",
@@ -1382,6 +1382,27 @@
       "OriginalItemSpec": "wwwroot\\fonts\\RobotoFlex.woff2"
     },
     {
+      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Correspondencia.png",
+      "SourceId": "GestorCorrespondencia.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
+      "BasePath": "_content/GestorCorrespondencia.Frontend",
+      "RelativePath": "images/Correspondencia#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1fxfzjxhxv",
+      "Integrity": "7dV2btTSs/IWRX9FPTzzgYWECLZMIK1x/ouCjG1dTxM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Correspondencia.png"
+    },
+    {
       "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\invite-only.svg",
       "SourceId": "GestorCorrespondencia.Frontend",
       "SourceType": "Discovered",
@@ -1501,8 +1522,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f2521d89mz",
-      "Integrity": "Jzuwity2RmdRlXkQXymzqIvq8azcSE5ZRHb6x9QhfWw=",
+      "Fingerprint": "1qph2e9ec0",
+      "Integrity": "eeYfNUqBvBA+zS/Htu8iTV7qQOv9Ro9bJ34bVf84aYA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\auth.js"
@@ -1690,8 +1711,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hedbkyjflg",
-      "Integrity": "mWQLUn2yuQJmProflXhu11+1beB0wmPeYrwyahvQP4I=",
+      "Fingerprint": "ugvechu184",
+      "Integrity": "ziYtGPxX4EBEUh9mTKkqHL6a2MYTbQew6HQF3sgfqW4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\styles\\Pages\\MainLayout.css"
@@ -7071,6 +7092,88 @@
       ]
     },
     {
+      "Route": "images/Correspondencia.1fxfzjxhxv.png",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Correspondencia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "213919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7dV2btTSs/IWRX9FPTzzgYWECLZMIK1x/ouCjG1dTxM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:30:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1fxfzjxhxv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Correspondencia.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7dV2btTSs/IWRX9FPTzzgYWECLZMIK1x/ouCjG1dTxM="
+        }
+      ]
+    },
+    {
+      "Route": "images/Correspondencia.png",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Correspondencia.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "213919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7dV2btTSs/IWRX9FPTzzgYWECLZMIK1x/ouCjG1dTxM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Jul 2025 05:30:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7dV2btTSs/IWRX9FPTzzgYWECLZMIK1x/ouCjG1dTxM="
+        }
+      ]
+    },
+    {
       "Route": "images/invite-only.o4zc7n2lib.svg",
       "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\invite-only.svg",
       "Selectors": [],
@@ -7481,7 +7584,7 @@
       ]
     },
     {
-      "Route": "js/auth.f2521d89mz.js",
+      "Route": "js/auth.1qph2e9ec0.js",
       "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\auth.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -7491,7 +7594,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "792"
+          "Value": "1649"
         },
         {
           "Name": "Content-Type",
@@ -7499,11 +7602,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Jzuwity2RmdRlXkQXymzqIvq8azcSE5ZRHb6x9QhfWw=\""
+          "Value": "\"eeYfNUqBvBA+zS/Htu8iTV7qQOv9Ro9bJ34bVf84aYA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 23:51:12 GMT"
+          "Value": "Wed, 25 Jun 2025 20:42:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7513,7 +7616,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "f2521d89mz"
+          "Value": "1qph2e9ec0"
         },
         {
           "Name": "label",
@@ -7521,7 +7624,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Jzuwity2RmdRlXkQXymzqIvq8azcSE5ZRHb6x9QhfWw="
+          "Value": "sha256-eeYfNUqBvBA+zS/Htu8iTV7qQOv9Ro9bJ34bVf84aYA="
         }
       ]
     },
@@ -7536,7 +7639,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "792"
+          "Value": "1649"
         },
         {
           "Name": "Content-Type",
@@ -7544,11 +7647,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Jzuwity2RmdRlXkQXymzqIvq8azcSE5ZRHb6x9QhfWw=\""
+          "Value": "\"eeYfNUqBvBA+zS/Htu8iTV7qQOv9Ro9bJ34bVf84aYA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 23 Jun 2025 23:51:12 GMT"
+          "Value": "Wed, 25 Jun 2025 20:42:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7558,7 +7661,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Jzuwity2RmdRlXkQXymzqIvq8azcSE5ZRHb6x9QhfWw="
+          "Value": "sha256-eeYfNUqBvBA+zS/Htu8iTV7qQOv9Ro9bJ34bVf84aYA="
         }
       ]
     },
@@ -8229,7 +8332,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1298"
+          "Value": "1297"
         },
         {
           "Name": "Content-Type",
@@ -8237,11 +8340,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mWQLUn2yuQJmProflXhu11+1beB0wmPeYrwyahvQP4I=\""
+          "Value": "\"ziYtGPxX4EBEUh9mTKkqHL6a2MYTbQew6HQF3sgfqW4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 18:35:54 GMT"
+          "Value": "Thu, 03 Jul 2025 05:00:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8251,12 +8354,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mWQLUn2yuQJmProflXhu11+1beB0wmPeYrwyahvQP4I="
+          "Value": "sha256-ziYtGPxX4EBEUh9mTKkqHL6a2MYTbQew6HQF3sgfqW4="
         }
       ]
     },
     {
-      "Route": "styles/Pages/MainLayout.hedbkyjflg.css",
+      "Route": "styles/Pages/MainLayout.ugvechu184.css",
       "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\styles\\Pages\\MainLayout.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -8266,7 +8369,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1298"
+          "Value": "1297"
         },
         {
           "Name": "Content-Type",
@@ -8274,11 +8377,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mWQLUn2yuQJmProflXhu11+1beB0wmPeYrwyahvQP4I=\""
+          "Value": "\"ziYtGPxX4EBEUh9mTKkqHL6a2MYTbQew6HQF3sgfqW4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 18:35:54 GMT"
+          "Value": "Thu, 03 Jul 2025 05:00:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8288,7 +8391,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hedbkyjflg"
+          "Value": "ugvechu184"
         },
         {
           "Name": "label",
@@ -8296,7 +8399,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mWQLUn2yuQJmProflXhu11+1beB0wmPeYrwyahvQP4I="
+          "Value": "sha256-ziYtGPxX4EBEUh9mTKkqHL6a2MYTbQew6HQF3sgfqW4="
         }
       ]
     },

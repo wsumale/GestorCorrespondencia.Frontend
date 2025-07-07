@@ -43,6 +43,7 @@ public partial class CreatePackageIncident
             dto.ConsolidatedDetailId = ConsolidatedDetailId;
             dto.IncidentTypeId = form.IncidentType;
             dto.Comment = form.Comment;
+            dto.RelationshipType = 2;
 
             _logger.LogWarning(ConsolidatedDetailId.ToString());
             _logger.LogWarning(PackageId.ToString());
@@ -56,12 +57,12 @@ public partial class CreatePackageIncident
             }
             else
             {
-                await CustomDialogService.OpenViewErrors(response);
+                await CustomDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch(Exception e)
         {
-            await CustomDialogService.OpenInternalError(e);
+            await CustomDialogService.OpenInternalErrorAsync(e);
         }
         finally
         {

@@ -51,7 +51,7 @@ public partial class WBAccessRequestExistingUser
             }
             else
             {
-                await CustomDialogService.OpenViewErrors(response);
+                await CustomDialogService.OpenViewErrorsAsync(response);
                 StatusCode = (int)response.StatusCode;
             }
         }

@@ -1,0 +1,47 @@
+﻿@page "/incidencias/paquetes_con_incidencia" 
+
+<SessionValidator title="Paquetes con incidencia" path="/incidencias/paquetes_con_incidencia" >
+	<Loader Loading="loading" />
+
+    <div class="main-container">
+        <RadzenText Text="Paquetes con incidencia" class="form-title" />
+
+		<RadzenDataGrid Data="@packages"
+						AllowFiltering="true" ApplyFilterText="Aplicar" ClearFilterText="Limpiar" EmptyText="No hay paquetes con incidencias"
+						FilterMode="FilterMode.CheckBoxList" FilterPopupRenderMode="PopupRenderMode.OnDemand"
+						FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="10"
+						AllowSorting="true" ColumnWidth="200px">
+			<Columns>
+				<RadzenDataGridColumn Property="IncidentId" Title="Incidencia" Width="135px" />
+				<RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="125px" />
+				<RadzenDataGridColumn Property="IncidentType" Title="Tipo de incidencia" Width="250px" />
+				<RadzenDataGridColumn Property="CreatedAt" Title="Fecha" />
+				<RadzenDataGridColumn Property="CreatedBy" Title="Creada por" />
+				<RadzenDataGridColumn Property="Solved" Title="Solucionada" Width="150px" FilterProperty="Solved">
+					<Template Context="Detail">
+						@(Detail.Solved ? "Solucionada" : "Pendiente")
+					</Template>
+					<FilterTemplate>
+						<RadzenDropDown style="width:100%;" @bind-Value="@solvedFilter" Data="@(new List<bool?> { null, true, false })"
+										TextProperty="Text" ValueProperty="Value"
+										Change="@(args => OnSolvedFilterChanged(args))">
+							<Template Context="data">
+								@((data == null) ? "Todos" : (data == true ? "Solucionada" : "Pendiente"))
+							</Template>
+						</RadzenDropDown>
+					</FilterTemplate>
+				</RadzenDataGridColumn>
+				<RadzenDataGridColumn Filterable="false" Sortable="false" Width="180px">
+					<Template Context="Detail">
+						<RadzenButton Icon="package" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" Click="@(() => OpenPackageDetailAsync(Detail.PackageId ?? 0))" class="rz-me-3" />
+						<RadzenButton Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" Click="@(() => OpenIncidentDetailAsync(Detail.IncidentId))" class="rz-me-3" />
+						<RadzenButton Icon="task_alt" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" Disabled="@(Detail.Solved)" Click="@(() => OpenResolveIncidentAsync(Detail.IncidentId, Detail.IncidentTypeId))" />
+					</Template>
+				</RadzenDataGridColumn>
+
+			</Columns>
+		</RadzenDataGrid>
+
+    </div>
+
+</SessionValidator>

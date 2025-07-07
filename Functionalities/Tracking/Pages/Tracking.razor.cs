@@ -16,11 +16,11 @@ public partial class Tracking
     private bool foundPackage;
     private bool firstSearch = false;
 
-    private async Task BuscarPaquete()
+    private async Task SearchPackageAsync()
     {
         loading = true;
-        package  = await TrackingHttp.GetPackageAsync(PackageId ?? 0);
-        foundPackage = package.PackageId > 0 ? true : false;
+        package  = await TrackingHttp.GetPackageAsync(PackageId ?? 0, true);
+        foundPackage = package != null && package.PackageId > 0;
         firstSearch = true;
         loading = false;
         StateHasChanged();

@@ -34,7 +34,7 @@ public partial class WBAccessRequest
             }
             else
             {
-                await CustomDialogService.OpenViewErrors(response);
+                await CustomDialogService.OpenViewErrorsAsync(response);
                 switchForm((int)response.StatusCode);
             }
         }

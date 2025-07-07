@@ -44,7 +44,7 @@ public partial class Login
 
             if (response.IsSuccessStatusCode)
             {
-                await ProcesarLoginExitoso(response, content);
+                await ProcesarLoginExitosoAsync(response, content);
             }
             else
             {
@@ -91,7 +91,7 @@ public partial class Login
         }
     }
 
-    private async Task ProcesarLoginExitoso(HttpResponseMessage response, string content)
+    private async Task ProcesarLoginExitosoAsync(HttpResponseMessage response, string content)
     {
         var token = response.Headers.GetValues("Authorization").FirstOrDefault()?.Replace("Bearer ", "");
         var user = JsonSerializer.Deserialize<SessionUser>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
@@ -105,7 +105,10 @@ public partial class Login
 
         var userJson = JsonSerializer.Serialize(user);
 
-        await JS.InvokeVoidAsync("auth.setTempSession", token, userJson);
+        //await JS.InvokeVoidAsync("auth.setTempSession", token, userJson);
+        await JS.InvokeVoidAsync("auth.setTempSession", token, "");
+        await JS.InvokeVoidAsync("auth.setTempUserFragmented", userJson, 2000);
+
         await JS.InvokeVoidAsync("auth.setTempRefreshToken", cookieRefreshToken!.RefreshToken, cookieRefreshToken.Expires?.ToString("o"));
         NavigationManager.NavigateTo("/auth/start-session", forceLoad: true);
     }

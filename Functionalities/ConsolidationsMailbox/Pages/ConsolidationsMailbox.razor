@@ -1,0 +1,26 @@
+﻿@page "/recepcion/buzon_de_consolidados"
+
+<SessionValidator title="Buzón de consolidados" path="/recepcion/buzon_de_consolidados">
+	<Loader Loading="@loading" />
+	<div class="main-container">
+		<RadzenText Text="Buzón de consolidados" class="form-title" />
+
+		<RadzenDataGrid Data="@consolidations" AllowPaging="true" PageSize="10" ColumnWidth="200px"
+						AllowRowSelectOnRowClick="true" SelectionMode="DataGridSelectionMode.Single"
+						FilterMode="FilterMode.CheckBoxList" AllowSorting="true" AllowFiltering="true"
+						ApplyFilterText="Aplicar" ClearFilterText="Limpiar" EmptyText="No hay consolidados para mostrar">
+			<Columns>
+				<RadzenDataGridColumn Property="ConsolidatedId" Title="Rastreo" />
+				<RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
+				<RadzenDataGridColumn Property="CreatedBy" Title="Remitente" />
+				<RadzenDataGridColumn Property="DestinationLocation" Title="Destino" />
+				<RadzenDataGridColumn Property="CreatedAt" title="Fecha" />
+				<RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px">
+					<Template Context="Detail">
+						<RadzenButton ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" Icon="list" Click="@(() => CustomDialogService.OpenViewConsolidationDetailAsync(Detail.ConsolidatedId, false))" />
+					</Template>
+				</RadzenDataGridColumn>
+			</Columns>
+		</RadzenDataGrid>
+	</div>
+</SessionValidator>

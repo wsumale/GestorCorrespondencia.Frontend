@@ -34,7 +34,7 @@ public partial class ResetPasswordRequest
             }
             else
             {
-                await CustomDialogService.OpenViewErrors(response);
+                await CustomDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)

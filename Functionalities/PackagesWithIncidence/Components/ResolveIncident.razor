@@ -1,0 +1,14 @@
+﻿<RadzenTabs @bind-SelectedIndex="selectedIndex">
+    <Tabs>
+        <RadzenTabsItem Text="Cambio de Destinatario">
+
+            <ChangeReceiver />
+
+        </RadzenTabsItem>
+        <RadzenTabsItem Text="Devolver al remitente" Disabled="@(IncidentTypeId == 3)">
+
+            <ReturnToSender IncidentId="@IncidentId" />
+
+        </RadzenTabsItem>
+    </Tabs>
+</RadzenTabs>

@@ -55,7 +55,7 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
                 }
                 else
                 {
-                    await CustomDialogService.OpenViewErrors(response);
+                    await CustomDialogService.OpenViewErrorsAsync(response);
                 }
             } catch(Exception e)
             {
@@ -72,7 +72,7 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
             var redirect = await DialogService.Alert("Consolidado creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar" });
             if (redirect == true)
             {
-                NavigationManager.NavigateTo("/principal/home");
+                NavigationManager.NavigateTo("/consolidados/mis_consolidados");
             }
         }
 

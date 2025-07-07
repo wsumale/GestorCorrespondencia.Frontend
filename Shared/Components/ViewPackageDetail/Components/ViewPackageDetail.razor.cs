@@ -11,7 +11,7 @@ public partial class ViewPackageDetail
 
     [Parameter] public int PackageId { get; set; }
 
-    private bool paqueteEncontrado = true;
+    private bool paqueteEncontrado = false;
     private bool loading = true;
     private Package package = new();
 
@@ -19,8 +19,9 @@ public partial class ViewPackageDetail
     {
         if (firstRender)
         {
-            package = await TrackingHttp.GetPackageAsync(PackageId);
+            package = await TrackingHttp.GetPackageAsync(PackageId, false);
             loading = false;
+            paqueteEncontrado = true;
             StateHasChanged();
         }
     }

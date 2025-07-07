@@ -26,6 +26,7 @@ wwwroot\fonts\Poppins\Poppins-SemiBoldItalic.ttf
 wwwroot\fonts\Poppins\Poppins-Thin.ttf
 wwwroot\fonts\Poppins\Poppins-ThinItalic.ttf
 wwwroot\fonts\RobotoFlex.woff2
+wwwroot\images\Correspondencia.png
 wwwroot\images\invite-only.svg
 wwwroot\images\lock.svg
 wwwroot\images\send.svg

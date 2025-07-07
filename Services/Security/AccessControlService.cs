@@ -145,8 +145,8 @@ public class AccessControlService
                 }
                 else
                 {
-                    await _customDialogService.OpenViewErrors(responseNewToken);
-                    await CloseSession();
+                    await _customDialogService.OpenViewErrorsAsync(responseNewToken);
+                    await CloseSessionAsync();
                     _logger.LogWarning("Error al actualizar sesión");
                     _logger.LogWarning(accessToken);
                     _logger.LogWarning(exp.ToString("o"));
@@ -157,8 +157,8 @@ public class AccessControlService
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
-                await CloseSession();
+                await _customDialogService.OpenViewErrorsAsync(response);
+                await CloseSessionAsync();
                 _logger.LogWarning("Error al actualizar el token");
                 _logger.LogWarning(accessToken);
                 _logger.LogWarning(exp.ToString("o"));
@@ -168,7 +168,7 @@ public class AccessControlService
         } catch (Exception e)
         {
             await _dialogService.Alert(e.Message, "Error interno", new AlertOptions() { OkButtonText = "Aceptar" });
-            await CloseSession();
+            await CloseSessionAsync();
         }
 
     }
@@ -180,7 +180,7 @@ public class AccessControlService
 
         if (!user.Identity?.IsAuthenticated ?? true)
         {
-            await CloseSession();
+            await CloseSessionAsync();
         }
 
         string _accessToken = user.FindFirstValue("AccessToken") ?? "";
@@ -204,7 +204,7 @@ public class AccessControlService
             }
             else if (accessTokenExp <= now && refreshTokenExp <= now)
             {
-                await CloseSession();
+                await CloseSessionAsync();
                 _logger.LogWarning("Cerrar sesión");
             } else
             {
@@ -215,12 +215,12 @@ public class AccessControlService
         else
         {
             _logger.LogError("No se pudieron interpretar los valores de expiración de los tokens (formato de fecha inválido).");
-            await CloseSession();
+            await CloseSessionAsync();
         }
 
     }
 
-    public async Task CloseSession()
+    public async Task CloseSessionAsync()
     {
         await _sessionReasonService.SetSessionReasonAsync("expired");
         _authSessionService.CloseSession();

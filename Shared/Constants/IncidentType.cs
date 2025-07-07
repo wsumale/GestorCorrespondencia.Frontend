@@ -3,9 +3,8 @@ public enum IncidentType
 {
     NoReceived = 1,
     ReturnedToCorrespondence = 2,
-    ReturnedToSender = 3,
-    ReceiverChangedInCorrespondence = 4,
-    ReceiverChangedInDestination = 5,
+    ReceiverChangedInCorrespondence = 3,
+    ReceiverChangedInDestination = 4
 }
 
 public static class IncidentTypeExtensions
@@ -16,7 +15,6 @@ public static class IncidentTypeExtensions
         {
             IncidentType.NoReceived => "No Recibido",
             IncidentType.ReturnedToCorrespondence => "Devuelto a Correspondencia",
-            IncidentType.ReturnedToSender => "Devuelto al Remitente",
             IncidentType.ReceiverChangedInCorrespondence => "Cambio de Destinatario en Correspondencia",
             IncidentType.ReceiverChangedInDestination => "Cambio de Destinatario en Destino",
             _ => throw new ArgumentOutOfRangeException(nameof(incident), incident, null)

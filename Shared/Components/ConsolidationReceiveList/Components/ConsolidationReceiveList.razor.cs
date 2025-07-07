@@ -13,6 +13,7 @@ public partial class ConsolidationReceiveList
     [Inject] ConsolidationReceiveListHttp ConsolidationReceiveListHttp { get; set; } = default!;
 
     [Parameter] public int ConsolidatedId { get; set; }
+    [Parameter] public int ConsolidatedType { get; set; }
 
     private bool loading = false;
     private bool busy = false;

@@ -46,14 +46,8 @@
                                         TValue="bool" Change=@(args => { if (!allowRowSelectOnRowClick) { grid.SelectRow(data); } }) />
                     </Template>
                 </RadzenDataGridColumn>
-                <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="115px">
-                    <Template Context="Package">
-                        <span class="clickable-text" @onclick:stopPropagation="true" @onclick="() => CustomDialogService.OpenViewPackage(Package.PackageId)">
-                            @Package.PackageId
-                        </span>
-                    </Template>
-                </RadzenDataGridColumn>
-                <RadzenDataGridColumn Title="Fecha" Width="120px">
+                <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="125px" />
+                <RadzenDataGridColumn Title="Fecha" Width="125px">
                     <Template Context="package">
                         @package.Created.ToLocalTime().ToString("dd/MM/yyyy")
                     </Template>

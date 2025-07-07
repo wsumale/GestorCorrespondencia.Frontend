@@ -36,7 +36,7 @@ public class SGLService
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)
@@ -65,12 +65,12 @@ public class SGLService
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)
         {
-            await _dialogService.Alert(e.Message, "Error interno", new AlertOptions() { OkButtonText = "Aceptar" });
+            await _customDialogService.OpenInternalErrorAsync(e);
         }
 
         return new List<Location>();

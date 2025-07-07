@@ -25,7 +25,7 @@ public partial class PendingConsolidationReception
 
     private async Task ConsolidatedReceptionListAsync(int ConsolidatedId)
     {
-        await CustomDialogService.OpenConsolidatedReceptionListAsync(ConsolidatedId);
+        await CustomDialogService.OpenConsolidatedReceptionListAsync(ConsolidatedId, 1);
         await RefreshLoadDataAsync();
     }
 

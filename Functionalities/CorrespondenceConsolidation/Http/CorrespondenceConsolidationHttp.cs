@@ -37,7 +37,7 @@ public class CorrespondenceConsolidationHttp
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)

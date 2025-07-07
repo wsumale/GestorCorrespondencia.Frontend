@@ -14,11 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Functionalities\PendingPackages\Components\" />
     <Folder Include="Lib\" />
-    <Folder Include="Shared\Components\ViewPackageDetail\DTO\" />
-    <Folder Include="Shared\Components\ViewPackageDetail\Http\" />
-    <Folder Include="Shared\Components\ViewPackageDetail\Model\" />
+    <Folder Include="Shared\Components\NewFolder\" />
     <Folder Include="wwwroot\fonts\" />
   </ItemGroup>
 

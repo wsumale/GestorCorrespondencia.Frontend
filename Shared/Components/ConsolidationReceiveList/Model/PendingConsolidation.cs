@@ -17,4 +17,7 @@ public class PendingConsolidation
 
     [JsonPropertyName("Paquetes")]
     public List<PendingConsolidationDetail>? Detail { get; set; }
+
+    [JsonPropertyName("Recibido")]
+    public bool Received { get; set; }
 }

@@ -30,7 +30,7 @@ public class ConsolidationReceiveListHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"consolidados/{consolidatedId}", 1, false);
+            var response = await _apiGetService.GetAsync($"consolidados/{consolidatedId}", 1, true);
 
             if (response.IsSuccessStatusCode)
             {
@@ -44,12 +44,12 @@ public class ConsolidationReceiveListHttp
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)
         {
-            await _customDialogService.OpenInternalError(e);
+            await _customDialogService.OpenInternalErrorAsync(e);
         }
 
         return null;
@@ -67,13 +67,13 @@ public class ConsolidationReceiveListHttp
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
                 _dialogService.Close();
             }
         } 
         catch (Exception e)
         {
-            await _customDialogService.OpenInternalError(e);
+            await _customDialogService.OpenInternalErrorAsync(e);
         }
     }
 }

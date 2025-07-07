@@ -46,7 +46,6 @@ public partial class Form2FA
             Request.authenticatorCode = Form.AuthenticatorCode;
 
             var response = await ApiPostService.PostAsync($"auth/2fa/validar-codigo?username={Request.username}&authenticatorCode={Request.authenticatorCode}&secretKey={Request.secretKey}", Request, 2, false);
-            var content = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
             {
@@ -55,7 +54,7 @@ public partial class Form2FA
             }
             else
             {
-                await CustomDialogService.OpenViewErrors(response);
+                await CustomDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)
@@ -82,7 +81,7 @@ public partial class Form2FA
                 qr = GenerateQRCode(EncryptionService.Decrypt(Settings.qrCodeUri!));
             } else
             {
-                await CustomDialogService.OpenViewErrors(response);
+                await CustomDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)

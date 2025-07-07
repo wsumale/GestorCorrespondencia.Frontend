@@ -117,6 +117,10 @@
       "PackagePath": "staticwebassets\\fonts\\RobotoFlex.woff2"
     },
     {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Correspondencia.png",
+      "PackagePath": "staticwebassets\\images\\Correspondencia.png"
+    },
+    {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Unisuper.png",
       "PackagePath": "staticwebassets\\images\\Unisuper.png"
     },

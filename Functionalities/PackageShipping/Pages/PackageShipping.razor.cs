@@ -15,7 +15,7 @@ public partial class PackageShipping
 {
     [Inject] DialogService DialogService { get; set; } = default!;
     [Inject] NavigationManager NavigationManager { get; set; } = default!;
-    [Inject] SGLService SGUService { get; set; } = default!;
+    [Inject] SGLService SGLService { get; set; } = default!;
     [Inject] ILogger<PackageShipping> _logger { get; set; } = default!;
     [Inject] ApiPostService ApiPostService { get; set; } = default!;
     [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
@@ -25,7 +25,7 @@ public partial class PackageShipping
 
     protected override async Task OnInitializedAsync()
     {
-        Locations = await SGUService.GetLocationsSendPackagesAsync();
+        Locations = await SGLService.GetLocationsSendPackagesAsync();
 
         loading = false;
     }
@@ -120,11 +120,11 @@ public partial class PackageShipping
                 await Success();
             } else
             {
-                await CustomDialogService.OpenViewErrors(response);
+                await CustomDialogService.OpenViewErrorsAsync(response);
             }
         } catch(Exception e)
         {
-            await DialogService.Alert(e.Message, "Error interno", new AlertOptions { OkButtonText="Aceptar" });
+            await CustomDialogService.OpenInternalErrorAsync(e);
         } finally
         {
             loading = false;

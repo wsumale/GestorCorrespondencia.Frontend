@@ -1,0 +1,22 @@
+﻿@using GestorCorrespondencia.Frontend.Functionalities.PackagesWithIncidence.DTO
+
+<Loader Loading="@loading" />
+
+<RadzenTemplateForm Data="@Form" Submit="@OnSubmitReturnedToSenderAsync" TItem="ReturnToSenderDTO" class="form-login">
+    <DataAnnotationsValidator />
+    <RadzenRow>
+        <RadzenColumn class="rz-display-flex rz-flex-column gap-0 rz-mt-3">
+            <RadzenLabel class="form-label">Observaciones<span class="text-rojo">*</span></RadzenLabel>
+            <RadzenTextArea @bind-Value="Form.Solution" />
+        </RadzenColumn>
+    </RadzenRow>
+
+    <RadzenRow>
+        <RadzenColumn class="rz-display-flex rz-justify-content-end gap-2 rz-mt-3">
+            <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="@(() => DialogService.Close())" />
+            <RadzenButton Text="Devolver al remitente" ButtonType="ButtonType.Submit" ButtonStyle="ButtonStyle.Primary" />
+        </RadzenColumn>
+    </RadzenRow>
+</RadzenTemplateForm>
+
+

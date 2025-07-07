@@ -38,7 +38,7 @@ public partial class PendingPackages
 
     private async Task ReceivePackageAsync(int PackageId)
     {
-        bool confirm = await CustomDialogService.OpenConfirm("¿Desea recibir este paquete?", "Confirmar", "Recibir", "Cancelar", new DialogOptions { Width = "400px" });
+        bool confirm = await CustomDialogService.OpenConfirmAsync("¿Desea recibir este paquete?", "Confirmar", "Recibir", "Cancelar", new DialogOptions { Width = "400px" });
 
         if (confirm == true)
         {
@@ -56,7 +56,8 @@ public partial class PendingPackages
 
     private async Task CreateIncidentDialogAsync(int PackageId, int ConsolidatedDetailId)
     {
-        await CustomDialogService.OpenCreatePackageIncidentAsync(PackageId, ConsolidatedDetailId);
+        //await CustomDialogService.OpenCreatePackageIncidentAsync(PackageId, ConsolidatedDetailId);
+        await CustomDialogService.OpenChangeReceiverInDestinationAsync(PackageId);
         await RefreshLoadDataAsync();
     }
 }

@@ -13,8 +13,8 @@ public class MyPackagesHttp
     private readonly DialogService _dialogService;
     private readonly GetCurrentUser _getCurrentUser;
 
-    public MyPackagesHttp(ApiGetService apiGetService, 
-                          CustomDialogService customDialogService, 
+    public MyPackagesHttp(ApiGetService apiGetService,
+                          CustomDialogService customDialogService,
                           DialogService dialogService,
                           GetCurrentUser getCurrentUser)
     {
@@ -28,7 +28,7 @@ public class MyPackagesHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"paquetes", 1, false);
+            var response = await _apiGetService.GetAsync("usuarios/paquetes", 1, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -43,9 +43,10 @@ public class MyPackagesHttp
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
             }
-        } catch (Exception e)
+        }
+        catch (Exception e)
         {
             await _dialogService.Alert(e.Message, "Error interno", new AlertOptions() { OkButtonText = "Aceptar" });
         }

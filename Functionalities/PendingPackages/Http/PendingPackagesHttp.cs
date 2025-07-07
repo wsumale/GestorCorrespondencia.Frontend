@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using GestorCorrespondencia.Frontend.Functionalities.PendingPackages.DTO;
 using GestorCorrespondencia.Frontend.Functionalities.PendingPackages.Model;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
@@ -12,6 +13,7 @@ public class PendingPackagesHttp
 {
     private readonly ApiGetService _apiGetService;
     private readonly ApiPatchService _apiPatchService;
+    private readonly ApiPostService _apiPostService;
     private readonly CustomDialogService _customDialogService;
     private readonly DialogService _dialogService;
     private readonly NotificationService _notificationService;
@@ -19,6 +21,7 @@ public class PendingPackagesHttp
 
     public PendingPackagesHttp(ApiGetService apiGetService,
                                ApiPatchService apiPatchService,
+                               ApiPostService apiPostService,
                                CustomDialogService customDialogService,
                                DialogService dialogService,
                                NotificationService notificationService,
@@ -26,6 +29,7 @@ public class PendingPackagesHttp
     {
         _apiGetService = apiGetService;
         _apiPatchService = apiPatchService;
+        _apiPostService = apiPostService;
         _customDialogService = customDialogService;
         _dialogService = dialogService;
         _notificationService = notificationService;
@@ -53,12 +57,12 @@ public class PendingPackagesHttp
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)
         {
-            await _customDialogService.OpenInternalError(e);
+            await _customDialogService.OpenInternalErrorAsync(e);
         }
         return new List<PendingPackage>();
     }
@@ -75,13 +79,35 @@ public class PendingPackagesHttp
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
                 _dialogService.Close();
             }
         }
         catch (Exception e)
         {
-            await _customDialogService.OpenInternalError(e);
+            await _customDialogService.OpenInternalErrorAsync(e);
+        }
+    }
+
+    public async Task ChangeReceiverAsync(ChangeReceiverInDestinationDTO dto)
+    {
+        try
+        {
+            var response = await _apiPostService.PostAsync("incidencias", dto, 1, true);
+            if (response.IsSuccessStatusCode)
+            {
+                _notificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Operación exitosa", Detail = "Destinatario actualizado", Duration = 4000 });
+                _dialogService.Close();
+            }
+            else
+            {
+                await _customDialogService.OpenViewErrorsAsync(response);
+                _dialogService.Close();
+            }
+        }
+        catch (Exception e)
+        {
+            await _customDialogService.OpenInternalErrorAsync(e);
         }
     }
 }

@@ -19,11 +19,11 @@ public class TrackingHttp
         _dialogService = dialogService;
     }
 
-    public async Task<Package> GetPackageAsync(int PackageId)
+    public async Task<Package> GetPackageAsync(int PackageId, bool CurrentUser)
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"paquetes/{PackageId}", 1, false);
+            var response = await _apiGetService.GetAsync($"paquetes/{PackageId}?UsuarioActual={CurrentUser}", 1, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -38,7 +38,7 @@ public class TrackingHttp
             }
             else
             {
-                await _customDialogService.OpenViewErrors(response);
+                await _customDialogService.OpenViewErrorsAsync(response);
             }
         }
         catch (Exception e)

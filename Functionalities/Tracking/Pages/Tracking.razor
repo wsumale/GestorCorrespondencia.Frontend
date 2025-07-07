@@ -10,7 +10,7 @@
             <RadzenText Text="Rastrear Paquete" class="form-title" />
             
             <RadzenNumeric TValue="int?" @bind-Value="@PackageId" Placeholder="Ingrese el número de rastreo" Style="width: 60%;" ShowUpDown="false" />
-            <RadzenButton Text="Rastrear" Icon="alt_route" Click="@BuscarPaquete" Style="margin-left: 10px;" />
+            <RadzenButton Text="Rastrear" Icon="alt_route" Click="@SearchPackageAsync" Style="margin-left: 10px;" />
             @if (foundPackage)
             {
                 <RadzenTimeline Orientation="Orientation.Horizontal" LinePosition="LinePosition.Start"
@@ -85,10 +85,6 @@
                                 <pre class="rz-mt-2 rz-mb-2 rz-pb-1">
                                 <strong>Observaciones:</strong><br />@package.Observations
                                 </pre>
-                            </div>
-                            <div class="rz-display-flex" style="gap: 10px;">
-                                <RadzenButton Text="Eliminar" ButtonStyle="ButtonStyle.Danger" Icon="Delete" />
-                                <RadzenButton Text="Recibir" ButtonStyle="ButtonStyle.Primary" Icon="unarchive" />
                             </div>
                         </RadzenCard>
                     </RadzenColumn>

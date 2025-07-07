@@ -1,0 +1,61 @@
+﻿@using GestorCorrespondencia.Frontend.Functionalities.PackagesWithIncidence.Model
+
+<Loader loading="@loading" />
+
+@code {
+    private string IconName => incident.Solved ? "check_circle" : "error";
+    private string IconColor => incident.Solved ? "#19c37d" : "#f44336";
+    private string BadgeText => incident.Solved ? "Solucionada" : "Pendiente";
+    private string BadgeColor => incident.Solved ? "success" : "danger";
+    private string TipoColor => "#253f6e";
+}
+
+@if (showContent)
+{
+    <RadzenCard Style="margin:auto; border-radius:18px; background: #f8fafc;">
+        <RadzenRow Style="align-items:center; margin-bottom: 12px; justify-content:flex-start;">
+            <RadzenColumn>
+                <span style="display:flex; align-items:center;">
+                    <RadzenIcon Icon="@IconName" Style=@($"font-size:2.1rem; color:{IconColor}; margin-right:12px;") />
+                    <span style="font-size:1.5rem; font-weight:700; color:#232f52; margin-right:10px;">
+                        @($"Incidencia #{incident.IncidentId}")
+                    </span>
+                    <RadzenBadge Text="@BadgeText" Color="@BadgeColor" Style="vertical-align:middle;" />
+                </span>
+            </RadzenColumn>
+        </RadzenRow>
+
+        <RadzenRow>
+            <RadzenColumn Width="50%">
+                <RadzenLabel Text="Tipo de incidencia" Style=@($"color:{TipoColor}; font-weight:600;") />
+                <RadzenText Text="@incident.IncidentType" Style="margin-bottom:12px;" />
+                <RadzenLabel Text="Remitente" Style="font-weight:500;" />
+                <RadzenText Text="@incident.Sender" />
+                <RadzenLabel Text="Ubicación remitente" Style="font-weight:500;" />
+                <RadzenText Text="@incident.SenderLocation" />
+                <RadzenLabel Text="Destinatario" Style="font-weight:500;" />
+                <RadzenText Text="@incident.Addressee" />
+                <RadzenLabel Text="Ubicación destinatario" Style="font-weight:500;" />
+                <RadzenText Text="@incident.DestinationLocation" />
+                <RadzenLabel Text="Estado" Style="font-weight:500;" />
+                <RadzenText Text="@incident.State" />
+            </RadzenColumn>
+            <RadzenColumn Width="50%">
+                <RadzenLabel Text="Paquete" Style="font-weight:500;" />
+                <RadzenText Text="@incident.PackageId?.ToString()" />
+                <RadzenLabel Text="Creado por" Style="font-weight:500;" />
+                <RadzenText Text="@incident.CreatedBy" />
+                <RadzenLabel Text="Fecha de creación" Style="font-weight:500;" />
+                <RadzenText Text="@incident.CreatedAt.ToString("yyyy-MM-dd HH:mm")" />
+                <RadzenLabel Text="Comentarios" Style="font-weight:500;" />
+                <RadzenText Text="@incident.Comment" />
+                <RadzenLabel Text="Solución" Style="font-weight:500;" />
+                <RadzenText Text="@incident.Solution" />
+                <RadzenLabel Text="Solucionado por" Style="font-weight:500;" />
+                <RadzenText Text="@incident.SolvedBy" />
+                <RadzenLabel Text="Fecha de solución" Style="font-weight:500;" />
+                <RadzenText Text="@((incident.SolvedDate.HasValue ? incident.SolvedDate.Value.ToString("yyyy-MM-dd HH:mm") : "-"))" />
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenCard>
+}

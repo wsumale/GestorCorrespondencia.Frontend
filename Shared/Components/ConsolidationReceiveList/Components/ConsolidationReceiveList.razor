@@ -29,11 +29,17 @@
 			<RadzenDataGridColumn Property="DestinationLocation" Title="Destino" />
 			<RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
 			<RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
-			<RadzenDataGridColumn Filterable="false" Sortable="false" TextAlign="TextAlign.Right">
+			<RadzenDataGridColumn Filterable="false" Sortable="false" TextAlign="TextAlign.Right" Width="250px">
 				<Template Context="Detail">
-					<RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
-					<RadzenButton Click="@(() => CreateIncidentDialogAsync(Detail.PackageId, Detail.ConsolidatedDetailId))" hidden="@(Detail.StateId != 5)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
-					<RadzenBadge Shade="Shade.Lighter" BadgeStyle="BadgeStyle.Warning" Text="@(Detail.State)" hidden="@(Detail.StateId == 5)" />
+					<RadzenButton Click="@(() => CustomDialogService.OpenViewPackage(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" class="rz-me-2" />
+					@if(ConsolidatedType == 1){
+						<RadzenButton Click="@(() => CreateIncidentDialogAsync(Detail.PackageId, Detail.ConsolidatedDetailId))" hidden="@(Detail.StateId != 5)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
+						<RadzenBadge Shade="Shade.Lighter" BadgeStyle="BadgeStyle.Warning" Text="@(Detail.State)" hidden="@(Detail.StateId == 5)" />
+					} 
+					else if (ConsolidatedType == 2){
+						<RadzenButton Click="@(() => CreateIncidentDialogAsync(Detail.PackageId, Detail.ConsolidatedDetailId))" hidden="@(Detail.StateId != 8)" Icon="add_alert" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Medium" />
+						<RadzenBadge Shade="Shade.Lighter" BadgeStyle="BadgeStyle.Warning" Text="@(Detail.State)" hidden="@(Detail.StateId == 8)" />
+					}
 				</Template>
 			</RadzenDataGridColumn>
 		</Columns>

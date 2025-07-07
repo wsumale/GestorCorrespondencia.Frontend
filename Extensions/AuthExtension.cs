@@ -14,7 +14,19 @@ public static class AuthExtension
         group.MapGet("/start-session", async (HttpContext context, AuthSessionService sessionService) =>
         {
             var token = context.Request.Cookies["temp_token"];
-            var userEncoded = context.Request.Cookies["temp_user"];
+            //var userEncoded = context.Request.Cookies["temp_user"];
+
+            var userJsonBuilder = new System.Text.StringBuilder();
+            int fragmentIndex = 0;
+            while (true)
+            {
+                var key = $"temp_user_{fragmentIndex}";
+                if (!context.Request.Cookies.ContainsKey(key)) break;
+                userJsonBuilder.Append(System.Uri.UnescapeDataString(context.Request.Cookies[key]!));
+                fragmentIndex++;
+            }
+            var userEncoded = userJsonBuilder.Length > 0 ? userJsonBuilder.ToString() : null;
+
             var refreshTokenTemp = context.Request.Cookies["temp_refresh_token"];
             var exp_refreshTokenTemp = context.Request.Cookies["temp_exp"];
 
@@ -36,7 +48,15 @@ public static class AuthExtension
             await sessionService.CreateSessionAsync(token, user, refreshToken, expRefreshToken);
 
             context.Response.Cookies.Delete("temp_token");
-            context.Response.Cookies.Delete("temp_user");
+            //context.Response.Cookies.Delete("temp_user");
+
+            // Borrar los fragmentos temp_user_N
+            for (int i = 0; i < fragmentIndex; i++)
+            {
+                context.Response.Cookies.Delete($"temp_user_{i}");
+            }
+
+
             context.Response.Cookies.Delete("temp_refresh_token");
             context.Response.Cookies.Delete("temp_exp");
 
