@@ -22,7 +22,7 @@ public class CorrespondencePendingConsolidationHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync("consolidados?TipoConsolidado=1&Recibido=false", 1, true);
+            var response = await _apiGetService.GetAsync("consolidados?TipoConsolidado=1&Recibido=false", "", 1, true);
 
             if (response.IsSuccessStatusCode)
             {

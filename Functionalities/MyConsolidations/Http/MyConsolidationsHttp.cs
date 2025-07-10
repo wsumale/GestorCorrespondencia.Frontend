@@ -31,7 +31,7 @@ public class MyConsolidationsHttp
         {
             var user = await _getCurrentUser.GetUserInfoAsync();
 
-            var response = await _apiGetService.GetAsync($"consolidados?IdUsuarioCreador={user.UserId}", 1, true);
+            var response = await _apiGetService.GetAsync($"consolidados?IdUsuarioCreador={user.UserId}", "", 1, true);
 
             if (response.IsSuccessStatusCode)
             {

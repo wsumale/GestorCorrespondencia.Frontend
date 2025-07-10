@@ -31,7 +31,7 @@ public class ApiGetService : IApiGetService
         _getCurrentUser = getCurrentUser;
     }
 
-    public async Task<HttpResponseMessage> GetAsync(string url, int source = 1, bool log = false)
+    public async Task<HttpResponseMessage> GetAsync(string url, string accept, int source = 1, bool log = false)
     {
         try
         {
@@ -47,6 +47,11 @@ public class ApiGetService : IApiGetService
             var requestUri = new Uri(baseUri, url);
             var request = new HttpRequestMessage(HttpMethod.Get, requestUri);
             request.Headers.UserAgent.ParseAdd("GestorCorrespondencia/1.0");
+
+            if (accept.Length > 0)
+            {
+                request.Headers.Accept.ParseAdd(accept);
+            }
 
             if (source != 2)
             {

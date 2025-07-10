@@ -9,6 +9,8 @@ public partial class CorrespondenceConsolidationTracking
     [Inject] ConsolidationTrackingHttp ConsolidationTrackingHttp { get; set; } = default!;
     [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
 
+    [Parameter] public int? ConsolidationIdParam { get; set; }
+
     private bool loading = false;
     private int? ConsolidationId;
     private bool foundConsolidated;

@@ -32,7 +32,7 @@ public class PackagesWithIncidentHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync("incidencias", 1, true);
+            var response = await _apiGetService.GetAsync("incidencias", "", 1, true);
 
             if (response.IsSuccessStatusCode)
             {
@@ -61,7 +61,7 @@ public class PackagesWithIncidentHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"incidencias/{IncidentId}", 1, true);
+            var response = await _apiGetService.GetAsync($"incidencias/{IncidentId}", "", 1, true);
 
             if (response.IsSuccessStatusCode)
             {

@@ -2,7 +2,7 @@
     <Tabs>
         <RadzenTabsItem Text="Cambio de Destinatario">
 
-            <ChangeReceiver />
+            <ChangeReceiver IncidentId="@IncidentId" />
 
         </RadzenTabsItem>
         <RadzenTabsItem Text="Devolver al remitente" Disabled="@(IncidentTypeId == 3)">

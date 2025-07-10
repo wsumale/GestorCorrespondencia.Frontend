@@ -21,6 +21,8 @@ using GestorCorrespondencia.Frontend.Functionalities.ConsolidationsMailbox.Http;
 using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Http;
 using GestorCorrespondencia.Frontend.Functionalities.PackagesWithIncidence.Http;
 using GestorCorrespondencia.Frontend.Shared.Components.ViewConsolidationDetail.Http;
+using GestorCorrespondencia.Frontend.Functionalities.AllPackages.Http;
+using GestorCorrespondencia.Frontend.Functionalities.PackageShipping.Http;
 
 namespace GestorCorrespondencia.Frontend.Extensions;
 public static class ServiceExtension
@@ -49,6 +51,8 @@ public static class ServiceExtension
         services.AddScoped<ConsolidationTrackingHttp>();
         services.AddScoped<PackagesWithIncidentHttp>();
         services.AddScoped<ViewConsolidationDetailHttp>();
+        services.AddScoped<AllPackagesHttp>();
+        services.AddScoped<PackageShippingHttp>();
 
         services.AddScoped<IAuthCookieService, AuthCookieService>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();

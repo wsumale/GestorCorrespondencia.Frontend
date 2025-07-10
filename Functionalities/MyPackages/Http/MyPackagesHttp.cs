@@ -2,7 +2,6 @@
 using GestorCorrespondencia.Frontend.Functionalities.MyPackages.Model;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
-using GestorCorrespondencia.Frontend.Services.Security;
 using Radzen;
 
 namespace GestorCorrespondencia.Frontend.Functionalities.MyPackages.Http;
@@ -11,24 +10,21 @@ public class MyPackagesHttp
     private readonly ApiGetService _apiGetService;
     private readonly CustomDialogService _customDialogService;
     private readonly DialogService _dialogService;
-    private readonly GetCurrentUser _getCurrentUser;
 
     public MyPackagesHttp(ApiGetService apiGetService,
                           CustomDialogService customDialogService,
-                          DialogService dialogService,
-                          GetCurrentUser getCurrentUser)
+                          DialogService dialogService)
     {
         _apiGetService = apiGetService;
         _customDialogService = customDialogService;
         _dialogService = dialogService;
-        _getCurrentUser = getCurrentUser;
     }
 
     public async Task<IList<MyPackagesView>> GetMyPackagesAsync()
     {
         try
         {
-            var response = await _apiGetService.GetAsync("usuarios/paquetes", 1, false);
+            var response = await _apiGetService.GetAsync("usuarios/paquetes", "", 1, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -48,7 +44,8 @@ public class MyPackagesHttp
         }
         catch (Exception e)
         {
-            await _dialogService.Alert(e.Message, "Error interno", new AlertOptions() { OkButtonText = "Aceptar" });
+
+            await _customDialogService.OpenInternalErrorAsync(e);
         }
 
         return new List<MyPackagesView>();

@@ -6,15 +6,8 @@ namespace GestorCorrespondencia.Frontend.Functionalities.PackageShipping.Compone
 public partial class PackageDetailsForm
 {
     [Parameter] public ShippingForm? shippingForm { get; set; }
+    [Parameter] public IList<PackageDetailTypeItem>? TypeItems { get; set; }
     [Parameter] public EventCallback<ShippingForm> OnModelUpdated { get; set; }
-
-    private Dictionary<int, string> types = new()
-    {
-        { 1, "Documentos" },
-        { 2, "Paquete" },
-        { 3, "Carta" },
-        { 4, "Caja" }
-    };
 
     private async Task AddDetailAsync()
     {
@@ -38,9 +31,10 @@ public partial class PackageDetailsForm
 
     private void OnTypeChanged(object? value, ShippingDetail detail)
     {
-        if (value is int selectedId && types.TryGetValue(selectedId, out var selectedValue))
+        if (value is int selectedId && TypeItems != null)
         {
-            detail.Type = selectedValue;
+            var selectedItem = TypeItems.FirstOrDefault(t => t.Id == selectedId);
+            detail.Type = selectedItem?.Description;
         }
         else
         {

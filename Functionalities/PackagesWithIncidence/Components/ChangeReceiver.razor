@@ -8,7 +8,7 @@
         <RadzenColumn>
             <RadzenRow class="gap-0">
                 <RadzenLabel class="form-label">Ubicación destino</RadzenLabel>
-                <RadzenDropDown Name="LocationId" @bind-Value="selectedLocation" Change="@(() => GetUsersByLocationIdAsync())" class="w-100"
+                <RadzenDropDown Name="LocationId" @bind-Value="form.NewRecipientLocationId" Change="@(() => GetUsersByLocationIdAsync())" class="w-100"
                                 Data="@Locations" TextProperty="LocationName" ValueProperty="LocationId"
                                 FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterOperator="StringFilterOperator.Contains" AllowFiltering="true" />
             </RadzenRow>
@@ -34,7 +34,7 @@
     <RadzenRow>
         <RadzenColumn class="rz-display-flex rz-justify-content-end gap-2 rz-mt-3">
             <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="@(() => DialogService.Close())" />
-            <RadzenButton Text="Cambiar destinatario" ButtonType="ButtonType.Submit" ButtonStyle="ButtonStyle.Primary" />
+            <RadzenButton Text="Cambiar destinatario" IsBusy="busy" BusyText="Cambiando destinatario" ButtonType="ButtonType.Submit" ButtonStyle="ButtonStyle.Primary" />
         </RadzenColumn>
     </RadzenRow>
 </RadzenTemplateForm>

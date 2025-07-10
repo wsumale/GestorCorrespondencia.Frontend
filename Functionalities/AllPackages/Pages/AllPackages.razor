@@ -1,0 +1,71 @@
+﻿@page "/correspondencia/todos_los_paquetes"
+
+<Loader Loading="@loading" />
+<SessionValidator title="Todos los paquetes" path="/correspondencia/todos_los_paquetes">
+	<div class="main-container">
+
+        <RadzenRow class="rz-mb-3">
+            <RadzenColumn>
+                <RadzenLabel Text="Ubicación Remitente" class="fw-bold" />
+                <RadzenDropDown Name="LocationId" @bind-Value="filterForm.SenderLocationId" class="w-100"
+                                Data="@Locations" TextProperty="LocationName" ValueProperty="LocationId"
+                                Change="GetSenderUsersAsync"
+                                FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterOperator="StringFilterOperator.Contains" AllowFiltering="true" />
+            </RadzenColumn>
+            <RadzenColumn>
+                <RadzenLabel Text="Remitente" class="fw-bold" />
+                <RadzenDropDown Name="AddresseeId" @bind-Value="filterForm.SenderId" class="w-100"
+                                Data="@SenderUsers" TextProperty="Name" ValueProperty="Id"
+                                FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterOperator="StringFilterOperator.Contains" AllowFiltering="true" />
+            </RadzenColumn>
+            <RadzenColumn>
+                <RadzenLabel Text="Ubicación Destino" class="fw-bold" />
+                <RadzenDropDown Name="LocationId" @bind-Value="filterForm.ReceiverLocationId" class="w-100"
+                                Data="@Locations" TextProperty="LocationName" ValueProperty="LocationId"
+                                Change="GetReceiverUsersAsync"
+                                FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterOperator="StringFilterOperator.Contains" AllowFiltering="true" />
+            </RadzenColumn>
+            <RadzenColumn>
+                <RadzenLabel Text="Destinatario" class="fw-bold" />
+                <RadzenDropDown Name="AddresseeId" @bind-Value="filterForm.ReceiverId" class="w-100"
+                                Data="@ReceiverUsers" TextProperty="Name" ValueProperty="Id"
+                                FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterOperator="StringFilterOperator.Contains" AllowFiltering="true" />
+            </RadzenColumn>
+            <RadzenColumn>
+                <RadzenLabel Text="Estado" class="fw-bold" />
+                <RadzenDropDown TValue="int" Data="@States" Name="State" class="w-100"
+                                TextProperty="Description" ValueProperty="Value" @bind-Value="filterForm.State" />
+            </RadzenColumn>
+            <RadzenColumn class="rz-display-flex rz-align-items-end gap-3">
+                <RadzenButton Click="LoadDataAsync" title="Buscar paquetes" ButtonStyle="ButtonStyle.Primary" Icon="search" Size="ButtonSize.Medium" />
+                <RadzenButton Click="ClearFilters" title="Limpiar filtros" ButtonStyle="ButtonStyle.Danger" Icon="filter_alt_off" Size="ButtonSize.Medium" />
+                <RadzenButton Click="DownloadReportPDF" title="Descargar PDF" ButtonStyle="ButtonStyle.Secondary" Icon="picture_as_pdf" Size="ButtonSize.Medium" />
+                <RadzenButton Click="DownloadReportCSV" title="Descargar CSV" ButtonStyle="ButtonStyle.Success" Icon="csv" Size="ButtonSize.Medium" />
+            </RadzenColumn>
+        </RadzenRow>
+
+		<RadzenDataGrid Data="@packages" AllowPaging="true" PageSize="10" ColumnWidth="200px"
+						AllowRowSelectOnRowClick="true" SelectionMode="DataGridSelectionMode.Single"
+						FilterMode="FilterMode.CheckBoxList" AllowSorting="true" AllowFiltering="true"
+                        ApplyFilterText="Aplicar" ClearFilterText="Limpiar" EmptyText="No hay paquetes para mostrar">
+            <Columns>
+                <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="125px" />
+                <RadzenDataGridColumn Property="Sender" Title="Remitente" />
+                <RadzenDataGridColumn Property="SenderLocation" Title="Ubicación remitente" />
+                <RadzenDataGridColumn Property="Receiver" Title="Destinatario" />
+                <RadzenDataGridColumn Property="DestinationLocation" Title="Ubicación destinatario" />
+                <RadzenDataGridColumn Property="CreatedAt" Title="Fecha" Width="150px" FormatString="{0:dd/MM/yyyy HH:mm}">
+                    <Template Context="data">
+                        @data.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Property="State" Title="Estado" />
+                <RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px">
+                    <Template Context="Detail">
+                        <RadzenButton Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" Icon="list" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+		</RadzenDataGrid>
+	</div>
+</SessionValidator>

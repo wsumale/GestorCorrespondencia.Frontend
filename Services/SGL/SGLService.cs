@@ -22,7 +22,7 @@ public class SGLService
     {
         try
         {
-            var response = await _apiGetService.GetAsync("ubicaciones?Asignable=true", 4, false);
+            var response = await _apiGetService.GetAsync("ubicaciones?Asignable=true", "", 4, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -51,7 +51,7 @@ public class SGLService
     {
         try
         {
-            var response = await _apiGetService.GetAsync("ubicaciones?TipoListadoUbicaciones=2", 4, false);
+            var response = await _apiGetService.GetAsync("ubicaciones?TipoListadoUbicaciones=2", "", 4, false);
 
             if (response.IsSuccessStatusCode)
             {

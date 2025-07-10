@@ -19,12 +19,13 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
         [Parameter] public Consolidated? consolidated { get; set; }
 
         bool loading = false;
+        bool busy = false;
 
         public async Task SubmitAsync()
         {
             try
             {
-                loading = true;
+                loading = busy = true;
 
                 List<int> packageIds = consolidated!.ConsolidatedDetail.Select(d => d.PackageId).ToList();
 
@@ -61,17 +62,22 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
                 await DialogService.Alert(e.Message, "Error interno", new AlertOptions { OkButtonText = "Aceptar" });
             } finally
             {
-                loading = false;
+                loading = busy = false;
             }
         }
 
         private async Task SuccessAsync()
         {
-
             var redirect = await DialogService.Alert("Consolidado creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar" });
-            if (redirect == true)
+            
+            if (redirect == true && consolidated!.Type == 1)
             {
                 NavigationManager.NavigateTo("/consolidados/mis_consolidados");
+            }
+
+            if (redirect == true && consolidated!.Type == 2)
+            {
+                NavigationManager.NavigateTo("/correspondencia/todos_los_consolidados");
             }
         }
 

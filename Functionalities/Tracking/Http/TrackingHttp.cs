@@ -23,7 +23,7 @@ public class TrackingHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"paquetes/{PackageId}?UsuarioActual={CurrentUser}", 1, false);
+            var response = await _apiGetService.GetAsync($"paquetes/{PackageId}/bitacora?UsuarioActual={CurrentUser}", "", 1, false);
 
             if (response.IsSuccessStatusCode)
             {

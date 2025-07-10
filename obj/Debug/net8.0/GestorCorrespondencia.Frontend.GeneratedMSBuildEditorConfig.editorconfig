@@ -72,6 +72,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEFsbENvbnNvbGlkYXRpb25zXFBhZ2VzXEFsbENvbnNvbGlkYXRpb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/AllPackages/Pages/AllPackages.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEFsbFBhY2thZ2VzXFBhZ2VzXEFsbFBhY2thZ2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/Authentication/Components/Form2FA.razor]
 build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXEF1dGhlbnRpY2F0aW9uXENvbXBvbmVudHNcRm9ybTJGQS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

@@ -25,7 +25,7 @@ public class ConsolidationsMailboxHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync("consolidados?TipoConsolidado=2", 1, true);
+            var response = await _apiGetService.GetAsync("consolidados?TipoConsolidado=2", "", 1, true);
 
             if (response.IsSuccessStatusCode)
             {

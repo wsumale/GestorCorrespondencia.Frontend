@@ -89,7 +89,7 @@
                 </RadzenStepsItem>
 
                 <RadzenStepsItem Text="Detalle del envío">
-                    <PackageDetailsForm shippingForm="@shippingForm" OnModelUpdated="@(m => shippingForm = m)" />
+                    <PackageDetailsForm shippingForm="@shippingForm" TypeItems="@TypeItems" OnModelUpdated="@(m => shippingForm = m)" />
                 </RadzenStepsItem>
 
                 <RadzenStepsItem Text="Confirmar Envío">

@@ -1,4 +1,4 @@
-﻿@page "/consolidados/rastrear"
+﻿@page "/consolidados/rastrear/{ConsolidationIdParam:int?}"
 
 <SessionValidator title="Rastrear consolidado" path="/consolidados/rastrear">
 	<Loader Loading="@loading" />
@@ -13,18 +13,18 @@
             <RadzenRow class="rz-mt-3">
                 <RadzenColumn>
                     <p>
-                        <strong>Origen:</strong> @consolidated.SenderLocation <br />
+                        <strong>Origen:</strong> @consolidated!.SenderLocation <br />
                         <strong>Remitente:</strong> @consolidated.CreatedBy
                     </p>
                 </RadzenColumn>
                 <RadzenColumn>
                     <p>
-                        <strong>Fecha:</strong> @consolidated.CreatedAt
+                        <strong>Fecha:</strong> @consolidated!.CreatedAt
                     </p>
                 </RadzenColumn>
             </RadzenRow>
 
-            @if (consolidated.Detail.Any())
+            @if (consolidated!.Detail!.Any())
             {
                 <RadzenDataGrid Data="@consolidated.Detail" AllowFiltering="true"
                                 ApplyFilterText="Aplicar"

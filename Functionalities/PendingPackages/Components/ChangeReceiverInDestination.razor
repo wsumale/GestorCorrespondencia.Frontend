@@ -13,7 +13,7 @@
             <RadzenRow class="gap-0">
                 <RadzenLabel class="form-label">Destinatario<span class="text-rojo">*</span></RadzenLabel>
                 <RadzenDropDown Name="NewReceiverId" @bind-Value="Form.NewReceiverId" class="w-100"
-                                Data="@Users" TextProperty="Name" ValueProperty="Id"
+                                Data="@Users" TextProperty="Name" ValueProperty="Id" Change="@OnReceiverChanged"
                                 FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" FilterOperator="StringFilterOperator.Contains" AllowFiltering="true" />
             </RadzenRow>
         </RadzenColumn>

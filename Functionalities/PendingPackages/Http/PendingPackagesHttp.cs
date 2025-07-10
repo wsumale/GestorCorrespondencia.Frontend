@@ -41,7 +41,7 @@ public class PendingPackagesHttp
         try
         {
             var user = await _getCurrentUser.GetUserInfoAsync();
-            var response = await _apiGetService.GetAsync($"paquetes?Estado=10&IdDestinatario={user.UserId}", 1, true);
+            var response = await _apiGetService.GetAsync($"paquetes?Estado=10&IdDestinatario={user.UserId}", "", 1, false);
             //var response = await _apiGetService.GetAsync("destinatarios/paquetes?Estado=10", 1, true);
 
             if (response.IsSuccessStatusCode)

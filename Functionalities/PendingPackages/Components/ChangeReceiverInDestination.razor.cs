@@ -17,6 +17,8 @@ public partial class ChangeReceiverInDestination
     [Inject] SGUService SGUService { get; set; } = default!;
     [Inject] GetCurrentUser GetCurrentUser { get; set; } = default!;
 
+    [Inject] ILogger<ChangeReceiverInDestination> _logger { get; set; } = default!;
+
     [Parameter] public int PackageId { get; set; }
 
     private bool loading = false;
@@ -54,5 +56,15 @@ public partial class ChangeReceiverInDestination
             DialogService.Close();
         }
     }
+
+    private void OnReceiverChanged(object value)
+    {
+        var selectedUser = Users.FirstOrDefault(u => u.Id.Equals(value));
+        if (selectedUser != null)
+        {
+            Form.NewDestinationId = selectedUser.LocationId ?? 0;
+        }
+    }
+
 
 }

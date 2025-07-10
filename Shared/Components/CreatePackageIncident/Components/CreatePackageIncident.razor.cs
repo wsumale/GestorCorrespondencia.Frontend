@@ -20,6 +20,7 @@ public partial class CreatePackageIncident
     [Parameter] public int ConsolidatedDetailId { get; set; }
 
     private bool loading = false;
+    private bool busy = false;
 
     private IncidentFormModel form = new();
 
@@ -31,7 +32,7 @@ public partial class CreatePackageIncident
     {
         try
         {
-            loading = true;
+            loading = busy = true;
 
             IncidentDTO dto = new IncidentDTO();
             dto.ConsolidatedDetailId = ConsolidatedDetailId;
@@ -56,7 +57,7 @@ public partial class CreatePackageIncident
         }
         finally
         {
-            loading = false;
+            loading = busy = false;
         }
     }
 

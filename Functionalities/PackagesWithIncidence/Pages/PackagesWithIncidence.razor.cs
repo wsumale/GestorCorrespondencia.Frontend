@@ -42,6 +42,7 @@ public partial class PackagesWithIncidence
     private async Task OpenResolveIncidentAsync(int IncidentId, int? IncidentTypeId)
     {
         await CustomDialogService.OpenResolveIncidentAsync(IncidentId, IncidentTypeId);
+        await LoadDataAsync();
     }
 
     bool? solvedFilter;

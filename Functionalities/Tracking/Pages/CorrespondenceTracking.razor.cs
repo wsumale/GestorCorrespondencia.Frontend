@@ -1,38 +1,46 @@
+using System;
 using GestorCorrespondencia.Frontend.Functionalities.Tracking.Http;
 using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace GestorCorrespondencia.Frontend.Functionalities.Tracking.Pages;
 public partial class CorrespondenceTracking
 {
     [Inject] TrackingHttp TrackingHttp { get; set; } = default!;
+    [Inject] IJSRuntime JS { get; set; } = default!;
+
+    [Parameter] public int? PackageIdParam { get; set; }
 
     private bool loading = false;
 
+    private PackageTrackingForm form = new();
     private int? PackageId;
     private Package package = new();
     private bool foundPackage;
     private bool firstSearch = false;
 
+    private string buffer = "";
+    private string LastScanned = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (PackageIdParam > 0)
+        {
+            form.PackageId = PackageIdParam;
+            await SearchPackageAsync();
+        }
+    }
+
     private async Task SearchPackageAsync()
     {
         loading = true;
-        package = await TrackingHttp.GetPackageAsync(PackageId ?? 0, false);
+        package = await TrackingHttp.GetPackageAsync(form.PackageId ?? 0, false);
         foundPackage = package != null && package.PackageId > 0;
         firstSearch = true;
         loading = false;
         StateHasChanged();
     }
-
-    IList<PackageChangelog> changelog = new List<PackageChangelog>
-    {
-        new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "Recibido", Usuario = "scollections", Fecha = "05/04/2025" },
-        new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "En Recepción", Usuario = "scollections", Fecha = "04/04/2025" },
-        new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "Enviado a Destino", Usuario = "scollections", Fecha = "03/04/2025" },
-        new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "Recibido por Correspondencia", Usuario = "scollections", Fecha = "02/04/2025" },
-        new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "Enviado a Correspondencia", Usuario = "scollections", Fecha = "01/04/2025" },
-        new PackageChangelog { NumeroRastreo = "UKSIS-UKSIS-386759", Comentario = "Cambio de estado", Estado = "Nuevo Envío", Usuario = "scollections", Fecha = "31/03/2025" }
-    };
 
     private List<(string Texto, string Icon)> timelineItems = new()
     {
@@ -42,4 +50,28 @@ public partial class CorrespondenceTracking
         ("En Recepción", "location_on"),
         ("Recibido", "check_circle")
     };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("startGlobalScanner", DotNetObjectReference.Create(this));
+        }
+    }
+
+    [JSInvokable]
+    public async Task OnScannerInput(string code)
+    {
+        LastScanned = code;
+        buffer = "";
+        await ProcessScannedCodeAsync(code);
+        StateHasChanged();
+    }
+
+    private async Task ProcessScannedCodeAsync(string code)
+    {
+        form.PackageId = int.Parse(code);
+        await SearchPackageAsync();
+    }
+
 }

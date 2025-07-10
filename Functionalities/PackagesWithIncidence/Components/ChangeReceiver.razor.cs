@@ -17,11 +17,10 @@ public partial class ChangeReceiver
     [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
     [Inject] DialogService DialogService { get; set; } = default!;
 
-    private bool loading = true;
+    private bool loading = false;
+    private bool busy = false;
     private IList<Location>? Locations;
     private IList<User>? Users;
-
-    private int selectedLocation;
 
     [Parameter] public int IncidentId { get; set; }
     private IncidentResolveDTO form = new();
@@ -40,9 +39,9 @@ public partial class ChangeReceiver
             if (confirm)
             {
                 StateHasChanged();
-                loading = true;
+                loading = busy =true;
                 await PackagesWithIncidentHttp.ResolveChangeOfRecipientIncidentAsync(IncidentId, form, "Destinatario actualizado");
-                loading = false;
+                loading = busy = false;
                 DialogService.Close();
             }
         }
@@ -59,8 +58,9 @@ public partial class ChangeReceiver
     private async Task GetUsersByLocationIdAsync()
     {
         loading = true;
-        Users = await SGUService.GetUsersByLocationAsync(selectedLocation);
+        Users = await SGUService.GetUsersByLocationAsync(form.NewRecipientLocationId ?? 0, false);
         loading = false;
         StateHasChanged();
     }
+
 }

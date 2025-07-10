@@ -21,12 +21,13 @@ public class SGUService
         _getCurrentUser = getCurrentUser;
     }
 
-    public async Task<IList<User>> GetUsersByLocationAsync(int LocationId)
+    public async Task<IList<User>> GetUsersByLocationAsync(int LocationId, bool ExcludeCurrentUser)
     {
         try
         {
             var user = await _getCurrentUser.GetUserInfoAsync();
-            var response = await _apiGetService.GetAsync($"ubicaciones/{LocationId.ToString()}/usuarios?UserId={user.UserId}", 3, true);
+            string CurrentUser = ExcludeCurrentUser ? $"UserId={user.UserId}" : "";
+            var response = await _apiGetService.GetAsync($"ubicaciones/{LocationId.ToString()}/usuarios?{CurrentUser}", "", 3, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -52,7 +53,7 @@ public class SGUService
         try
         {
             var user = await _getCurrentUser.GetUserInfoAsync();
-            var response = await _apiGetService.GetAsync($"ubicaciones/{LocationId.ToString()}/usuarios?UserId={user.UserId}", 3, true);
+            var response = await _apiGetService.GetAsync($"ubicaciones/{LocationId.ToString()}/usuarios?UserId={user.UserId}&BuscarPorUbicacionFisica=true", "", 3, false);
 
             if (response.IsSuccessStatusCode)
             {

@@ -66,7 +66,7 @@ public partial class Form2FA
     {
         try
         {
-            var response = await ApiGetService.GetAsync($"auth/2fa/configurar?username={Login.Username}", 2, true);
+            var response = await ApiGetService.GetAsync($"auth/2fa/configurar?username={Login.Username}", "", 2, true);
             var content = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)

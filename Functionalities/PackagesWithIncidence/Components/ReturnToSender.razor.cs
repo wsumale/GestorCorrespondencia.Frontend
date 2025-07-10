@@ -16,6 +16,7 @@ public partial class ReturnToSender
     private ReturnToSenderDTO Form = new(); 
 
     private bool loading = false;
+    private bool busy = false;
 
     private async Task OnSubmitReturnedToSenderAsync()
     {
@@ -24,9 +25,9 @@ public partial class ReturnToSender
         if (confirm)
         {
             StateHasChanged();
-            loading = true;
+            loading = busy = true;
             await PackagesWithIncidentHttp.ResolveReturnToSenderIncidentAsync(IncidentId, Form, "Paquete devuelto al remitente");
-            loading = false;
+            loading = busy = false;
             DialogService.Close();
         }
     }

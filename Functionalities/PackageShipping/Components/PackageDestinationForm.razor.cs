@@ -45,7 +45,7 @@ public partial class PackageDestinationForm
     private async Task GetUsersByLocationIdAsync()
     {
         await UpdateLoaderAsync(true);
-        Users = await SGUService.GetUsersByLocationAsync(shippingForm!.LocationId);
+        Users = await SGUService.GetUsersByLocationAsync(shippingForm!.LocationId, true);
         await UpdateLoaderAsync(false);
         StateHasChanged();
     }

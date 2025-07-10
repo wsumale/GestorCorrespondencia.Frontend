@@ -1,4 +1,4 @@
-﻿@page "/paquetes/rastrear"
+﻿@page "/paquetes/rastrear/{PackageIdParam:int?}"
 
 @using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model
 
@@ -8,9 +8,20 @@
         <div class="main-container">
 
             <RadzenText Text="Rastrear Paquete" class="form-title" />
+
+            <RadzenTemplateForm Data="@form" Submit="SearchPackageAsync" TItem="PackageTrackingForm">
+                <DataAnnotationsValidator />
+                <RadzenRow>
+                    <RadzenColumn>
+                        <RadzenNumeric TValue="int?" @bind-Value="@form.PackageId" Placeholder="Ingrese el número de rastreo" class="rz-w-100" ShowUpDown="false" />
+                        <ValidationMessage For="@(() => form.PackageId)" class="rz-message rz-messages-error" />
+                    </RadzenColumn>
+                    <RadzenColumn>
+                        <RadzenButton Text="Rastrear" Icon="alt_route" ButtonType="ButtonType.Submit" class="rz-ms-3" />
+                    </RadzenColumn>
+                </RadzenRow>
+            </RadzenTemplateForm>
             
-            <RadzenNumeric TValue="int?" @bind-Value="@PackageId" Placeholder="Ingrese el número de rastreo" Style="width: 60%;" ShowUpDown="false" />
-            <RadzenButton Text="Rastrear" Icon="alt_route" Click="@SearchPackageAsync" Style="margin-left: 10px;" />
             @if (foundPackage)
             {
                 <RadzenTimeline Orientation="Orientation.Horizontal" LinePosition="LinePosition.Start"
@@ -94,12 +105,13 @@
                     <RadzenCard class="rz-mt-5">
                         <RadzenHeading Size="H3" Text="Historial de Cambios" />
 
-                        <RadzenDataGrid Data="@changelog" TItem="PackageChangelog" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
+                        <RadzenDataGrid Data="@package.Log" TItem="PackageActionLog" EmptyText="Este paquete no tiene registros en la bitácora."
+                                        ShowPagingSummary="false" AllowPaging="true" PageSize="5" >
                             <Columns>
-                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Estado" Title="Estado" />
-                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Comentario" Title="Comentario" />
-                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Usuario" Title="Usuario" />
-                                <RadzenDataGridColumn TItem="PackageChangelog" Property="Fecha" Title="Fecha" />
+                                <RadzenDataGridColumn Property="CreatedAt" Title="Fecha" />
+                                <RadzenDataGridColumn Property="PackageState" Title="Acción" />
+                                <RadzenDataGridColumn Property="CreatedBy" Title="Usuario" />
+                                <RadzenDataGridColumn Property="Description" Title="Descripción" />
                             </Columns>
                         </RadzenDataGrid>
                     </RadzenCard>

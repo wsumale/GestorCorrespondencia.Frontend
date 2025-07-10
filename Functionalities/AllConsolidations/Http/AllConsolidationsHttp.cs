@@ -26,7 +26,7 @@ public class AllConsolidationsHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync("consolidados", 1, true);
+            var response = await _apiGetService.GetAsync("consolidados", "", 1, true);
 
             if (response.IsSuccessStatusCode)
             {

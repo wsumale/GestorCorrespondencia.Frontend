@@ -3,68 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\shared\\components\\sessionvalidator.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:shared\\components\\sessionvalidator.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\correspondencetracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\correspondencetracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\mypackages\\pages\\mypackages.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\mypackages\\pages\\mypackages.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\tracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\tracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\mypackages\\pages\\mypackages.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\mypackages\\pages\\mypackages.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\tracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\tracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\receptionpendingconsolidations\\pages\\pendingconsolidationreception.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\receptionpendingconsolidations\\pages\\pendingconsolidationreception.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\correspondencetracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\correspondencetracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\shared\\components\\consolidationreceivelist\\components\\consolidationreceivelist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:shared\\components\\consolidationreceivelist\\components\\consolidationreceivelist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\pendingpackages\\pages\\pendingpackages.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\pendingpackages\\pages\\pendingpackages.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\allconsolidations\\pages\\allconsolidations.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\allconsolidations\\pages\\allconsolidations.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\consolidationsmailbox\\pages\\consolidationsmailbox.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\consolidationsmailbox\\pages\\consolidationsmailbox.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\myconsolidations\\pages\\myconsolidations.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\myconsolidations\\pages\\myconsolidations.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\shared\\components\\viewconsolidationdetail\\components\\viewconsolidationdetail.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:shared\\components\\viewconsolidationdetail\\components\\viewconsolidationdetail.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\packageshipping\\components\\packagedestinationform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\packageshipping\\components\\packagedestinationform.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\pendingpackages\\components\\changereceiverindestination.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\pendingpackages\\components\\changereceiverindestination.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\authentication\\components\\form2fa.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\authentication\\components\\form2fa.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\packageswithincidence\\components\\incidentdetail.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\packageswithincidence\\components\\incidentdetail.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\packageswithincidence\\pages\\packageswithincidence.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\packageswithincidence\\pages\\packageswithincidence.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\packageswithincidence\\pages\\packageswithincidence.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\packageswithincidence\\pages\\packageswithincidence.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -79,209 +35,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SessionValidator.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\SessionValidator.razor.cs",
-              "RelativeDocumentMoniker": "Shared\\Components\\SessionValidator.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\SessionValidator.razor.cs",
-              "RelativeToolTip": "Shared\\Components\\SessionValidator.razor.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAqwEUAAAA0AAAAAAAAAA==",
+              "Title": "CorrespondenceTracking.razor.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
+              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
+              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:46:15.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MyPackages.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\MyPackages\\Pages\\MyPackages.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\MyPackages\\Pages\\MyPackages.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\MyPackages\\Pages\\MyPackages.razor.cs",
-              "RelativeToolTip": "Functionalities\\MyPackages\\Pages\\MyPackages.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:45:57.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MyPackages.razor",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\MyPackages\\Pages\\MyPackages.razor",
-              "RelativeDocumentMoniker": "Functionalities\\MyPackages\\Pages\\MyPackages.razor",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\MyPackages\\Pages\\MyPackages.razor",
-              "RelativeToolTip": "Functionalities\\MyPackages\\Pages\\MyPackages.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T17:45:55.831Z",
+              "WhenOpened": "2025-07-10T04:21:11.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PendingConsolidationReception.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\ReceptionPendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\ReceptionPendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\ReceptionPendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
-              "RelativeToolTip": "Functionalities\\ReceptionPendingConsolidations\\Pages\\PendingConsolidationReception.razor.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwBMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:45:17.001Z",
+              "Title": "CorrespondenceTracking.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
+              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
+              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T04:21:09.311Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ConsolidationReceiveList.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
-              "RelativeDocumentMoniker": "Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
-              "RelativeToolTip": "Shared\\Components\\ConsolidationReceiveList\\Components\\ConsolidationReceiveList.razor.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBYAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:44:52.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PendingPackages.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PendingPackages\\Pages\\PendingPackages.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\PendingPackages\\Pages\\PendingPackages.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PendingPackages\\Pages\\PendingPackages.razor.cs",
-              "RelativeToolTip": "Functionalities\\PendingPackages\\Pages\\PendingPackages.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:44:29.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AllConsolidations.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\AllConsolidations\\Pages\\AllConsolidations.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\AllConsolidations\\Pages\\AllConsolidations.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\AllConsolidations\\Pages\\AllConsolidations.razor.cs",
-              "RelativeToolTip": "Functionalities\\AllConsolidations\\Pages\\AllConsolidations.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:44:04.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ConsolidationsMailbox.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\ConsolidationsMailbox\\Pages\\ConsolidationsMailbox.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\ConsolidationsMailbox\\Pages\\ConsolidationsMailbox.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\ConsolidationsMailbox\\Pages\\ConsolidationsMailbox.razor.cs",
-              "RelativeToolTip": "Functionalities\\ConsolidationsMailbox\\Pages\\ConsolidationsMailbox.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:43:49.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MyConsolidations.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\MyConsolidations\\Pages\\MyConsolidations.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\MyConsolidations\\Pages\\MyConsolidations.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\MyConsolidations\\Pages\\MyConsolidations.razor.cs",
-              "RelativeToolTip": "Functionalities\\MyConsolidations\\Pages\\MyConsolidations.razor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:43:33.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ViewConsolidationDetail.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ViewConsolidationDetail\\Components\\ViewConsolidationDetail.razor.cs",
-              "RelativeDocumentMoniker": "Shared\\Components\\ViewConsolidationDetail\\Components\\ViewConsolidationDetail.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\ViewConsolidationDetail\\Components\\ViewConsolidationDetail.razor.cs",
-              "RelativeToolTip": "Shared\\Components\\ViewConsolidationDetail\\Components\\ViewConsolidationDetail.razor.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA1wBIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:38:55.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PackageDestinationForm.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
-              "RelativeToolTip": "Functionalities\\PackageShipping\\Components\\PackageDestinationForm.razor.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA5wBIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:38:33.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ChangeReceiverInDestination.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PendingPackages\\Components\\ChangeReceiverInDestination.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\PendingPackages\\Components\\ChangeReceiverInDestination.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PendingPackages\\Components\\ChangeReceiverInDestination.razor.cs",
-              "RelativeToolTip": "Functionalities\\PendingPackages\\Components\\ChangeReceiverInDestination.razor.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAwwBsAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:38:14.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Form2FA.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Authentication\\Components\\Form2FA.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\Authentication\\Components\\Form2FA.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Authentication\\Components\\Form2FA.razor.cs",
-              "RelativeToolTip": "Functionalities\\Authentication\\Components\\Form2FA.razor.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwB8AAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:37:47.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IncidentDetail.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackagesWithIncidence\\Components\\IncidentDetail.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\PackagesWithIncidence\\Components\\IncidentDetail.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackagesWithIncidence\\Components\\IncidentDetail.razor.cs",
-              "RelativeToolTip": "Functionalities\\PackagesWithIncidence\\Components\\IncidentDetail.razor.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwA8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:37:25.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PackagesWithIncidence.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor.cs",
-              "RelativeToolTip": "Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T17:37:08.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PackagesWithIncidence.razor",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor",
-              "RelativeDocumentMoniker": "Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor",
-              "RelativeToolTip": "Functionalities\\PackagesWithIncidence\\Pages\\PackagesWithIncidence.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T17:37:06.883Z",
+              "WhenOpened": "2025-07-09T23:45:56.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Tracking.razor.cs",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
+              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
+              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T23:45:50.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tracking.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor",
+              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\Tracking.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor",
+              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\Tracking.razor",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-09T23:45:50.234Z",
               "EditorCaption": ""
             }
           ]

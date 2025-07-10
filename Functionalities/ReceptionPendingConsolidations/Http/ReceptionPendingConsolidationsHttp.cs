@@ -22,7 +22,7 @@ public class ReceptionPendingConsolidationsHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync("consolidados?TipoConsolidado=2&Recibido=false", 1, false);
+            var response = await _apiGetService.GetAsync("consolidados?TipoConsolidado=2&Recibido=false", "", 1, false);
 
             if (response.IsSuccessStatusCode)
             {

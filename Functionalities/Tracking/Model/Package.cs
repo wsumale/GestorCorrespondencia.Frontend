@@ -33,4 +33,7 @@ public class Package
     [JsonPropertyName("Detalle")]
     public List<PackageDetail> Details { get; set; } = new List<PackageDetail>();
 
+    [JsonPropertyName("Bitacora")]
+    public List<PackageActionLog> Log { get; set; } = new List<PackageActionLog>();
+
 }

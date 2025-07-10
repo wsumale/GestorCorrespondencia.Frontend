@@ -25,7 +25,7 @@ public partial class WBAccessRequest
 
         try
         {
-            var response = await ApiGetService.GetAsync($"auth/validar-workbeat?employeeCode={Form.EmployeeCode}", 2, false);
+            var response = await ApiGetService.GetAsync($"auth/validar-workbeat?employeeCode={Form.EmployeeCode}", "", 2, false);
 
             if (response.IsSuccessStatusCode)
             {

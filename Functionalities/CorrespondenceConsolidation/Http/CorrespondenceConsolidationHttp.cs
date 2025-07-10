@@ -22,7 +22,7 @@ public class CorrespondenceConsolidationHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"paquetes?Estado=6&IdUbicacionDestinatario={LocationId}&IncluirPaquetesDescendientesDestino=true", 1, false);
+            var response = await _apiGetService.GetAsync($"paquetes?Estado=6&IdUbicacionDestinatario={LocationId}&IncluirPaquetesDescendientesDestino=true", "", 1, false);
 
             if (response.IsSuccessStatusCode)
             {

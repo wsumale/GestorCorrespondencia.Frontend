@@ -11,4 +11,8 @@ public class IncidentResolveDTO
     [JsonPropertyName("IdNuevoDestinatario")]
     [Required(ErrorMessage = "Debe seleccionar un usuario")]
     public int? NewRecipientId { get; set; }
+
+    [JsonPropertyName("IdNuevoDestino")]
+    [Required(ErrorMessage = "La ubicación es requerida")]
+    public int? NewRecipientLocationId { get; set; }
 }

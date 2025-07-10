@@ -30,7 +30,7 @@ public class ConsolidationTrackingHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"consolidados/{ConsolidatedId}?UsuarioActual={CurrentUser}", 1, true);
+            var response = await _apiGetService.GetAsync($"consolidados/{ConsolidatedId}?UsuarioActual={CurrentUser}", "", 1, true);
 
             if (response.IsSuccessStatusCode)
             {

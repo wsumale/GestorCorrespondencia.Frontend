@@ -1,5 +1,5 @@
 ﻿namespace GestorCorrespondencia.Frontend.Shared.Interfaces;
 public interface IApiGetService
 {
-    Task<HttpResponseMessage> GetAsync(string url, int source = 1, bool log = false);
+    Task<HttpResponseMessage> GetAsync(string url, string accept, int source = 1, bool log = false);
 }

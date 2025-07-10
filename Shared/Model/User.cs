@@ -12,4 +12,7 @@ public class User
 
     [JsonPropertyName("Correo")]
     public string? Email { get; set; }
+
+    [JsonPropertyName("IdUbicacion")]
+    public int? LocationId { get; set; }
 }

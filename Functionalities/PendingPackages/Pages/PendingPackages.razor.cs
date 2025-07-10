@@ -56,7 +56,6 @@ public partial class PendingPackages
 
     private async Task CreateIncidentDialogAsync(int PackageId, int ConsolidatedDetailId)
     {
-        //await CustomDialogService.OpenCreatePackageIncidentAsync(PackageId, ConsolidatedDetailId);
         await CustomDialogService.OpenChangeReceiverInDestinationAsync(PackageId);
         await RefreshLoadDataAsync();
     }

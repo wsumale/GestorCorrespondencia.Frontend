@@ -14,7 +14,7 @@
     <RadzenRow>
         <RadzenColumn class="rz-display-flex rz-justify-content-end gap-2 rz-mt-3">
             <RadzenButton Text="Cancelar" ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Danger" Click="@(() => DialogService.Close())" />
-            <RadzenButton Text="Devolver al remitente" ButtonType="ButtonType.Submit" ButtonStyle="ButtonStyle.Primary" />
+            <RadzenButton Text="Devolver al remitente" IsBusy="@busy" BusyText="Devolviendo al remitente" ButtonType="ButtonType.Submit" ButtonStyle="ButtonStyle.Primary" />
         </RadzenColumn>
     </RadzenRow>
 </RadzenTemplateForm>

@@ -21,7 +21,7 @@ public class SenderConsolidationHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync("remitentes/paquetes?Estado=4", 1, false);
+            var response = await _apiGetService.GetAsync("remitentes/paquetes?Estado=4", "", 1, false);
 
             if (response.IsSuccessStatusCode)
             {

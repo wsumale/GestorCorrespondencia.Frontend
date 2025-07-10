@@ -12,9 +12,8 @@
         {
             <RadzenTableRow>
                 <RadzenTableCell>
-                    <RadzenDropDown Data="@types" TextProperty="Value" ValueProperty="Key" @bind-Value="detail.TypeId"
+                    <RadzenDropDown Data="@TypeItems" TextProperty="Description" ValueProperty="Id" @bind-Value="detail.TypeId"
                                     Placeholder="Seleccione un tipo" class="rz-w-100" Change="@(args => OnTypeChanged(args, detail))" />
-
                 </RadzenTableCell>
                 <RadzenTableCell>
                     <RadzenTextArea @bind-Value="detail.Comment" Placeholder="Comentarios" class="rz-w-100" />

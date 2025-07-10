@@ -47,12 +47,13 @@
     <RadzenRow>
         <RadzenCard class="rz-mt-5 rz-background-color-base-light">
             <RadzenHeading Size="H3" Text="Historial de Cambios" />
-            <RadzenDataGrid Data="@changelog" TItem="PackageChangelog" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
+            <RadzenDataGrid Data="@package.Log" TItem="PackageActionLog" EmptyText="Este paquete no tiene registros en la bitácora."
+                            ShowPagingSummary="false" AllowPaging="true" PageSize="5">
                 <Columns>
-                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Estado" Title="Estado" />
-                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Comentario" Title="Comentario" />
-                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Usuario" Title="Usuario" />
-                    <RadzenDataGridColumn TItem="PackageChangelog" Property="Fecha" Title="Fecha" />
+                    <RadzenDataGridColumn Property="CreatedAt" Title="Fecha" />
+                    <RadzenDataGridColumn Property="PackageState" Title="Acción" />
+                    <RadzenDataGridColumn Property="CreatedBy" Title="Usuario" />
+                    <RadzenDataGridColumn Property="Description" Title="Descripción" />
                 </Columns>
             </RadzenDataGrid>
         </RadzenCard>

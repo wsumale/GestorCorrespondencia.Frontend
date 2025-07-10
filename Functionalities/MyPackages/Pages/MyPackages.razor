@@ -16,7 +16,7 @@
                 <RadzenDataGridColumn Property="SenderLocation" Title="Ubicación remitente" />
                 <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
                 <RadzenDataGridColumn Property="DestinationLocation" Title="Ubicación destinatario" />
-                <RadzenDataGridColumn Property="Created" Title="Fecha" Width="100px" FormatString="{0:dd/MM/yyyy HH:mm}">
+                <RadzenDataGridColumn Property="Created" Title="Fecha" Width="150px" FormatString="{0:dd/MM/yyyy HH:mm}">
                     <Template Context="data">
                         @data.Created.ToLocalTime().ToString("dd/MM/yyyy HH:mm")
                     </Template>
