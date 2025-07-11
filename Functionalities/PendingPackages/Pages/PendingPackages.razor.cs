@@ -40,7 +40,7 @@ public partial class PendingPackages
     {
         bool confirm = await CustomDialogService.OpenConfirmAsync("¿Desea recibir este paquete?", "Confirmar", "Recibir", "Cancelar", new DialogOptions { Width = "400px" });
 
-        if (confirm == true)
+        if (confirm)
         {
             StateHasChanged();
             loading = true;

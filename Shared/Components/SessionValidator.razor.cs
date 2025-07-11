@@ -95,7 +95,7 @@ public partial class SessionValidator
     private async Task ValidatorAsync()
     {
         var authState = await AuthStateProvider.GetAuthenticationStateAsync();
-        var user = authState.User;
+        user = authState.User;
 
         if (DateTime.TryParse(_expRefreshToken, out var expDateTime))
         {
