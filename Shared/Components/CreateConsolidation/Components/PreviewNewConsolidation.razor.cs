@@ -31,12 +31,19 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
             ConsolidatedResponseDTO response = new();
             if (consolidated!.Type == 1)
             {
-                ConsolidatedSenderRequestDTO SenderDTO = new ConsolidatedSenderRequestDTO { ConsolidatedType = consolidated.Type, PackagesIds = packageIds };
+                ConsolidatedSenderRequestDTO SenderDTO = new();
+                SenderDTO.ConsolidatedType = consolidated.Type;
+                SenderDTO.PackagesIds = packageIds;
+                
                 response = await CreateConsolidatedHttp.SendSenderConsolidationAsync(SenderDTO);
             }
             else if (consolidated!.Type == 2)
             {
-                ConsolidatedCorrespondenceRequestDTO CorrespondenceDTO = new ConsolidatedCorrespondenceRequestDTO { ConsolidatedType = consolidated.Type, RecipientLocationId = consolidated.RecipientLocationId, PackagesIds = packageIds };
+                ConsolidatedCorrespondenceRequestDTO CorrespondenceDTO = new();
+                CorrespondenceDTO.ConsolidatedType = consolidated.Type;
+                CorrespondenceDTO.RecipientLocationId = consolidated.RecipientLocationId;
+                CorrespondenceDTO.PackagesIds = packageIds;
+
                 response = await CreateConsolidatedHttp.SendCorrespondenceConsolidationAsync(CorrespondenceDTO);
             }
 

@@ -16,7 +16,7 @@ public partial class WBAccessRequest
     [Inject] private CustomDialogService CustomDialogService { get; set; } = default!;
 
     private int formulario = 0; //0=Validar Codigo, 1=Usar Credenciales Existentes, 2=Crear Usuario
-    public readonly WBValidateEmployeeCodeForm Form = new WBValidateEmployeeCodeForm();
+    public readonly WBValidateEmployeeCodeForm Form = new();
     bool busy;
 
     private async Task OnSubmitValidateCodeAsync()

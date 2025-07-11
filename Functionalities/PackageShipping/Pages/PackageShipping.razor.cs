@@ -36,7 +36,7 @@ public partial class PackageShipping
     }
 
     private string title = "Formulario de Envío";
-    private ShippingForm shippingForm = new ShippingForm();
+    private ShippingForm shippingForm = new();
 
     private async Task CanChangeAsync(StepsCanChangeEventArgs args)
     {

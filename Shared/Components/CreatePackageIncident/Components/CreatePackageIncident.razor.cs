@@ -34,7 +34,7 @@ public partial class CreatePackageIncident
         {
             loading = busy = true;
 
-            IncidentDTO dto = new IncidentDTO();
+            IncidentDTO dto = new();
             dto.ConsolidatedDetailId = ConsolidatedDetailId;
             dto.IncidentTypeId = form.IncidentType;
             dto.Comment = form.Comment;

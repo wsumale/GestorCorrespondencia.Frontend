@@ -34,7 +34,7 @@ public partial class SenderConsolidation
     {
         if (selectedPackages != null && selectedPackages!.Count() > 0)
         {
-            Consolidated consolidated = new Consolidated();
+            Consolidated consolidated = new();
             consolidated.RecipientLocationId = 88;
             consolidated.ConsolidatedDetail = selectedPackages;
             consolidated.Type = 1;
