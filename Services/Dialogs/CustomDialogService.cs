@@ -176,7 +176,7 @@ public class CustomDialogService
                 PropertyNameCaseInsensitive = true
             });
 
-            var statusDialog = await DialogService.OpenAsync<ViewErrorsModal>(
+            await DialogService.OpenAsync<ViewErrorsModal>(
                 errorObject!.Title,
                 new Dictionary<string, object>
                     { { "responseNotAcceptable", errorObject } },

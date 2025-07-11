@@ -61,8 +61,11 @@ public partial class CorrespondenceConsolidationTracking
 
     private async Task ProcessScannedCodeAsync(string code)
     {
-        form.ConsolidationId = int.Parse(code);
-        await SearchConsolidationAsync();
+        if (int.TryParse(code, out var ConsolidationId))
+        {
+            form.ConsolidationId = ConsolidationId;
+            await SearchConsolidationAsync();
+        }
     }
 
 }

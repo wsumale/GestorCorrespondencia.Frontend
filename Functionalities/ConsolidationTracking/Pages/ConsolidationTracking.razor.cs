@@ -1,23 +1,28 @@
+using System;
 using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Http;
 using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Model;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Pages;
 public partial class ConsolidationTracking
 {
     [Inject] ConsolidationTrackingHttp ConsolidationTrackingHttp { get; set; } = default!;
     [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
+    [Inject] IJSRuntime JS { get; set; } = default!;
 
     [Parameter] public int? ConsolidationIdParam { get; set; }
 
     private bool loading = false;
     private ConsolidationTrackingForm form = new();
+    private ConsolidationTrackingView? consolidated = new();
 
     private bool foundConsolidated;
     private bool firstSearch = false;
 
-    private ConsolidationTrackingView? consolidated = new();
+    private string buffer = "";
+    private string LastScanned = "";
 
     protected override async Task OnInitializedAsync()
     {
@@ -37,4 +42,31 @@ public partial class ConsolidationTracking
         loading = false;
         StateHasChanged();
     }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("startGlobalScanner", DotNetObjectReference.Create(this));
+        }
+    }
+
+    [JSInvokable]
+    public async Task OnScannerInputAsync(string code)
+    {
+        LastScanned = code;
+        buffer = "";
+        await ProcessScannedCodeAsync(code);
+        StateHasChanged();
+    }
+
+    private async Task ProcessScannedCodeAsync(string code)
+    {
+        if (int.TryParse(code, out var ConsolidationId))
+        {
+            form.ConsolidationId = ConsolidationId;
+            await SearchConsolidationAsync();
+        }
+    }
+
 }

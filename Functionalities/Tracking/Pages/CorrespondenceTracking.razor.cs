@@ -70,8 +70,11 @@ public partial class CorrespondenceTracking
 
     private async Task ProcessScannedCodeAsync(string code)
     {
-        form.PackageId = int.Parse(code);
-        await SearchPackageAsync();
+        if (int.TryParse(code, out var packageId))
+        {
+            form.PackageId = packageId;
+            await SearchPackageAsync();
+        }
     }
 
 }
