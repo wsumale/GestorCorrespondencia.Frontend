@@ -1,6 +1,7 @@
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using GestorCorrespondencia.Frontend.Services.Http;
 using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.DTO;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Http;
 using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
@@ -11,7 +12,7 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
     public partial class PreviewNewConsolidation
     {
         [Inject] DialogService DialogService { get; set; } = default!;
-        [Inject] ApiPostService ApiPostService { get; set; } = default!;
+        [Inject] CreateConsolidatedHttp CreateConsolidatedHttp { get; set; } = default!;
         [Inject] CustomDialogService CustomDialogService { get; set; } = default!;
         [Inject] NavigationManager NavigationManager { get; set; } = default!;
         [Inject] IJSRuntime JS { get; set; } = default!;
@@ -23,61 +24,42 @@ namespace GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.C
 
         public async Task SubmitAsync()
         {
-            try
+            loading = busy = true;
+
+            List<int> packageIds = consolidated!.ConsolidatedDetail.Select(d => d.PackageId).ToList();
+
+            ConsolidatedResponseDTO response = new();
+            if (consolidated!.Type == 1)
             {
-                loading = busy = true;
-
-                List<int> packageIds = consolidated!.ConsolidatedDetail.Select(d => d.PackageId).ToList();
-
-                object? dto = null;
-                if (consolidated!.Type == 1)
-                {
-                    dto = new ConsolidatedSenderRequestDTO { ConsolidatedType = consolidated.Type, PackagesIds = packageIds };
-                }
-                else if (consolidated!.Type == 2)
-                {
-                    dto = new ConsolidatedCorrespondenceRequestDTO { ConsolidatedType = consolidated.Type, RecipientLocationId = consolidated.RecipientLocationId, PackagesIds = packageIds };
-                }
-
-                var response = await ApiPostService.PostAsync("consolidados", dto, 1, true);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var fileBytes = await response.Content.ReadAsByteArrayAsync();
-                    var contentType = response.Content.Headers.ContentType?.ToString() ?? "application/octet-stream";
-                    var fileName = response.Content.Headers.ContentDisposition?.FileName?.Trim('"') ?? "archivo.xlsx";
-
-                    var base64 = Convert.ToBase64String(fileBytes);
-
-                    await JS.InvokeVoidAsync("downloadFromByteArray", fileName, base64, contentType);
-
-                    await SuccessAsync();
-                }
-                else
-                {
-                    await CustomDialogService.OpenViewErrorsAsync(response);
-                }
-            } catch(Exception e)
-            {
-                await DialogService.Alert(e.Message, "Error interno", new AlertOptions { OkButtonText = "Aceptar" });
-            } finally
-            {
-                loading = busy = false;
+                ConsolidatedSenderRequestDTO SenderDTO = new ConsolidatedSenderRequestDTO { ConsolidatedType = consolidated.Type, PackagesIds = packageIds };
+                response = await CreateConsolidatedHttp.SendSenderConsolidationAsync(SenderDTO);
             }
+            else if (consolidated!.Type == 2)
+            {
+                ConsolidatedCorrespondenceRequestDTO CorrespondenceDTO = new ConsolidatedCorrespondenceRequestDTO { ConsolidatedType = consolidated.Type, RecipientLocationId = consolidated.RecipientLocationId, PackagesIds = packageIds };
+                response = await CreateConsolidatedHttp.SendCorrespondenceConsolidationAsync(CorrespondenceDTO);
+            }
+
+            if (response.ConsolidatedId > 0)
+            {
+                await SuccessAsync(response);
+            }
+
+            loading = busy = false;
         }
 
-        private async Task SuccessAsync()
+        private async Task SuccessAsync(ConsolidatedResponseDTO response)
         {
-            var redirect = await DialogService.Alert("Consolidado creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar" });
+            var redirect = await DialogService.Alert($"Consolidado <strong>{response.ConsolidatedId}</strong> creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar", ShowClose = false });
             
             if (redirect == true && consolidated!.Type == 1)
             {
-                NavigationManager.NavigateTo("/consolidados/mis_consolidados");
+                NavigationManager.NavigateTo($"/consolidados/rastrear/{response.ConsolidatedId}");
             }
 
             if (redirect == true && consolidated!.Type == 2)
             {
-                NavigationManager.NavigateTo("/correspondencia/todos_los_consolidados");
+                NavigationManager.NavigateTo($"/correspondencia/rastrear_consolidado/{response.ConsolidatedId}");
             }
         }
 

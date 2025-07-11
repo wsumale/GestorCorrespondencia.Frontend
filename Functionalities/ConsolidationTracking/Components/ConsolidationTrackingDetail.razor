@@ -1,0 +1,70 @@
+﻿@using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Model
+
+<Loader Loading="loading" />
+
+@if (foundConsolidated)
+{
+    <RadzenRow class="rz-mt-7">
+        <RadzenColumn SizeXs="12" SizeSm="12" SizeMd="5">
+            <RadzenText><strong>Origen:</strong> @consolidated!.SenderLocation</RadzenText>
+            <RadzenText><strong>Remitente:</strong> @consolidated!.CreatedBy</RadzenText>
+        </RadzenColumn>
+        <RadzenColumn SizeXs="12" SizeSm="12" SizeMd="4">
+            <RadzenText><strong>Fecha:</strong> @consolidated!.CreatedAt</RadzenText>
+            <RadzenText>
+                <strong>Estado:</strong>
+                <RadzenBadge BadgeStyle="@(consolidated!.Received ? BadgeStyle.Success : BadgeStyle.Danger)">
+                    @(consolidated!.Received ? "Recibido" : "Pendiente de Recibir")
+                </RadzenBadge>
+            </RadzenText>
+        </RadzenColumn>
+        <RadzenColumn SizeXs="12" SizeSm="12" SizeMd="3" class="d-flex align-items-start gap-2 rz-mb-5">
+            <RadzenButton Text="Consolidado" Icon="picture_as_pdf" Click="GetConsolidatedTracking" Size="ButtonSize.Small" />
+            <RadzenButton Text="Rastreos" Icon="picture_as_pdf" Click="GetConsolidatedPackages" Size="ButtonSize.Small" />
+        </RadzenColumn>
+    </RadzenRow>
+
+
+
+
+    @if (consolidated!.Detail!.Any())
+    {
+        <RadzenDataGrid Data="@consolidated.Detail" AllowFiltering="true"
+                        ApplyFilterText="Aplicar"
+                        ClearFilterText="Limpiar"
+                        EmptyText="No hay paquetes en este consolidado"
+                        FilterMode="FilterMode.CheckBoxList"
+                        FilterPopupRenderMode="PopupRenderMode.OnDemand"
+                        FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                        AllowPaging="true"
+                        PageSize="10"
+                        AllowSorting="true"
+                        ColumnWidth="200px">
+            <Columns>
+                <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="125px" />
+                <RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
+                <RadzenDataGridColumn Property="Sender" Title="Remitente" />
+                <RadzenDataGridColumn Property="DestinationLocation" Title="Destino" />
+                <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
+                <RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
+                <RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px">
+                    <Template Context="Detail">
+                        <RadzenButton ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" Icon="list" Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" />
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    }
+    else
+    {
+        <RadzenCard class="no-searchable-package rz-mt-3">
+            <RadzenText Text="No hay paquetes en este consolidado" TextStyle="TextStyle.H4" />
+        </RadzenCard>
+    }
+}
+else if (firstSearch)
+{
+    <RadzenCard class="no-searchable-package rz-mt-3">
+        <RadzenText Text="No se pudo encontrar el consolidado" TextStyle="TextStyle.H4" />
+    </RadzenCard>
+}

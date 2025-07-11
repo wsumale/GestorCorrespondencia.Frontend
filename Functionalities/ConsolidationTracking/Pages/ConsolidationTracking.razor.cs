@@ -1,6 +1,5 @@
 using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Http;
 using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Model;
-using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using GestorCorrespondencia.Frontend.Services.Dialogs;
 using Microsoft.AspNetCore.Components;
 
@@ -13,7 +12,8 @@ public partial class ConsolidationTracking
     [Parameter] public int? ConsolidationIdParam { get; set; }
 
     private bool loading = false;
-    private int? ConsolidationId;
+    private ConsolidationTrackingForm form = new();
+
     private bool foundConsolidated;
     private bool firstSearch = false;
 
@@ -23,7 +23,7 @@ public partial class ConsolidationTracking
     {
         if (ConsolidationIdParam > 0)
         {
-            ConsolidationId = ConsolidationIdParam;
+            form.ConsolidationId = ConsolidationIdParam;
             await SearchConsolidationAsync();
         }
     }
@@ -31,7 +31,7 @@ public partial class ConsolidationTracking
     private async Task SearchConsolidationAsync()
     {
         loading = true;
-        consolidated = await ConsolidationTrackingHttp.GetConsolidationDetailAsync(ConsolidationId ?? 0, true);
+        consolidated = await ConsolidationTrackingHttp.GetConsolidationDetailAsync(form.ConsolidationId ?? 0, true);
         foundConsolidated = consolidated != null && consolidated.ConsolidatedId > 0;
         firstSearch = true;
         loading = false;

@@ -4,16 +4,18 @@
 	<Loader Loading="@loading" />
 
 	<RadzenRow>
-		<RadzenColumn>
-			<p>
-				<strong>Origen:</strong> @consolidated!.SenderLocation <br />
-				<strong>Remitente:</strong> @consolidated.CreatedBy
-			</p>
+		<RadzenColumn SizeXs="12" SizeSm="12" SizeMd="5">
+			<RadzenText><strong>Origen:</strong> @consolidated!.SenderLocation</RadzenText>
+			<RadzenText><strong>Remitente:</strong> @consolidated!.CreatedBy</RadzenText>
 		</RadzenColumn>
-		<RadzenColumn>
-			<p>
-				<strong>Fecha:</strong> @consolidated!.CreatedAt
-			</p>
+		<RadzenColumn SizeXs="12" SizeSm="12" SizeMd="4">
+			<RadzenText><strong>Fecha:</strong> @consolidated!.CreatedAt</RadzenText>
+			<RadzenText>
+				<strong>Estado:</strong>
+				<RadzenBadge BadgeStyle="@(consolidated!.Received ? BadgeStyle.Success : BadgeStyle.Danger)">
+					@(consolidated!.Received ? "Recibido" : "Pendiente de Recibir")
+				</RadzenBadge>
+			</RadzenText>
 		</RadzenColumn>
 	</RadzenRow>
 

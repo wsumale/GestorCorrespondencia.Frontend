@@ -123,7 +123,7 @@ public partial class PackageShipping
     private async Task SuccessAsync(PackageResponseDTO response)
     {
 
-        var redirect = await DialogService.Alert($"Paquete <strong>{response.PackageId}</strong> creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar" });
+        var redirect = await DialogService.Alert($"Paquete <strong>{response.PackageId}</strong> creado con éxito", "Operación exitosa", new AlertOptions { CloseDialogOnEsc = false, CloseDialogOnOverlayClick = false, OkButtonText = "Aceptar", ShowClose=false });
         if (redirect == true)
         {
             NavigationManager.NavigateTo($"/paquetes/rastrear/{response.PackageId}");

@@ -9,7 +9,7 @@ public class PackageActionLog
     [JsonPropertyName("EstadoPaquete")]
     public string? PackageState { get; set; }
 
-    [JsonPropertyName("CreadorPor")]        
+    [JsonPropertyName("CreadoPor")]        
     public string? CreatedBy { get; set; }
 
     [JsonPropertyName("FechaCreacion")]
@@ -17,4 +17,7 @@ public class PackageActionLog
 
     [JsonPropertyName("Descripcion")]
     public string? Description { get; set; }
+
+    [JsonPropertyName("IdConsolidado")]
+    public int? ConsolidationId { get; set; }
 }

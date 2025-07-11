@@ -14,8 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Functionalities\ConsolidationTracking\Components\" />
-    <Folder Include="Functionalities\Tracking\Components\" />
     <Folder Include="Lib\" />
     <Folder Include="Shared\Components\NewFolder\" />
     <Folder Include="wwwroot\fonts\" />

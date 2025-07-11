@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\correspondencetracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\correspondencetracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\tracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\tracking.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\tracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\tracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\functionalities\\tracking\\pages\\correspondencetracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:functionalities\\tracking\\pages\\correspondencetracking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|c:\\users\\wsumale\\source\\repos\\unisuper.gestorcorrespondencia.frontend\\shared\\components\\sessionvalidator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE095DCA-09CB-4CDF-A821-48831EEF910A}|GestorCorrespondencia.Frontend.csproj|solutionrelative:shared\\components\\sessionvalidator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,66 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CorrespondenceTracking.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
-              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAqwAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T04:21:11.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CorrespondenceTracking.razor",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
-              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
-              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\CorrespondenceTracking.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-10T04:21:09.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-09T23:45:56.906Z",
+              "WhenOpened": "2025-07-10T21:17:42.361Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Tracking.razor.cs",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
-              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
-              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\Tracking.razor.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T23:45:50.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Tracking.razor",
-              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor",
-              "RelativeDocumentMoniker": "Functionalities\\Tracking\\Pages\\Tracking.razor",
-              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Functionalities\\Tracking\\Pages\\Tracking.razor",
-              "RelativeToolTip": "Functionalities\\Tracking\\Pages\\Tracking.razor",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Title": "SessionValidator.razor",
+              "DocumentMoniker": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\SessionValidator.razor",
+              "RelativeDocumentMoniker": "Shared\\Components\\SessionValidator.razor",
+              "ToolTip": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\Shared\\Components\\SessionValidator.razor",
+              "RelativeToolTip": "Shared\\Components\\SessionValidator.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-09T23:45:50.234Z",
+              "WhenOpened": "2025-07-10T21:17:25.553Z",
               "EditorCaption": ""
             }
           ]

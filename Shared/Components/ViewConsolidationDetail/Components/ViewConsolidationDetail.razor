@@ -3,16 +3,22 @@
 <Loader Loading="@loading" />
 
 <RadzenRow>
-	<RadzenColumn>
-		<p>
-			<strong>Origen:</strong> @consolidation!.SenderLocation <br />
-			<strong>Remitente:</strong> @consolidation.CreatedBy
-		</p>
+	<RadzenColumn SizeXs="12" SizeSm="12" SizeMd="5">
+		<RadzenText><strong>Origen:</strong> @consolidation!.SenderLocation</RadzenText>
+		<RadzenText><strong>Remitente:</strong> @consolidation!.CreatedBy</RadzenText>
 	</RadzenColumn>
-	<RadzenColumn>
-		<p>
-			<strong>Fecha:</strong> @consolidation!.CreatedAt
-		</p>
+	<RadzenColumn SizeXs="12" SizeSm="12" SizeMd="4">
+		<RadzenText><strong>Fecha:</strong> @consolidation!.CreatedAt</RadzenText>
+		<RadzenText>
+			<strong>Estado:</strong>
+			<RadzenBadge BadgeStyle="@(consolidation!.Received ? BadgeStyle.Success : BadgeStyle.Danger)">
+				@(consolidation!.Received ? "Recibido" : "Pendiente de Recibir")
+			</RadzenBadge>
+		</RadzenText>
+	</RadzenColumn>
+	<RadzenColumn class="rz-display-flex rz-align-items-start rz-justify-content-right gap-3">
+		<RadzenButton Text="Consolidado" Icon="picture_as_pdf" Click="GetConsolidatedTracking" Size="ButtonSize.Small" />
+		<RadzenButton Text="Rastreos" Icon="picture_as_pdf" Click="GetConsolidatedPackages" Size="ButtonSize.Small" />
 	</RadzenColumn>
 </RadzenRow>
 

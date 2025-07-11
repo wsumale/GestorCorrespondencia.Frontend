@@ -1,71 +1,27 @@
 ﻿@page "/consolidados/rastrear/{ConsolidationIdParam:int?}"
 
+@using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Model
+@using GestorCorrespondencia.Frontend.Functionalities.ConsolidationTracking.Components
+
 <SessionValidator title="Rastrear consolidado" path="/consolidados/rastrear">
 	<Loader Loading="@loading" />
 	<div class="main-container">
 		<RadzenText Text="Rastrear consolidado" class="form-title" />
 
-		<RadzenNumeric TValue="int?" @bind-Value="@ConsolidationId" Placeholder="Ingrese el número de rastreo" Style="width: 60%;" ShowUpDown="false" />
-		<RadzenButton Text="Rastrear" Icon="alt_route" Click="@SearchConsolidationAsync" Style="margin-left: 10px;" />
-
-        @if (foundConsolidated)
-        {
-            <RadzenRow class="rz-mt-3">
+        <RadzenTemplateForm Data="@form" Submit="SearchConsolidationAsync" TItem="ConsolidationTrackingForm">
+            <DataAnnotationsValidator />
+            <RadzenRow>
                 <RadzenColumn>
-                    <p>
-                        <strong>Origen:</strong> @consolidated!.SenderLocation <br />
-                        <strong>Remitente:</strong> @consolidated.CreatedBy
-                    </p>
+                    <RadzenNumeric TValue="int?" @bind-Value="@form.ConsolidationId" Placeholder="Ingrese el número de consolidado" class="rz-w-100" ShowUpDown="false" />
+                    <ValidationMessage For="@(() => form.ConsolidationId)" class="rz-message rz-messages-error" />
                 </RadzenColumn>
                 <RadzenColumn>
-                    <p>
-                        <strong>Fecha:</strong> @consolidated!.CreatedAt
-                    </p>
+                    <RadzenButton Text="Rastrear" Icon="alt_route" ButtonType="ButtonType.Submit" class="rz-ms-3" />
                 </RadzenColumn>
             </RadzenRow>
+        </RadzenTemplateForm>
 
-            @if (consolidated!.Detail!.Any())
-            {
-                <RadzenDataGrid Data="@consolidated.Detail" AllowFiltering="true"
-                                ApplyFilterText="Aplicar"
-                                ClearFilterText="Limpiar"
-                                EmptyText="No hay paquetes en este consolidado"
-                                FilterMode="FilterMode.CheckBoxList"
-                                FilterPopupRenderMode="PopupRenderMode.OnDemand"
-                                FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
-                                AllowPaging="true"
-                                PageSize="10"
-                                AllowSorting="true"
-                                ColumnWidth="200px">
-                    <Columns>
-                        <RadzenDataGridColumn Property="PackageId" Title="Rastreo" Width="125px" />
-                        <RadzenDataGridColumn Property="SenderLocation" Title="Origen" />
-                        <RadzenDataGridColumn Property="Sender" Title="Remitente" />
-                        <RadzenDataGridColumn Property="DestinationLocation" Title="Destino" />
-                        <RadzenDataGridColumn Property="Addressee" Title="Destinatario" />
-                        <RadzenDataGridColumn Property="CreatedAt" Title="Fecha de Envío" />
-                        <RadzenDataGridColumn Filterable="false" Sortable="false" Width="61px" >
-                            <Template Context="Detail">
-                                <RadzenButton ButtonType="ButtonType.Button" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Medium" Icon="list" Click="@(() => CustomDialogService.OpenViewPackageAsync(Detail.PackageId))" />
-                            </Template>
-                        </RadzenDataGridColumn>
-                    </Columns>
-                </RadzenDataGrid>
-            }
-            else
-            {
-                <RadzenCard class="no-searchable-package rz-mt-3">
-                    <RadzenText Text="No hay paquetes en este consolidado" TextStyle="TextStyle.H4" />
-                </RadzenCard>
-            }
-        }
-        else if (firstSearch)
-        {
-            <RadzenCard class="no-searchable-package rz-mt-3">
-                <RadzenText Text="No se pudo encontrar el consolidado" TextStyle="TextStyle.H4" />
-            </RadzenCard>
-        }
-
+        <ConsolidationTrackingDetail consolidated="@consolidated" firstSearch="@firstSearch" foundConsolidated="@foundConsolidated" />
 
 	</div>
 </SessionValidator>

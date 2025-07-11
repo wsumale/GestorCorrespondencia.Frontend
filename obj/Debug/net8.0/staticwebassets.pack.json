@@ -125,6 +125,10 @@
       "PackagePath": "staticwebassets\\images\\Unisuper.png"
     },
     {
+      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\correspondence.svg",
+      "PackagePath": "staticwebassets\\images\\correspondence.svg"
+    },
+    {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\invite-only.svg",
       "PackagePath": "staticwebassets\\images\\invite-only.svg"
     },
@@ -135,10 +139,6 @@
     {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
       "PackagePath": "staticwebassets\\images\\send.svg"
-    },
-    {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\vector-correspondencia.svg",
-      "PackagePath": "staticwebassets\\images\\vector-correspondencia.svg"
     },
     {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Download.js",

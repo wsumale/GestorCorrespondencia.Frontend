@@ -88,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXENvbnNvbGlkYXRpb25zTWFpbGJveFxQYWdlc1xDb25zb2xpZGF0aW9uc01haWxib3gucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/ConsolidationTracking/Components/ConsolidationTrackingDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXENvbnNvbGlkYXRpb25UcmFja2luZ1xDb21wb25lbnRzXENvbnNvbGlkYXRpb25UcmFja2luZ0RldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/ConsolidationTracking/Pages/ConsolidationTracking.razor]
 build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXENvbnNvbGlkYXRpb25UcmFja2luZ1xQYWdlc1xDb25zb2xpZGF0aW9uVHJhY2tpbmcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -170,6 +174,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/SenderConsolidation/Pages/SenderConsolidation.razor]
 build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFNlbmRlckNvbnNvbGlkYXRpb25cUGFnZXNcU2VuZGVyQ29uc29saWRhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/Tracking/Components/TrackingPackageDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = RnVuY3Rpb25hbGl0aWVzXFRyYWNraW5nXENvbXBvbmVudHNcVHJhY2tpbmdQYWNrYWdlRGV0YWlsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/wsumale/source/repos/Unisuper.GestorCorrespondencia.Frontend/Functionalities/Tracking/Pages/CorrespondenceTracking.razor]

@@ -1,29 +1,6 @@
 ﻿@page "/consolidados/consolidar"
 
-@using GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Model
-@using GestorCorrespondencia.Frontend.Functionalities.SenderConsolidation.Http
-@using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model
-@using GestorCorrespondencia.Frontend.Services.Dialogs
-@using GestorCorrespondencia.Frontend.Shared.Components
 @using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Model
-@using System.Text.Json
-
-@inject CustomDialogService CustomDialogService
-@inject SenderConsolidationHttp SenderConsolidationHttp
-
-@code {
-    private ConsolidatedDetail package = new();
-    private IList<ConsolidatedDetail> packages = new List<ConsolidatedDetail>();
-
-    protected override async Task OnInitializedAsync()
-    {
-        loading = true;
-        packages = await SenderConsolidationHttp.GetPackagesPendingConsolidationAsync();
-        loading = false;
-
-        StateHasChanged();
-    }
-}
 
 <SessionValidator title="Consolidado a correspondencia" path="/consolidados/consolidar">
     <Loader Loading="@loading" />

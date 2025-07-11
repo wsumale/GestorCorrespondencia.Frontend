@@ -23,6 +23,7 @@ using GestorCorrespondencia.Frontend.Functionalities.PackagesWithIncidence.Http;
 using GestorCorrespondencia.Frontend.Shared.Components.ViewConsolidationDetail.Http;
 using GestorCorrespondencia.Frontend.Functionalities.AllPackages.Http;
 using GestorCorrespondencia.Frontend.Functionalities.PackageShipping.Http;
+using GestorCorrespondencia.Frontend.Shared.Components.CreateConsolidation.Http;
 
 namespace GestorCorrespondencia.Frontend.Extensions;
 public static class ServiceExtension
@@ -53,6 +54,7 @@ public static class ServiceExtension
         services.AddScoped<ViewConsolidationDetailHttp>();
         services.AddScoped<AllPackagesHttp>();
         services.AddScoped<PackageShippingHttp>();
+        services.AddScoped<CreateConsolidatedHttp>();
 
         services.AddScoped<IAuthCookieService, AuthCookieService>();
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();

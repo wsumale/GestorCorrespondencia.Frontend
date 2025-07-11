@@ -32,7 +32,7 @@ public class PackagesWithIncidentHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync("incidencias", "", 1, true);
+            var response = await _apiGetService.GetAsync("incidencias", "", 1, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -61,7 +61,7 @@ public class PackagesWithIncidentHttp
     {
         try
         {
-            var response = await _apiGetService.GetAsync($"incidencias/{IncidentId}", "", 1, true);
+            var response = await _apiGetService.GetAsync($"incidencias/{IncidentId}", "", 1, false);
 
             if (response.IsSuccessStatusCode)
             {
@@ -89,7 +89,7 @@ public class PackagesWithIncidentHttp
     {
         try
         {
-            var response = await _apiPatchService.PatchAsync($"incidencias/{IncidentId}", DTO, 1, true);
+            var response = await _apiPatchService.PatchAsync($"incidencias/{IncidentId}", DTO, 1, false);
             if (response.IsSuccessStatusCode)
             {
                 _notificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Operación exitosa", Detail = SuccessMessage, Duration = 4000 });
@@ -111,7 +111,7 @@ public class PackagesWithIncidentHttp
     {
         try
         {
-            var response = await _apiPatchService.PatchAsync($"incidencias/{IncidentId}", DTO, 1, true);
+            var response = await _apiPatchService.PatchAsync($"incidencias/{IncidentId}", DTO, 1, false);
             if (response.IsSuccessStatusCode)
             {
                 _notificationService.Notify(new NotificationMessage { Severity = NotificationSeverity.Success, Summary = "Operación exitosa", Detail = SuccessMessage, Duration = 4000 });

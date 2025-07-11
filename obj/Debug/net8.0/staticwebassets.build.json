@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3ODxPbQNPDV72VY8kkHhWfQX6zRkhxtXRqSZ9hrMC0U=",
+  "Hash": "BoWNKSXOMwOSFLGI669sIODYSpor9DE5CGexqe5Lfsc=",
   "Source": "GestorCorrespondencia.Frontend",
   "BasePath": "_content/GestorCorrespondencia.Frontend",
   "Mode": "Default",
@@ -1382,6 +1382,27 @@
       "OriginalItemSpec": "wwwroot\\fonts\\RobotoFlex.woff2"
     },
     {
+      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\correspondence.svg",
+      "SourceId": "GestorCorrespondencia.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
+      "BasePath": "_content/GestorCorrespondencia.Frontend",
+      "RelativePath": "images/correspondence#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9dq51efzbn",
+      "Integrity": "vV0eWgB39Jp9OqkGH6K14KYERGB4Yc8rHFZ5oeHrfM0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\correspondence.svg"
+    },
+    {
       "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Correspondencia.png",
       "SourceId": "GestorCorrespondencia.Frontend",
       "SourceType": "Discovered",
@@ -1485,27 +1506,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Unisuper.png"
-    },
-    {
-      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\vector-correspondencia.svg",
-      "SourceId": "GestorCorrespondencia.Frontend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
-      "BasePath": "_content/GestorCorrespondencia.Frontend",
-      "RelativePath": "images/vector-correspondencia#[.{fingerprint}]?.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "5hj6se6dfu",
-      "Integrity": "Gdxxd90CPyoQ9ooXdDtRjl5AasH/KNUZ7t0RHb1pmnU=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\vector-correspondencia.svg"
     },
     {
       "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\auth.js",
@@ -7092,6 +7092,88 @@
       ]
     },
     {
+      "Route": "images/correspondence.9dq51efzbn.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\correspondence.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207487"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vV0eWgB39Jp9OqkGH6K14KYERGB4Yc8rHFZ5oeHrfM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 21:14:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9dq51efzbn"
+        },
+        {
+          "Name": "label",
+          "Value": "images/correspondence.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vV0eWgB39Jp9OqkGH6K14KYERGB4Yc8rHFZ5oeHrfM0="
+        }
+      ]
+    },
+    {
+      "Route": "images/correspondence.svg",
+      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\correspondence.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "207487"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vV0eWgB39Jp9OqkGH6K14KYERGB4Yc8rHFZ5oeHrfM0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 21:14:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vV0eWgB39Jp9OqkGH6K14KYERGB4Yc8rHFZ5oeHrfM0="
+        }
+      ]
+    },
+    {
       "Route": "images/Correspondencia.1fxfzjxhxv.png",
       "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Correspondencia.png",
       "Selectors": [],
@@ -7498,88 +7580,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-12GmoQu1ITEiH2TROkai94pFpfkYlyx2eA250aQrKN0="
-        }
-      ]
-    },
-    {
-      "Route": "images/vector-correspondencia.5hj6se6dfu.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\vector-correspondencia.svg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35696"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/svg+xml"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Gdxxd90CPyoQ9ooXdDtRjl5AasH/KNUZ7t0RHb1pmnU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 14:17:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5hj6se6dfu"
-        },
-        {
-          "Name": "label",
-          "Value": "images/vector-correspondencia.svg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Gdxxd90CPyoQ9ooXdDtRjl5AasH/KNUZ7t0RHb1pmnU="
-        }
-      ]
-    },
-    {
-      "Route": "images/vector-correspondencia.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\vector-correspondencia.svg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35696"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/svg+xml"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Gdxxd90CPyoQ9ooXdDtRjl5AasH/KNUZ7t0RHb1pmnU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 11 Apr 2025 14:17:47 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Gdxxd90CPyoQ9ooXdDtRjl5AasH/KNUZ7t0RHb1pmnU="
         }
       ]
     },

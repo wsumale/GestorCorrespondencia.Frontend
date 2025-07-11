@@ -1,5 +1,20 @@
 ﻿@page "/principal/home"
 
+<div style="margin: var(--rz-layout-body-margin); padding: var(--rz-layout-body-padding); text-align:center;">
+    <RadzenStack JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center" Gap="0" class="mt-4">
+
+        <RadzenText TextStyle="TextStyle.H2" class="mb-3" Style="font-family:'Poppins-Regular'">Bienvenidos</RadzenText>
+        <RadzenText TextStyle="TextStyle.H5" class="mb-3" Style="font-family:'Poppins-Regular'">Sistema Gestor de Correspondencia</RadzenText>
+
+        <RadzenRow AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" class="mt-3">
+            <RadzenColumn Size="12" SizeXS="12" SizeMD="12">
+                <RadzenImage Path="images/send.svg" class="w-75"></RadzenImage>
+            </RadzenColumn>
+        </RadzenRow>
+
+    </RadzenStack>
+</div>
+
 @inject IJSRuntime JS
 <h3>Escáner Global</h3>
 

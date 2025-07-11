@@ -16,6 +16,7 @@ public partial class Tracking
 
     private PackageTrackingForm form = new();
     private Package package = new();
+
     private bool foundPackage;
     private bool firstSearch = false;
 
@@ -40,15 +41,6 @@ public partial class Tracking
         loading = false;
         StateHasChanged();
     }
-
-    private List<(string Texto, string Icon)> timelineItems = new()
-    {
-        ("Enviado a Correspondencia", "local_shipping"),
-        ("Recibido por Correspondencia", "mail"),
-        ("Enviado a Destino", "send"),
-        ("En Recepción", "location_on"),
-        ("Recibido", "check_circle")
-    };
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

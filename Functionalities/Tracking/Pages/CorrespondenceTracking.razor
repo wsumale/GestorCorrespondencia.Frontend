@@ -1,6 +1,7 @@
 ﻿@page "/correspondencia/rastrear_paquete/{PackageIdParam:int?}"
 
 @using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model
+@using GestorCorrespondencia.Frontend.Functionalities.Tracking.Components
 
 <SessionValidator title="Rastrear Paquete" path="/paquetes/rastrear">
     <Loader Loading="@loading" />
@@ -23,98 +24,7 @@
         </RadzenTemplateForm>
         @if (foundPackage)
         {
-            <RadzenTimeline Orientation="Orientation.Horizontal" LinePosition="LinePosition.Start"
-                            style="--rz-timeline-line-width: 3px;
-                                       --rz-timeline-line-color: #562E8A;
-                                       --rz-timeline-axis-size: 72px;
-                                       margin: 0 auto;">
-                <Items>
-                    <RadzenTimelineItem PointVariant="Variant.Filled" PointStyle="PointStyle.Success" PointShadow="0">
-                        <PointContent>
-                            <RadzenIcon Icon="how_to_reg" Style="color: #ffffff;" />
-                        </PointContent>
-                        <ChildContent>
-                            <RadzenText TextStyle="TextStyle.Subtitle1" class="rz-m-0" Style="font-size: 0.8rem; color: #4CAF50;">
-                                Nuevo Envío
-                            </RadzenText>
-                        </ChildContent>
-                    </RadzenTimelineItem>
-
-                    @foreach (var item in timelineItems)
-                    {
-                        <RadzenTimelineItem PointVariant="Variant.Outlined" PointStyle="PointStyle.Info" PointShadow="0">
-                            <PointContent>
-                                <RadzenIcon Icon="@item.Icon" Style="color: #562E8A;" />
-                            </PointContent>
-                            <ChildContent>
-                                <RadzenText TextStyle="TextStyle.Subtitle1" class="rz-m-0" Style="font-size: 0.8rem; color: #562E8A;">
-                                    @item.Texto
-                                </RadzenText>
-                            </ChildContent>
-                        </RadzenTimelineItem>
-                    }
-                </Items>
-            </RadzenTimeline>
-
-            <RadzenRow>
-                <RadzenColumn Size="7" style="min-height: 40vh;">
-                    <RadzenCard Style="height: 100%;">
-                        <RadzenRow>
-                            <RadzenColumn>
-                                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de origen:</strong> <span class="text-morado">@package.SenderLocation</span></p>
-                            </RadzenColumn>
-                            <RadzenColumn>
-                                <p class="rz-mt-2 rz-mb-2"><strong>Ubicación de destino:</strong> <span class="text-naranja">@package.DestinationLocation</span></p>
-                            </RadzenColumn>
-                        </RadzenRow>
-
-                        <RadzenHeading Size="H3" Text="Detalle del Envío" />
-
-                        <RadzenDataGrid Data="@package.Details" TItem="PackageDetail" ShowPagingSummary="false" AllowPaging="true" PageSize="5">
-                            <Columns>
-                                <RadzenDataGridColumn TItem="PackageDetail" Property="Type" Title="Tipo" />
-                                <RadzenDataGridColumn TItem="PackageDetail" Property="Comment" Title="Comentarios" />
-                                <RadzenDataGridColumn TItem="PackageDetail" Property="Quantity" Title="Cantidad" />
-                            </Columns>
-                        </RadzenDataGrid>
-                    </RadzenCard>
-                </RadzenColumn>
-
-                <RadzenColumn Size="5" Style="min-height: 40vh;">
-                    <RadzenCard class="rz-display-flex rz-flex-column rz-justify-content-space-between" Style="height: 100%;">
-                        <div>
-                            <RadzenHeading Size="H3" Text="Información del Envío" />
-
-                            <p class="rz-mt-2 rz-mb-2"><strong>Fecha Envío:</strong> <span class="text-morado">@package.CreatedAt</span></p>
-                            <p class="rz-mt-2 rz-mb-2"><strong>Estado:</strong> <span class="text-azul-claro">@package.State</span></p>
-                            <p class="rz-mt-2 rz-mb-2"><strong>Rastreo:</strong> <span class="text-rojo-brillante">@package.PackageId</span></p>
-
-                            <p class="rz-mt-2 rz-mb-2"><strong>Remitente:</strong> <span class="text-naranja">@package.Sender</span></p>
-                            <p class="rz-mt-2 rz-mb-2"><strong>Destinatario:</strong> <span class="text-morado">@package.Addressee</span></p>
-
-                            <pre class="rz-mt-2 rz-mb-2 rz-pb-1">
-                            <strong>Observaciones:</strong><br />@package.Observations
-                                    </pre>
-                        </div>
-                    </RadzenCard>
-                </RadzenColumn>
-            </RadzenRow>
-
-            <RadzenRow>
-                <RadzenCard class="rz-mt-5">
-                    <RadzenHeading Size="H3" Text="Historial de Cambios" />
-
-                    <RadzenDataGrid Data="@package.Log" TItem="PackageActionLog" EmptyText="Este paquete no tiene registros en la bitácora."
-                                    ShowPagingSummary="false" AllowPaging="true" PageSize="5">
-                        <Columns>
-                            <RadzenDataGridColumn Property="CreatedAt" Title="Fecha" />
-                            <RadzenDataGridColumn Property="PackageState" Title="Acción" />
-                            <RadzenDataGridColumn Property="CreatedBy" Title="Usuario" />
-                            <RadzenDataGridColumn Property="Description" Title="Descripción" />
-                        </Columns>
-                    </RadzenDataGrid>
-                </RadzenCard>
-            </RadzenRow>
+            <TrackingPackageDetail package="@package" />
         }
         else if (firstSearch)
         {
