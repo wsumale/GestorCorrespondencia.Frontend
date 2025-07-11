@@ -13,6 +13,7 @@ using GestorCorrespondencia.Frontend.Functionalities.Authentication.Model.Sessio
 using GestorCorrespondencia.Frontend.Shared.Model;
 using GestorCorrespondencia.Frontend.Shared.Interfaces;
 using GestorCorrespondencia.Frontend.Functionalities.Authentication.Mapper;
+using System;
 
 namespace GestorCorrespondencia.Frontend.Functionalities.Authentication.Pages;
 public partial class Login
@@ -38,7 +39,7 @@ public partial class Login
 
         try
         {
-            var response = await ApiPostService.PostAsync("auth/login", login, 2, true);
+            var response = await ApiPostService.PostAsync("auth/login", login, 2, false);
             var content = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
@@ -94,6 +95,7 @@ public partial class Login
     {
         var token = response.Headers.GetValues("Authorization").FirstOrDefault()?.Replace("Bearer ", "");
         var user = JsonSerializer.Deserialize<SessionUser>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
         var cookieRefreshToken = await AuthCookieService.GetAuthCookie(response);
 
         if (string.IsNullOrEmpty(token) || user == null)

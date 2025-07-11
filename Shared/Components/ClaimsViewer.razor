@@ -34,13 +34,13 @@ else
     }
     else
     {
-        <RadzenDataGrid Data="@menus" TItem="Menu" ShowPagingSummary="false" AllowPaging="false">
+        <RadzenDataGrid Data="@menus" TItem="Menu" ShowPagingSummary="false" AllowPaging="false" ColumnWidth="200px">
             <Columns>
                 <RadzenDataGridColumn TItem="Menu" Property="Section" Title="Sección" />
                 <RadzenDataGridColumn TItem="Menu" Property="Module" Title="Módulo" />
                 <RadzenDataGridColumn TItem="Menu" Property="Icon" Title="Icono" />
                 <RadzenDataGridColumn TItem="Menu" Property="Path" Title="Ruta" />
-                <RadzenDataGridColumn TItem="Menu" Title="Permisos">
+                <RadzenDataGridColumn TItem="Menu" Title="Permisos" Width="500px">
                     <Template Context="menu">
                         Creación: @(menu.Permissions?.Create == true ? "✅" : "❌") |
                         Lectura: @(menu.Permissions?.Read == true ? "✅" : "❌") |
@@ -50,35 +50,5 @@ else
                 </RadzenDataGridColumn>
             </Columns>
         </RadzenDataGrid>
-    }
-}
-
-@code {
-    private ClaimsPrincipal? user;
-    private List<Menu> menus = new();
-
-    protected override async Task OnInitializedAsync()
-    {
-        var authState = await AuthStateProvider.GetAuthenticationStateAsync();
-        user = authState.User;
-
-        if (user.Identity?.IsAuthenticated == true)
-        {
-            menus = user.Claims
-                .Where(c => c.Type.StartsWith("Menu:"))
-                .Select(c =>
-                {
-                    try
-                    {
-                        return JsonSerializer.Deserialize<Menu>(c.Value);
-                    }
-                    catch
-                    {
-                        return null;
-                    }
-                })
-                .Where(m => m != null)
-                .ToList()!;
-        }
     }
 }

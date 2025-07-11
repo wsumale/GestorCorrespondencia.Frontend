@@ -22,7 +22,7 @@ public partial class ADAccessRequest
     public AccessRequestDTO Request = new();
     bool busy;
 
-    private async Task OnSubmit()
+    private async Task OnSubmitAsync()
     {
         busy = true;
 

@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Text.Json;
+using GestorCorrespondencia.Frontend.Functionalities.Authentication.Model.Session;
 using GestorCorrespondencia.Frontend.Services.Http;
 using GestorCorrespondencia.Frontend.Services.Security;
 using GestorCorrespondencia.Frontend.Services.UI;
@@ -16,6 +17,7 @@ public partial class SessionValidator
     [Inject] DialogService DialogService { get; set; } = default!;
     [Inject] MainLayoutService MainLayoutService { get; set; } = default!;
     [Inject] AccessControlService AccessControlService { get; set; } = default!;
+    [Inject] GetCurrentUser GetCurrentUser { get; set; } = default!;
     [Inject] ApiHeadAccessService ApiHeadAccessService { get; set; } = default!;
     [Inject] ILogger<SessionValidator> _logger { get; set; } = default!;
     [Inject] IJSRuntime JSRuntime { get; set; } = default!;
@@ -114,10 +116,15 @@ public partial class SessionValidator
 
     private async Task ValidateAccessPathAsync(string path)
     {
-        var response = await ApiHeadAccessService.HeadAsync("auth/frontend-path", path, 2, true);
+        List<Menu> menus = await GetCurrentUser.GetMenusAsync();
 
-        _hasAccess = response.IsSuccessStatusCode ? true : false;
-        _notHasAccess = !response.IsSuccessStatusCode ? true : false;
+        bool hasReadPermission = menus
+        .FirstOrDefault(menu => menu.Path == path)?
+        .Permissions?.Read ?? false;
+
+        _hasAccess = hasReadPermission ? true : false;
+        _notHasAccess = !hasReadPermission ? true : false;
+
         StateHasChanged();
     }
 

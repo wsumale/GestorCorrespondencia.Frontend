@@ -7,7 +7,7 @@ window.startGlobalScanner = function (dotNetHelper) {
 
         if (e.key === 'Enter') {
             if (buffer.length > 0) {
-                dotNetHelper.invokeMethodAsync('OnScannerInput', buffer);
+                dotNetHelper.invokeMethodAsync('OnScannerInputAsync', buffer);
                 buffer = '';
             }
         } else {

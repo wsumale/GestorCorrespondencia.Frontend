@@ -29,7 +29,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 17:42:18 GMT"
+          "Value": "Fri, 11 Jul 2025 14:37:19 GMT"
         }
       ],
       "EndpointProperties": [
@@ -74,7 +74,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 17:42:18 GMT"
+          "Value": "Fri, 11 Jul 2025 14:37:19 GMT"
         }
       ],
       "EndpointProperties": [
@@ -5657,88 +5657,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-5alY3XMtH/b/0erUzrQWGROwrFEgWbxmnZzr9udHTFA="
-        }
-      ]
-    },
-    {
-      "Route": "images/send.m7oxvqadbh.svg",
-      "AssetFile": "images/send.svg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10300"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/svg+xml"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 16:41:50 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m7oxvqadbh"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio="
-        },
-        {
-          "Name": "label",
-          "Value": "images/send.svg"
-        }
-      ]
-    },
-    {
-      "Route": "images/send.svg",
-      "AssetFile": "images/send.svg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10300"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/svg+xml"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 16:41:50 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio="
         }
       ]
     },

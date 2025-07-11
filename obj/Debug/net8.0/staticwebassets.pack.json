@@ -137,10 +137,6 @@
       "PackagePath": "staticwebassets\\images\\lock.svg"
     },
     {
-      "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
-      "PackagePath": "staticwebassets\\images\\send.svg"
-    },
-    {
       "Id": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\js\\Download.js",
       "PackagePath": "staticwebassets\\js\\Download.js"
     },

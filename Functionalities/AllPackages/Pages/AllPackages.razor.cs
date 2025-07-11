@@ -58,7 +58,7 @@ public partial class AllPackages
         StateHasChanged();
     }
 
-    private async Task DownloadReportPDF()
+    private async Task DownloadReportPDFAsync()
     {
         loading = true;
         await AllPackagesHttp.GetAllPackagesDownloadAsync(filterForm, "application/pdf");
@@ -66,7 +66,7 @@ public partial class AllPackages
         StateHasChanged();
     }
 
-    private async Task DownloadReportCSV()
+    private async Task DownloadReportCSVAsync()
     {
         loading = true;
         await AllPackagesHttp.GetAllPackagesDownloadAsync(filterForm, "application/csv");

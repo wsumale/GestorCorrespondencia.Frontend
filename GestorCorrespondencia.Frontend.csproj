@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <Folder Include="Lib\" />
-    <Folder Include="Shared\Components\NewFolder\" />
+    <Folder Include="Shared\Components\Utils\" />
     <Folder Include="wwwroot\fonts\" />
   </ItemGroup>
 

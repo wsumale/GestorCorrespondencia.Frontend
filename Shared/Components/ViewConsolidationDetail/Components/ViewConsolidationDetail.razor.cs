@@ -35,14 +35,14 @@ public partial class ViewConsolidationDetail
         consolidation = await ViewConsolidationDetailHttp.GetConsolidationDetailAsync(ConsolidationId, CurrentUser);
     }
 
-    private async Task GetConsolidatedTracking()
+    private async Task GetConsolidatedTrackingAsync()
     {
         loading = true;
         await ConsolidationTrackingHttp.GetConsolidatedTrackingDownloadAsync(consolidation!.ConsolidatedId, true);
         loading = false;
     }
 
-    private async Task GetConsolidatedPackages()
+    private async Task GetConsolidatedPackagesAsync()
     {
         loading = true;
         await ConsolidationTrackingHttp.GetConsolidatedPackagesDownloadAsync(consolidation!.ConsolidatedId, true);

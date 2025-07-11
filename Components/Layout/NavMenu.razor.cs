@@ -14,6 +14,7 @@ public partial class NavMenu
     private string _searchModule = string.Empty;
     public string name { get; set; } = "Usuario";
     public string rol { get; set; } = "Usuario";
+    private List<Menu> menus = new();
 
     protected override void OnInitialized()
     {
@@ -41,7 +42,6 @@ public partial class NavMenu
     {
         _searchModule = args.Value!.ToString()!;
     }
-    private List<Menu> menus = new();
 
     protected override async Task OnInitializedAsync()
     {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BoWNKSXOMwOSFLGI669sIODYSpor9DE5CGexqe5Lfsc=",
+  "Hash": "JQP+itDVGWkwj44OZlRNVEsKgkzfN1RA6944I64DQzo=",
   "Source": "GestorCorrespondencia.Frontend",
   "BasePath": "_content/GestorCorrespondencia.Frontend",
   "Mode": "Default",
@@ -1464,27 +1464,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\lock.svg"
-    },
-    {
-      "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
-      "SourceId": "GestorCorrespondencia.Frontend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\",
-      "BasePath": "_content/GestorCorrespondencia.Frontend",
-      "RelativePath": "images/send#[.{fingerprint}]?.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "m7oxvqadbh",
-      "Integrity": "0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\send.svg"
     },
     {
       "Identity": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\Unisuper.png",
@@ -6950,7 +6929,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 17:42:18 GMT"
+          "Value": "Fri, 11 Jul 2025 14:37:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6987,7 +6966,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 17:42:18 GMT"
+          "Value": "Fri, 11 Jul 2025 14:37:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7032,7 +7011,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 17:42:18 GMT"
+          "Value": "Fri, 11 Jul 2025 14:37:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7077,7 +7056,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 May 2025 17:42:18 GMT"
+          "Value": "Fri, 11 Jul 2025 14:37:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7416,88 +7395,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-5alY3XMtH/b/0erUzrQWGROwrFEgWbxmnZzr9udHTFA="
-        }
-      ]
-    },
-    {
-      "Route": "images/send.m7oxvqadbh.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10300"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/svg+xml"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 16:41:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m7oxvqadbh"
-        },
-        {
-          "Name": "label",
-          "Value": "images/send.svg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio="
-        }
-      ]
-    },
-    {
-      "Route": "images/send.svg",
-      "AssetFile": "C:\\Users\\wsumale\\source\\repos\\Unisuper.GestorCorrespondencia.Frontend\\wwwroot\\images\\send.svg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10300"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/svg+xml"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 02 Jun 2025 16:41:50 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0v+1n0qDU8EdFflI7PxKSiFMAayYygzbNbv6+waMxio="
         }
       ]
     },

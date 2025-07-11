@@ -60,7 +60,7 @@ public partial class CorrespondenceTracking
     }
 
     [JSInvokable]
-    public async Task OnScannerInput(string code)
+    public async Task OnScannerInputAsync(string code)
     {
         LastScanned = code;
         buffer = "";

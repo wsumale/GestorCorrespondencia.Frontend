@@ -8,9 +8,7 @@ using GestorCorrespondencia.Frontend.Shared.Components.ViewPackageDetail.Compone
 using GestorCorrespondencia.Frontend.Shared.Components.CreatePackageIncident.Components;
 using GestorCorrespondencia.Frontend.Shared.Components.ConsolidationReceiveList.Components;
 using GestorCorrespondencia.Frontend.Functionalities.PackagesWithIncidence.Components;
-using GestorCorrespondencia.Frontend.Functionalities.Tracking.Model;
 using GestorCorrespondencia.Frontend.Functionalities.PendingPackages.Components;
-using GestorCorrespondencia.Frontend.Shared.Components.ViewConsolidationDetail.Model;
 using GestorCorrespondencia.Frontend.Shared.Components.ViewConsolidationDetail.Components;
 
 namespace GestorCorrespondencia.Frontend.Services.Dialogs;

@@ -52,7 +52,7 @@ public class AuthSessionService
         };
 
         // Crear claims individuales para las rutas y permisos
-        foreach (var menu in user.Menu)
+        foreach (var menu in user.Menu!)
         {
             var json = JsonSerializer.Serialize(menu);
             claims.Add(new Claim($"Menu:{menu.Path}", json));

@@ -16,14 +16,14 @@ public partial class ConsolidationTrackingDetail
 
     private bool loading = false;
 
-    private async Task GetConsolidatedTracking()
+    private async Task GetConsolidatedTrackingAsync()
     {
         loading = true;
         await ConsolidationTrackingHttp.GetConsolidatedTrackingDownloadAsync(consolidated!.ConsolidatedId, true);
         loading = false;
     }
 
-    private async Task GetConsolidatedPackages()
+    private async Task GetConsolidatedPackagesAsync()
     {
         loading = true;
         await ConsolidationTrackingHttp.GetConsolidatedPackagesDownloadAsync(consolidated!.ConsolidatedId, true);

@@ -1,3 +1,10 @@
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.csproj.AssemblyReference.cache
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.AssemblyInfoInputs.cache
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.AssemblyInfo.cs
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.csproj.CoreCompileInputs.cache
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.sourcelink.json
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\appsettings.json
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\GestorCorrespondencia.Frontend.staticwebassets.runtime.json
@@ -16,6 +23,7 @@ C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\QRCoder.dll
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\Radzen.Blazor.dll
+C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\Riok.Mapperly.Abstractions.dll
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -47,13 +55,6 @@ C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\Conexion_inv.dll
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\crypttool.dll
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\UniEncryption.dll
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.csproj.AssemblyReference.cache
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.AssemblyInfoInputs.cache
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.AssemblyInfo.cs
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.csproj.CoreCompileInputs.cache
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.sourcelink.json
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\scopedcss\Components\Layout\LoginLayout.razor.rz.scp.css
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
@@ -75,4 +76,3 @@ C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.pdb
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\GestorCorrespondencia.Frontend.genruntimeconfig.cache
 C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\obj\Debug\net8.0\ref\GestorCorrespondencia.Frontend.dll
-C:\Users\wsumale\source\repos\Unisuper.GestorCorrespondencia.Frontend\bin\Debug\net8.0\Riok.Mapperly.Abstractions.dll
